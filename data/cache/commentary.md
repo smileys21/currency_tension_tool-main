@@ -1,7 +1,6 @@
-**Risk-premium regime dominates; carry unwinds fragment long-duration shorts.**
+**Regime: Dollar supported but off recent highs; carry unwind risk in crowded AUD/GBP/JPY.**
 
-- **GBP & AUD short-signal apexes**: Both sit at valuation extremes (+1.3, +1.9) on deteriorating fundamentals, with carry crowded into 94th and 87th percentiles respectively. Real-yield stress multipliers (-0.62, -0.63) confirm yields are punishing, not rewarding, these pairs—classic unwind candidates into vol spikes.
-- **JPY long mean-reversion setup**: Cheap valuation (-0.7), improving fundamentals (+0.32), but carry equally crowded (88th percentile). Yield stress still high; watch for JPY strength into policy clarification or vol normalization, not yield moves.
-- **CAD/NZD value anchors**: CAD cheap (-0.92), improving (+0.05); NZD cheap (-1.04) with improving fundamentals (+0.27, though data incomplete). Both decoupled from real-yield regimes—narrow setups but stable bases.
-
-**AUD/NZD carry pair**: Stretched AUD vs. cheap NZD creates a structural short bias on valuation divergence alone; deteriorating AUD fundamentals add to the pressure.
+- **GBP & AUD at breaking point.** Both expensive (+1.3, +1.9 stretch) on deteriorating fundamentals (−0.27, −0.30 fund); carry crowded at 94th and 87th percentile. Real yields rise but correlate negatively with FX (risk premium, not reward). Valuation doing all the work; policy tailwind fading into stagflation. Vol spike triggers unwind.
+- **JPY cheap, improving, but fragile.** Valuation −0.69, fundamentals +0.32; classic mean-reversion setup. Yet carry at 88th percentile on real-yield stress (−0.58 mult). USD strength masking JPY's structural repricing; watch for carry-vol trigger.
+- **CAD & EUR: narrow reads.** Valuation floors (CAD −1.6, EUR +1.3 but only pillar working). Decoupled yield regime muddies real-rate support.
+- **AUD/USD the standout carry unwind pair.** Valuation +1.9 stretched, carry crowded 87th, policy trap closing; deteriorating fund into a vol event.
