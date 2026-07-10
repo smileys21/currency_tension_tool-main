@@ -12,8 +12,11 @@ secrets.toml
 .streamlit/secrets.toml
 
 # Raw data cache — large, rebuilt daily by the Action; NOT committed
+# EXCEPTION: yields.parquet IS committed (tracked) as a baseline, because RBNZ blocks
+# GitHub's servers, so NZ yields can't be fetched from the Action. The committed baseline
+# keeps NZD present; the daily backfill merges onto it (fresh data when a source responds,
+# last-known-good when it doesn't).
 data/cache/macro_backbone.parquet
-data/cache/yields.parquet
 data/cache/fx_spot.parquet
 data/cache/reer.parquet
 data/cache/tff.parquet
