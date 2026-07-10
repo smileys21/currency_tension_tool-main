@@ -1,0 +1,68 @@
+name: daily-refresh
+
+# Spec §7 scheduler: refresh the engine's data daily without manual runs.
+on:
+  schedule:
+    - cron: "30 6 * * 1-5"   # 06:30 UTC on weekdays (after US/EU/Asia closes settle)
+  workflow_dispatch: {}        # allow manual trigger
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write        # commit the refreshed snapshot back to the repo
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements-ingest.txt
+
+      - name: Verify ingestion sources (no key needed)
+        run: |
+          python scripts/verify_yields.py
+          python -m cte.adapters.cftc_tff
+          python -m cte.adapters.bis_reer
+
+      - name: Verify FRED backbone
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          ESTAT_APP_ID: ${{ secrets.ESTAT_APP_ID }}
+        run: python scripts/verify_fred.py
+
+      - name: Rebuild cache (full history — CI starts clean, no cache to append to)
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          ESTAT_APP_ID: ${{ secrets.ESTAT_APP_ID }}
+        run: python -m scripts.backfill
+
+      - name: Rebuild tension snapshot
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          ESTAT_APP_ID: ${{ secrets.ESTAT_APP_ID }}
+        run: python -m cte.scoring.engine
+
+      - name: Generate daily commentary (cached; ~1 call/day, not per-user)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python -m cte.commentary.narrator
+
+      - name: Commit refreshed snapshot
+        run: |
+          git config user.name  "cte-bot"
+          git config user.email "cte-bot@users.noreply.github.com"
+          git add -f data/cache/tension_map.parquet data/cache/pillar_scores.parquet \
+                     data/cache/overlays.parquet data/cache/carry_grid_real.parquet \
+                     data/cache/carry_grid_nominal.parquet data/cache/warnings.json \
+                     data/cache/commentary.md data/cache/commentary_meta.json \
+                     data/cache/tension_map_prev.parquet 2>/dev/null || true
+          git commit -m "chore: daily snapshot refresh [skip ci]" || echo "no changes"
+          git push || echo "nothing to push"
+
+      # Later stage: replace the verify steps above with the full pipeline
+      # entry point (ingest -> transform -> score -> cache -> commit snapshot).

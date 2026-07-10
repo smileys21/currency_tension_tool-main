@@ -1,0 +1,9 @@
+# Full stack for the daily GitHub Action (ingestion + transform + commentary).
+pandas>=2.2
+numpy>=1.26
+requests>=2.31
+urllib3>=2.0
+yfinance>=0.2.40          # FX spot
+openpyxl>=3.1             # BoE GLC / RBNZ B2 xlsx parsing
+pyarrow>=15.0             # parquet cache
+anthropic>=0.40           # change-driven LLM commentary

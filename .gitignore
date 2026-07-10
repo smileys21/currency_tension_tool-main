@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Secrets — never commit API keys
+.env.local
+secrets.toml
+.streamlit/secrets.toml
+
+# Raw data cache — large, rebuilt daily by the Action; NOT committed
+data/cache/macro_backbone.parquet
+data/cache/yields.parquet
+data/cache/fx_spot.parquet
+data/cache/reer.parquet
+data/cache/tff.parquet
+data/cache/*.sqlite
+data/*.db
+
+# Committed snapshot (small; served by the deployed app) is intentionally tracked:
+#   tension_map, pillar_scores, overlays, carry_grid_real, carry_grid_nominal,
+#   warnings.json, commentary.md, commentary_meta.json
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
