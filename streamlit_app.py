@@ -84,11 +84,13 @@ left, right = st.columns([3, 2])
 with left:
     st.pyplot(tension_map_fig(tm, hz, flagged), use_container_width=True)
 with right:
-    st.subheader("Inflection Warnings")
-    st.caption("Where a conditional signal (inflation, real-10Y) was bent by the "
-               "objective overlays — surfaced so the balance is visible.")
+    st.subheader("Currency Notes")
+    st.caption("Per-currency context and objective flags in plain language — the "
+               "twin-signal read (cheap/improving vs expensive/deteriorating), regime "
+               "divergence, crowded or fragile carry, one-legged positions, and where a "
+               "conditional signal was bent by an overlay.")
     if not warns:
-        st.info("No currencies at an inflection this snapshot.")
+        st.info("No notable reads this snapshot.")
     for ccy, notes in warns.items():
         with st.expander(f"{ccy}  ({len(notes)})", expanded=(ccy in ("GBP",))):
             for n in notes:
@@ -188,7 +190,7 @@ after stripping inflation). The dollar is one leg of eight here, not a hub.
 - **Carry-to-vol** — real carry divided by realized FX volatility, percentiled; a high
   reading flags crowded carry that's fragile to a volatility spike.
 
-Whenever an overlay bends a signal, the **Inflection Warnings** panel says so in plain
+Whenever an overlay bends a signal, the **Currency Notes** panel says so in plain
 language — including a note when a reading is confounded (e.g. a strong-dollar tape) or a
 data source is missing, so nothing ambiguous hides inside a single number.
 
