@@ -1,6 +1,10 @@
-**Regime: Dollar supported but off recent highs; carry unwind risk in crowded AUD/GBP/JPY.**
+**Regime: Risk-premium mode dominates; yield strength uncoupling from FX, favouring USD despite stretched valuation.**
 
-- **GBP & AUD at breaking point.** Both expensive (+1.3, +1.9 stretch) on deteriorating fundamentals (−0.27, −0.30 fund); carry crowded at 94th and 87th percentile. Real yields rise but correlate negatively with FX (risk premium, not reward). Valuation doing all the work; policy tailwind fading into stagflation. Vol spike triggers unwind.
-- **JPY cheap, improving, but fragile.** Valuation −0.69, fundamentals +0.32; classic mean-reversion setup. Yet carry at 88th percentile on real-yield stress (−0.58 mult). USD strength masking JPY's structural repricing; watch for carry-vol trigger.
-- **CAD & EUR: narrow reads.** Valuation floors (CAD −1.6, EUR +1.3 but only pillar working). Decoupled yield regime muddies real-rate support.
-- **AUD/USD the standout carry unwind pair.** Valuation +1.9 stretched, carry crowded 87th, policy trap closing; deteriorating fund into a vol event.
+**Inflection points:**
+- **GBP & AUD short**: Both trapped in the same vise—rich valuation (+1.3, +1.9) propped only by carry (94th, 87th percentile crowding) on deteriorating fundamentals. Policy tightening is spent; stagflation drag replaces hawkish tailwind. Vol spike would unwind both violently.
+- **JPY long candidate**: Cheap valuation (-0.69), improving fundamentals (+0.32), and mean-reversion setup offset by carry crowding (88th percentile) and risk-premium yield regime (weak real-rate support). Works on quiet vol; fragile.
+- **CAD**: Valuation floor (-1.55) is the only pillar working; rest near-neutral. Narrow, not broad. Treat as a vol trade, not a directional macro setup.
+
+**Carry**: **GBP carries crowding at extremes** (94th percentile, fat real yield, but on a collapsing fundamental base)—highest unwind risk in the set.
+
+**Since prior**: NZD fundamentals deteriorated -0.23 and stretched +0.58—dual compression; joins the policy-trap cohort more acutely.
