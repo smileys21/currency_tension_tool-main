@@ -1,9 +1,10 @@
-**Regime: Strong dollar on risk premium, not yield reward; carry crowded and fragile to vol.**
+**Regime: Strong dollar, risk-off overlay masking narrow fundamental signals across most pairs.**
 
-- **GBP under pressure**: deteriorating fundamentals (-0.27) meet stretched valuation (+1.27) in a policy trap—hawkish tailwind fading as growth softens. Carry at 94th percentile crowding; yields don't support the currency (real 10Y stress, -0.62 mult). Classic unwind setup.
-- **JPY & NZD mean-reversion long candidates**: both cheap (valuation < norm) with improving fundamentals (+0.32, +0.28). JPY has strongest external pillar (+1.72); NZD also benefits there (+1.12). Real-yield regime punishes both but valuation anchors the case.
-- **CAD & EUR one-legged**: valuation doing the work (CAD -1.55 cheap, EUR +1.30 rich); other pillars inert. Treat as narrow, not structural.
+**Inflection points:**
+- **GBP short** — textbook carry unwind: +1.3 valuation on deteriorating fundamentals (-0.3), out-yields the field on a fragile base, policy tightening cycle exhausted (feasibility -1.0), and carry crowding at 94th percentile. Real yields aren't supporting the currency (risk-premium regime, mult -0.62); vol spike kills this trade.
+- **AUD short** — mirrors GBP: +1.9 valuation (stretched further since last snapshot, stretch +0.00 hold), soft fundamentals (-0.3), policy trap (growth weak, feasibility -0.8), 87th percentile carry crowding. Deterioration persistent.
+- **JPY long** — cheap (-0.69 valuation), fundamentals improving (+0.32), mean-reversion setup. Confounded by strong USD tape but yield stress (real 10Y high, -0.33 correlation to JPY) downgrades real-yield support signal; treat as secondary to USD momentum, not primary.
 
-**AUD carry pair**: stretched valuation (+1.91, +2.70) now worsened by deteriorating growth (-0.05 fundamental). Fattest carry base on thinnest ice; feasibility collapse (-0.85, -0.69 inflation mult) confirms policy has done the work—no more tailwind ahead.
+**Carry standout:** GBP/JPY — short the stretched carry pair into thin vol, unwind risk acute given 94th/84th centile crowding contrast.
 
-AUD fundamentals deteriorated 0.25 since last read; stretch unchanged.
+**Since last:** AUD stretch unchanged despite -0.25 fund deterioration; carry base increasingly fragile.
