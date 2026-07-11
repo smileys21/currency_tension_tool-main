@@ -60,12 +60,28 @@ with st.sidebar:
                              "positions — which way it's moving, and how fast.")
     asof_sel = "Live"
     if _hist is not None and len(_hist):
-        _me = sorted((_hist.date + pd.offsets.MonthEnd(0)).dt.strftime("%Y-%m-%d")
-                     .unique().tolist())
-        asof_sel = st.select_slider(
-            "View as-of", options=_me + ["Live"], value="Live",
-            help="Time dial: redraw the map as it stood at any month-end. "
-                 "Notes and overlays always describe the live snapshot.")
+        # only offer month-ends where the CHOSEN horizon actually plots — i.e. at
+        # least half the universe has both axis scores (struct z's don't exist
+        # until the 10y window fills, so the struct dial starts later than regime)
+        _ac = [f"axis1_fundamental_{hz}", f"axis2_stretch_{hz}"]
+        _v = _hist.dropna(subset=[c for c in _ac if c in _hist.columns])
+        _cnt = _v.groupby(_v.date + pd.offsets.MonthEnd(0))["ccy"].nunique()
+        _avail = sorted(_cnt[_cnt >= 4].index)
+        if _avail:
+            _mode = st.radio("View", ["Live", "Historical"], horizontal=True,
+                             help="Historical redraws the map as it stood at a past "
+                                  "month-end. Notes and overlays always describe the "
+                                  "live snapshot.")
+            if _mode == "Historical":
+                _years = sorted({d.year for d in _avail}, reverse=True)
+                _yr = st.selectbox("Year", _years, index=0)
+                _mopts = [d for d in _avail if d.year == _yr]
+                _mo = st.selectbox(
+                    "Month", _mopts, index=len(_mopts) - 1,
+                    format_func=lambda d: d.strftime("%B %Y"))
+                asof_sel = _mo.strftime("%Y-%m-%d")
+                st.caption(f"Dial range: {_avail[0].strftime('%b %Y')} — "
+                           f"{_avail[-1].strftime('%b %Y')} on this horizon.")
     # rebuild is admin-only: it needs the raw cache + API keys, absent on the public
     # deploy (there the scheduled Action refreshes the snapshot instead)
     import os
@@ -130,7 +146,7 @@ with right:
                 st.markdown(f"- {n}")
 
 st.markdown("---")
-t1, t2, t3, t4, t5 = st.tabs(["Pillar Scores", "Carry Grid", "Overlays", "Currency Detail", "Positioning"])
+t1, t2, t_pos, t3, t4 = st.tabs(["Pillar Scores", "Carry Grid", "Positioning", "Overlays", "Currency Detail"])
 
 with t1:
     st.pyplot(pillar_heatmap_fig(pillars, tm, hz), use_container_width=True)
@@ -246,7 +262,7 @@ national debt offices for yield curves. Full mapping in `docs/DATA_SOURCES.md`.*
         """
     )
 
-with t5:
+with t_pos:
     if overlays is not None and "lev_z" in overlays.columns:
         st.pyplot(positioning_fig(overlays), use_container_width=True)
         st.caption(
