@@ -279,7 +279,7 @@ def fetch_rba() -> pd.DataFrame:
 
 
 # ----------------------------------------------------------------- NZD (RBNZ B2)
-def fetch_rbnz() -> pd.DataFrame:
+def _fetch_rbnz_direct() -> pd.DataFrame:
     # RBNZ migrated B2 from Refinitiv mid-rates (hb2-daily.csv, frozen 2025-08-22)
     # to NZFMA end-of-day closing rates (hb2-daily-close.xlsx) in Aug 2025.
     # Series IDs are unchanged; values are now closing rather than 11:10am mids.
@@ -313,6 +313,62 @@ def fetch_rbnz() -> pd.DataFrame:
                 if pd.notna(v):
                     rows.append({"date": d, "ccy": "NZD", "tenor": tenor, "value": v})
     return tidy_yields(rows, "rbnz_b2")
+
+
+_INTEREST_PAGE = "https://www.interest.co.nz/charts/interest-rates/government-bond-rates"
+_INTEREST_DATA = "https://www.interest.co.nz/chart-data/get-csv-data"
+
+
+def _fetch_rbnz_interest() -> pd.DataFrame:
+    """Fallback: interest.co.nz republishes RBNZ's B2 government-bond yields — verified
+    identical values and freshness, 26y history. Used when RBNZ 403s the caller's IP
+    (e.g. GitHub Actions / Azure ranges). robots.txt permits /chart-data. Chart
+    timestamps are NZ-local midnight as epoch-ms, so convert to Pacific/Auckland before
+    taking the date, or every observation lands one day early. Tenor→series index is
+    read from the page's own tab labels, so a reordering can't silently swap tenors."""
+    hdr = {"User-Agent": HTTP_UA, "Accept": "*/*"}
+    page = http_get(_INTEREST_PAGE, headers=hdr).text
+    opts = re.findall(r'value="chart-(\d+)-(\d+)"[^>]*>\s*Govt bond\s+(\d+)\s*yr',
+                      page, re.I)
+    if not opts:
+        raise RuntimeError("interest.co.nz: bond-tenor tabs not found")
+    nid = opts[0][0]
+    idx_tenor = {int(i): f"{int(y)}Y" for _n, i, y in opts}
+    js = make_session().post(_INTEREST_DATA, data={"nids[]": nid}, headers=hdr,
+                             timeout=HTTP_TIMEOUT).json()
+    series = js[nid]["csv_data"]
+    rows = []
+    for idx, tenor in idx_tenor.items():
+        if tenor not in ("2Y", "10Y") or idx >= len(series):
+            continue
+        for pair in series[idx]:
+            ms, val = pair[0], pair[1]
+            if val is None:
+                continue
+            d = (pd.Timestamp(int(ms), unit="ms", tz="UTC")
+                 .tz_convert("Pacific/Auckland").normalize().tz_localize(None))
+            rows.append({"date": d, "ccy": "NZD", "tenor": tenor, "value": float(val)})
+    if not rows:
+        raise RuntimeError("interest.co.nz: no 2Y/10Y rows parsed")
+    if not all(-2.0 < r["value"] < 25.0 for r in rows):   # gross-mislabel guard
+        raise RuntimeError("interest.co.nz: implausible yield values")
+    return tidy_yields(rows, "interest_co_nz_b2")
+
+
+def fetch_rbnz() -> pd.DataFrame:
+    """NZ govt yields. RBNZ B2 is canonical (works locally, cleanest provenance), but
+    RBNZ 403s data-center IPs, so from GitHub Actions the direct fetch fails and we fall
+    back to interest.co.nz's identical republished series. The source column records
+    which path produced each row."""
+    try:
+        df = _fetch_rbnz_direct()
+        if df is not None and not df.empty:
+            return df
+        raise RuntimeError("RBNZ B2 returned no rows")
+    except Exception as e:
+        print(f"[yields] RBNZ direct failed ({type(e).__name__}: {str(e)[:60]}); "
+              f"falling back to interest.co.nz")
+        return _fetch_rbnz_interest()
 
 
 # ----------------------------------------------------------------- registry + fallback
