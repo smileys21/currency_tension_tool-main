@@ -25,7 +25,7 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 
-from cte.adapters.base import CACHE_DIR, read_cache, utcnow, write_cache
+from cte.adapters.base import read_cache, utcnow, write_cache
 from cte.config import CURRENCIES
 from cte.flags.overlays import _fx_wide, _y10_wide, _WIN
 from cte.scoring.compositor import score
