@@ -29,6 +29,12 @@ jobs:
           ESTAT_APP_ID: ${{ secrets.ESTAT_APP_ID }}
         run: python -m scripts.backfill
 
+      - name: Seed map history (one-time monthly backfill if absent)
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          ESTAT_APP_ID: ${{ secrets.ESTAT_APP_ID }}
+        run: python -m scripts.backfill_history --if-missing
+
       - name: Rebuild tension snapshot
         env:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
@@ -49,7 +55,8 @@ jobs:
                      data/cache/carry_grid_nominal.parquet data/cache/warnings.json \
                      data/cache/commentary.md data/cache/commentary_meta.json \
                      data/cache/tension_map_prev.parquet \
-                     data/cache/yields.parquet 2>/dev/null || true
+                     data/cache/yields.parquet data/cache/snapshot_history.parquet \
+                     2>/dev/null || true
           git commit -m "chore: daily snapshot refresh [skip ci]" || echo "no changes"
           git push || echo "nothing to push"
 

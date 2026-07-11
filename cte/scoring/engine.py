@@ -13,6 +13,8 @@ import pandas as pd
 
 from cte.adapters.base import CACHE_DIR, write_cache
 from cte.flags.notes import completeness_warnings, context_notes
+from cte.flags.positioning import positioning_warnings
+from cte.scoring.history import append_today
 from cte.flags.overlays import overlay_snapshot, warnings
 from cte.scoring.compositor import score, tension_map
 from cte.transform.features import build_features
@@ -38,6 +40,10 @@ def build_snapshot(persist: bool = True) -> dict:
     for c, notes in context_notes(tm, pillars, real_grid).items():
         warns[c] = notes + warns.get(c, [])
 
+    # positioning flags (crowding, spec-vs-real-money split, quadrant+crowding combos)
+    for c, notes in positioning_warnings(snap, tm).items():
+        warns[c] = warns.get(c, []) + notes
+
     # Completeness guard runs LAST so it lands first (see notes.completeness_warnings:
     # it reindexes to the full pillar set so a whole-source outage is caught, not just
     # per-currency gaps).
@@ -51,6 +57,7 @@ def build_snapshot(persist: bool = True) -> dict:
         write_cache(real_grid.reset_index(), "carry_grid_real")
         write_cache(nom_grid.reset_index(), "carry_grid_nominal")
         (CACHE_DIR / "warnings.json").write_text(json.dumps(warns, indent=2))
+        append_today(tm)   # tension-map history: idempotent daily append (trails/dial)
 
     return {"tension_map": tm, "pillars": pillars, "overlays": snap,
             "carry_real": real_grid, "carry_nominal": nom_grid,

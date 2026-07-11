@@ -15,7 +15,7 @@ import streamlit as st
 from cte.adapters.base import read_cache
 from cte.config import CACHE_DIR
 from cte.dashboard.plots import (carry_heatmap_fig, pillar_heatmap_fig,
-                                 tension_map_fig)
+                                 positioning_fig, tension_map_fig)
 
 st.set_page_config(page_title="Currency Tension Engine", layout="wide")
 
@@ -50,6 +50,21 @@ with st.sidebar:
     st.header("Controls")
     horizon = st.radio("Horizon", ["Structural (~10y)", "Regime (~2y)"], index=0)
     hz = "struct" if horizon.startswith("Structural") else "regime"
+
+    st.markdown("---")
+    st.subheader("History")
+    _hist = read_cache("snapshot_history")
+    trail_n = st.slider("Trail (month-ends)", 0, 12, 6,
+                        help="Fading path of each currency's last N month-end "
+                             "positions — which way it's moving, and how fast.")
+    asof_sel = "Live"
+    if _hist is not None and len(_hist):
+        _me = sorted((_hist.date + pd.offsets.MonthEnd(0)).dt.strftime("%Y-%m-%d")
+                     .unique().tolist())
+        asof_sel = st.select_slider(
+            "View as-of", options=_me + ["Live"], value="Live",
+            help="Time dial: redraw the map as it stood at any month-end. "
+                 "Notes and overlays always describe the live snapshot.")
     # rebuild is admin-only: it needs the raw cache + API keys, absent on the public
     # deploy (there the scheduled Action refreshes the snapshot instead)
     import os
@@ -80,9 +95,26 @@ with st.container(border=True):
 
 flagged = set(warns)
 
+crowded = set()
+if overlays is not None and "pos_label" in overlays.columns:
+    crowded = set(overlays.loc[overlays.pos_label.astype(str)
+                  .str.startswith("CROWDED"), "ccy"])
+
 left, right = st.columns([3, 2])
 with left:
-    st.pyplot(tension_map_fig(tm, hz, flagged), use_container_width=True)
+    if asof_sel != "Live" and _hist is not None:
+        _d = pd.Timestamp(asof_sel)
+        _rows = _hist[(_hist.date + pd.offsets.MonthEnd(0)) == _d]             .sort_values("date").groupby("ccy").tail(1)
+        st.pyplot(tension_map_fig(_rows, hz, None, history=_hist,
+                                  trail_months=trail_n, asof_label=asof_sel),
+                  use_container_width=True)
+        st.caption(f"Historical view — the map as of {asof_sel}, computed from "
+                   "today's data vintage (revised macro; see Methodology). Notes "
+                   "and rings apply to the live snapshot only.")
+    else:
+        st.pyplot(tension_map_fig(tm, hz, flagged, history=_hist,
+                                  trail_months=trail_n, crowded=crowded),
+                  use_container_width=True)
 with right:
     st.subheader("Currency Notes")
     st.caption("Per-currency context and objective flags in plain language — the "
@@ -97,7 +129,7 @@ with right:
                 st.markdown(f"- {n}")
 
 st.markdown("---")
-t1, t2, t3, t4 = st.tabs(["Pillar Scores", "Carry Grid", "Overlays", "Currency Detail"])
+t1, t2, t3, t4, t5 = st.tabs(["Pillar Scores", "Carry Grid", "Overlays", "Currency Detail", "Positioning"])
 
 with t1:
     st.pyplot(pillar_heatmap_fig(pillars, tm, hz), use_container_width=True)
@@ -189,6 +221,20 @@ after stripping inflation). The dollar is one leg of eight here, not a hub.
   inflation tailwind fades to a drag (the "policy trap").
 - **Carry-to-vol** — real carry divided by realized FX volatility, percentiled; a high
   reading flags crowded carry that's fragile to a volatility spike.
+- **Speculative positioning** — CFTC TFF (futures **and options combined**): leveraged-fund
+  and asset-manager net positions as % of open interest, z-scored per currency vs its own
+  10-year history. The *listed-derivatives slice only* (no OTC/corporate/real-money flows) —
+  used strictly as a crowding and unwind-risk flag, never in the axis composites. A ring on
+  the map marks a crowded currency; the Positioning tab shows the full read.
+
+### History (trails & time dial)
+
+The map's month-end positions are recomputed back through the data (~2008+) with **as-of**
+overlay multipliers, then appended daily. Trails show each currency's recent path; the
+sidebar dial redraws the map at any past month-end. One honesty note: history is computed
+from **today's data vintage** (revised macro, CPI aligned to its reference month) — "as
+we'd compute it now", not "as you'd have seen it then". Fine for trails and pattern-matching;
+a point-in-time backtest needs additional lag adjustments.
 
 Whenever an overlay bends a signal, the **Currency Notes** panel says so in plain
 language — including a note when a reading is confounded (e.g. a strong-dollar tape) or a
@@ -198,3 +244,24 @@ data source is missing, so nothing ambiguous hides inside a single number.
 national debt offices for yield curves. Full mapping in `docs/DATA_SOURCES.md`.*
         """
     )
+
+with t5:
+    if overlays is not None and "lev_z" in overlays.columns:
+        st.pyplot(positioning_fig(overlays), use_container_width=True)
+        st.caption(
+            "**Scope, honestly:** CFTC Traders-in-Financial-Futures, futures **and "
+            "options combined** — the listed-derivatives slice (CME/ICE). It does not "
+            "see OTC forwards/swaps, corporate hedging, or real-money cash flows, so "
+            "it is *speculative* positioning, not the whole market. Used as a "
+            "crowding / unwind-risk conditioner only — it never enters the axis "
+            "composites. Net positions are % of open interest, z-scored against each "
+            "currency's own 10-year history; USD row = ICE Dollar Index. Weekly data, "
+            "Tuesday-dated, published Fridays (3-day lag).")
+        _pcols = ["ccy", "pos_label", "lev_z", "am_z", "lev_chg13w_z",
+                  "lev_pct_oi", "am_pct_oi", "pos_date"]
+        _pt = overlays[[c for c in _pcols if c in overlays.columns]].dropna(
+            subset=["lev_z"])
+        st.dataframe(_pt, use_container_width=True, hide_index=True)
+    else:
+        st.info("No positioning data in this snapshot — the TFF cache is absent "
+                "or the overlay hasn't been rebuilt yet.")

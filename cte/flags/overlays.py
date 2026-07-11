@@ -160,11 +160,14 @@ def warnings(snapshot: pd.DataFrame | None = None,
 
 
 def overlay_snapshot() -> pd.DataFrame:
+    from cte.flags.positioning import positioning_snapshot
     lz = latest_z(build_features().rename(columns={"feature": "metric"}))
     reg = yield_fx_regime()
     feas = hike_feasibility(lz)
     ctv = carry_to_vol()
-    out = reg.merge(feas, on="ccy", how="outer").merge(ctv, on="ccy", how="outer")
+    pos = positioning_snapshot()
+    out = (reg.merge(feas, on="ccy", how="outer").merge(ctv, on="ccy", how="outer")
+           .merge(pos, on="ccy", how="outer"))
     return out.set_index("ccy").reindex(CURRENCIES).reset_index()
 
 

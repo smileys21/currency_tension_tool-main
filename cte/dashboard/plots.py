@@ -45,10 +45,31 @@ def _style(ax):
         lab.set_color(_FG)
 
 
-def tension_map_fig(tm, horizon="struct", flagged=None):
+def tension_map_fig(tm, horizon="struct", flagged=None, history=None,
+                    trail_months=6, crowded=None, asof_label=None):
+    """history: snapshot_history frame (date, ccy, axis cols) -> fading trails of the
+    last `trail_months` month-ends per currency. crowded: set of ccys to ring (spec
+    positioning at an extreme). asof_label: date string when rendering a historical
+    view via the time dial."""
     xcol, ycol = f"axis1_fundamental_{horizon}", f"axis2_stretch_{horizon}"
     d = tm.dropna(subset=[xcol, ycol]).set_index("ccy")
     xs, ys = d[xcol], d[ycol]
+
+    # trail vertices: month-end resampled history strictly before the shown snapshot,
+    # ending at the live/asof dot so the path reads as one continuous move
+    trails = {}
+    if history is not None and trail_months and len(history):
+        h = history.dropna(subset=[xcol, ycol]).copy()
+        if asof_label:
+            h = h[h.date < pd.Timestamp(asof_label)]
+        me = (h.assign(me=h.date + pd.offsets.MonthEnd(0))
+                .sort_values("date").groupby(["ccy", "me"]).tail(1))
+        for ccy in d.index:
+            t = me[me.ccy == ccy].sort_values("date").tail(trail_months)
+            if len(t) >= 1:
+                pts = list(zip(t[xcol], t[ycol])) + [(d.loc[ccy, xcol], d.loc[ccy, ycol])]
+                if len(pts) >= 2:
+                    trails[ccy] = pts
 
     # fit each axis tightly to its own range (keeping 0 in view) so the currencies
     # spread across the panel instead of clustering on a wide symmetric scale
@@ -56,7 +77,9 @@ def tension_map_fig(tm, horizon="struct", flagged=None):
         lo, hi = min(v.min(), -0.1), max(v.max(), 0.1)
         pad = max((hi - lo) * 0.18, 0.15)
         return lo - pad, hi + pad
-    xlo, xhi = _bounds(xs); ylo, yhi = _bounds(ys)
+    tx = [p[0] for pts in trails.values() for p in pts]
+    ty = [p[1] for pts in trails.values() for p in pts]
+    xlo, xhi = _bounds(pd.Series(list(xs) + tx)); ylo, yhi = _bounds(pd.Series(list(ys) + ty))
 
     fig, ax = plt.subplots(figsize=(8.4, 7.6), facecolor=_BG)
     _style(ax)
@@ -76,7 +99,22 @@ def tension_map_fig(tm, horizon="struct", flagged=None):
                 ha=("right" if sx == "+" else "left"),
                 va=("top" if sy == "+" else "bottom"))
 
+    # trails: age-faded path, small dots shrinking with age, live dot terminal
+    for ccy, pts in trails.items():
+        n = len(pts)
+        for i in range(n - 1):
+            a = 0.10 + 0.42 * (i + 1) / (n - 1)
+            ax.plot([pts[i][0], pts[i + 1][0]], [pts[i][1], pts[i + 1][1]],
+                    color=_BLUE, alpha=a, lw=1.5, zorder=2, solid_capstyle="round")
+        for i, (px, py) in enumerate(pts[:-1]):
+            a = 0.12 + 0.38 * (i + 1) / max(n - 1, 1)
+            ax.scatter(px, py, s=26 + 60 * (i + 1) / max(n - 1, 1), color=_BLUE,
+                       alpha=a, zorder=2, edgecolors="none")
+
     for ccy, r in d.iterrows():
+        if crowded and ccy in crowded:
+            ax.scatter(r[xcol], r[ycol], s=2300, zorder=3, facecolors="none",
+                       edgecolors=_WARN, linewidths=1.8, alpha=0.9)
         ax.scatter(r[xcol], r[ycol], s=1500, zorder=3, color=_BLUE, alpha=0.16,
                    edgecolors="none")
         ax.scatter(r[xcol], r[ycol], s=900, zorder=4, color=_BLUE, alpha=0.95,
@@ -90,9 +128,20 @@ def tension_map_fig(tm, horizon="struct", flagged=None):
                   fontsize=9.5, labelpad=8)
     ax.set_ylabel("←  Cheap        Valuation & policy stretch        Maxed-out  →",
                   fontsize=9.5, labelpad=8)
-    ax.set_title(f"Currency Tension Map   ·   {hlabel}", fontsize=13.5, pad=14,
-                 fontweight="bold")
-    fig.tight_layout()
+    suffix = f"   ·   as of {asof_label}" if asof_label else ""
+    ax.set_title(f"Currency Tension Map   ·   {hlabel}{suffix}", fontsize=13.5,
+                 pad=14, fontweight="bold")
+    foot = []
+    if trails:
+        foot.append(f"trail = last {trail_months} month-ends (faded = older)")
+    if crowded:
+        foot.append("ring = spec positioning crowded (TFF |z| ≥ 1.5)")
+    if foot:
+        fig.text(0.5, 0.005, "   ·   ".join(foot), color=_MUTE, fontsize=8.5,
+                 ha="center", va="bottom")
+        fig.tight_layout(rect=[0, 0.025, 1, 1])
+    else:
+        fig.tight_layout()
     return fig
 
 
@@ -182,6 +231,59 @@ def pillar_heatmap_fig(pillars, tm=None, horizon="struct"):
     fig.text(0.5, 0.005,
              "Green = supportive / more stretched   ·   Red = drag / cheap   ·   "
              "Rows sorted by fundamental score",
+             color=_MUTE, fontsize=8.5, ha="center", va="bottom")
+    fig.tight_layout(rect=[0, 0.03, 1, 1])
+    return fig
+
+
+def positioning_fig(pos):
+    """Speculative-positioning dumbbell: per currency, leveraged-fund (fast money)
+    vs asset-manager (real money) net-%OI z-scores, sorted by lev z. Triangle shows
+    the direction of the 13-week swing in the lev position. Bands mark the crowded
+    threshold. Scope: CFTC TFF futures+options combined — the listed slice only."""
+    from cte.config import POS_CROWDED_Z
+    d = pos.dropna(subset=["lev_z"]).sort_values("lev_z").reset_index(drop=True)
+    if d.empty:
+        fig, ax = plt.subplots(figsize=(8, 2), facecolor=_BG)
+        _style(ax)
+        ax.text(0.5, 0.5, "No positioning data cached", color=_MUTE,
+                ha="center", va="center")
+        ax.set_xticks([]); ax.set_yticks([])
+        return fig
+    _TEAL = "#4fae8b"
+    n = len(d)
+    fig, ax = plt.subplots(figsize=(8.6, 0.62 * n + 2.2), facecolor=_BG)
+    _style(ax)
+    lim = max(2.2, float(np.nanmax(np.abs(d[["lev_z", "am_z"]].values))) * 1.15)
+    ax.axvspan(POS_CROWDED_Z, lim, color=_WARN, alpha=0.10, zorder=0)
+    ax.axvspan(-lim, -POS_CROWDED_Z, color=_WARN, alpha=0.10, zorder=0)
+    ax.axvline(0, color=_GRID, lw=1.2)
+    for v in (POS_CROWDED_Z, -POS_CROWDED_Z):
+        ax.axvline(v, color=_WARN, lw=0.8, alpha=0.5, ls=":")
+    for i, r in d.iterrows():
+        if pd.notna(r.am_z):
+            ax.plot([r.am_z, r.lev_z], [i, i], color=_MUTE, lw=1.6,
+                    alpha=0.75, zorder=2)
+            ax.scatter(r.am_z, i, s=120, color=_TEAL, zorder=3,
+                       edgecolors=_BG, linewidths=1.2)
+        ax.scatter(r.lev_z, i, s=170, color=_BLUE, zorder=4,
+                   edgecolors=_BG, linewidths=1.2)
+        if pd.notna(r.lev_chg13w_z) and abs(r.lev_chg13w_z) > 0.25:
+            ax.scatter(r.lev_z, i + 0.28, s=55, zorder=5, color=_FG, alpha=0.85,
+                       marker="^" if r.lev_chg13w_z > 0 else "v")
+        crowded = abs(r.lev_z) >= POS_CROWDED_Z
+        ax.text(lim * 1.03, i, f"{r.lev_pct_oi:+.0f}% OI",
+                color=_WARN if crowded else _MUTE, fontsize=8.5, va="center")
+    ax.set_yticks(range(n)); ax.set_yticklabels(d.ccy, fontsize=10.5)
+    ax.set_xlim(-lim, lim * 1.22)
+    ax.set_ylim(-0.7, n - 0.3)
+    ax.set_xlabel("Net position, % of open interest — z vs own 10y history "
+                  "(long the currency →)", fontsize=9.5, labelpad=8)
+    ax.set_title("Speculative Positioning   ·   CFTC TFF, futures + options",
+                 fontsize=13, pad=14, fontweight="bold")
+    fig.text(0.5, 0.005,
+             "Blue = leveraged funds (fast money)   ·   teal = asset managers "
+             "(real money)   ·   ▲▼ = 13-week swing   ·   shaded = crowded",
              color=_MUTE, fontsize=8.5, ha="center", va="bottom")
     fig.tight_layout(rect=[0, 0.03, 1, 1])
     return fig
