@@ -1,9 +1,9 @@
-**Regime: Risk-premium dominance narrows carry reward; USD structural bid intact but stretch easing.**
+**Regime: Strong dollar on risk premium, not yield reward; carry crowded and fragile to vol.**
 
-**Inflection currencies:**
-- **GBP short / AUD short** — both expensive (val +1.3/+1.9) on deteriorating fundamentals (fund –0.27/–0.30), fat carry sitting on fragile base. Carry crowding extreme (94th/87th percentile); yield stress regime means real-rate rises *don't* support the currency. Policy tightening cycle exhausted; stagflation drag ahead. Vol spike would unwind crowding fast.
-- **JPY long / NZD long** — both cheap (val –0.69/–0.46) with improving fundamentals (fund +0.32/+0.28). JPY gains on risk-premium regime despite yield stress; NZD upgraded +0.24 fund since prior, resets the mean-reversion case. Both levered to a policy pivot or EM stabilization.
+- **GBP under pressure**: deteriorating fundamentals (-0.27) meet stretched valuation (+1.27) in a policy trap—hawkish tailwind fading as growth softens. Carry at 94th percentile crowding; yields don't support the currency (real 10Y stress, -0.62 mult). Classic unwind setup.
+- **JPY & NZD mean-reversion long candidates**: both cheap (valuation < norm) with improving fundamentals (+0.32, +0.28). JPY has strongest external pillar (+1.72); NZD also benefits there (+1.12). Real-yield regime punishes both but valuation anchors the case.
+- **CAD & EUR one-legged**: valuation doing the work (CAD -1.55 cheap, EUR +1.30 rich); other pillars inert. Treat as narrow, not structural.
 
-**Standout carry pair:** **GBP/JPY** — short. GBP has all the GBP downside (expensive, deteriorating, crowded carry) while JPY has asymmetric support (cheap, improving, risk-premium hedge). Carry unwound into vol.
+**AUD carry pair**: stretched valuation (+1.91, +2.70) now worsened by deteriorating growth (-0.05 fundamental). Fattest carry base on thinnest ice; feasibility collapse (-0.85, -0.69 inflation mult) confirms policy has done the work—no more tailwind ahead.
 
-**Since prior:** NZD fundamentals +0.24; stretch stable. Narrows the AUD/NZD asymmetry further — Kiwi the cleaner long.
+AUD fundamentals deteriorated 0.25 since last read; stretch unchanged.

@@ -19,11 +19,9 @@
     "FX and yields are decoupled \u2014 the real-yield reward/stress read is ambiguous this window; treat Pillar D lightly."
   ],
   "AUD": [
-    "Expensive and deteriorating \u2014 the vulnerable combination: rich valuation (+1.9) on a softening fundamental trajectory (-0.3).",
     "Fat carry on a fragile base: out-yields the field in real terms (avg +0.5%) but sits on a stretched valuation \u2014 the classic carry-unwind setup.",
     "One-legged read: Valuation (+2.7) is doing almost all the work; the other pillars are near neutral, so treat this as narrow, not broad-based.",
-    "Policy trap: inflation above target but growth soft and policy already tight (feasibility -0.8) \u2014 the hawkish tailwind is fading toward a stagflation drag; inflation's axis-1 contribution is dampened (mult -0.69).",
-    "Yield stress: real 10Y is high (z +0.6) but the currency weakens as yields rise (-0.46 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.73). Note: cross vs USD partly confounds this in a strong-dollar tape."
+    "Policy trap: inflation above target but growth soft and policy already tight (feasibility -0.8) \u2014 the hawkish tailwind is fading toward a stagflation drag; inflation's axis-1 contribution is dampened (mult -0.69)."
   ],
   "NZD": [
     "Cheap and improving \u2014 the mean-reversion setup: valuation is below its own norm (-0.5) while fundamentals are turning up (+0.3).",
