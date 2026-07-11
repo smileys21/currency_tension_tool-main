@@ -1,10 +1,9 @@
-**Regime: Risk-premium mode dominates; yield strength uncoupling from FX, favouring USD despite stretched valuation.**
+**Regime: Risk-premium dominance narrows carry reward; USD structural bid intact but stretch easing.**
 
-**Inflection points:**
-- **GBP & AUD short**: Both trapped in the same vise—rich valuation (+1.3, +1.9) propped only by carry (94th, 87th percentile crowding) on deteriorating fundamentals. Policy tightening is spent; stagflation drag replaces hawkish tailwind. Vol spike would unwind both violently.
-- **JPY long candidate**: Cheap valuation (-0.69), improving fundamentals (+0.32), and mean-reversion setup offset by carry crowding (88th percentile) and risk-premium yield regime (weak real-rate support). Works on quiet vol; fragile.
-- **CAD**: Valuation floor (-1.55) is the only pillar working; rest near-neutral. Narrow, not broad. Treat as a vol trade, not a directional macro setup.
+**Inflection currencies:**
+- **GBP short / AUD short** — both expensive (val +1.3/+1.9) on deteriorating fundamentals (fund –0.27/–0.30), fat carry sitting on fragile base. Carry crowding extreme (94th/87th percentile); yield stress regime means real-rate rises *don't* support the currency. Policy tightening cycle exhausted; stagflation drag ahead. Vol spike would unwind crowding fast.
+- **JPY long / NZD long** — both cheap (val –0.69/–0.46) with improving fundamentals (fund +0.32/+0.28). JPY gains on risk-premium regime despite yield stress; NZD upgraded +0.24 fund since prior, resets the mean-reversion case. Both levered to a policy pivot or EM stabilization.
 
-**Carry**: **GBP carries crowding at extremes** (94th percentile, fat real yield, but on a collapsing fundamental base)—highest unwind risk in the set.
+**Standout carry pair:** **GBP/JPY** — short. GBP has all the GBP downside (expensive, deteriorating, crowded carry) while JPY has asymmetric support (cheap, improving, risk-premium hedge). Carry unwound into vol.
 
-**Since prior**: NZD fundamentals deteriorated -0.23 and stretched +0.58—dual compression; joins the policy-trap cohort more acutely.
+**Since prior:** NZD fundamentals +0.24; stretch stable. Narrows the AUD/NZD asymmetry further — Kiwi the cleaner long.
