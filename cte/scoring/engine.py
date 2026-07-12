@@ -9,13 +9,13 @@ from __future__ import annotations
 
 import json
 
-import pandas as pd
+
 
 from cte.adapters.base import CACHE_DIR, write_cache
 from cte.flags.notes import completeness_warnings, context_notes
-from cte.flags.positioning import positioning_warnings
-from cte.scoring.history import append_today
-from cte.flags.overlays import overlay_snapshot, warnings
+from cte.flags.positioning import persist_history, positioning_warnings
+from cte.scoring.history import append_today, append_today_details
+from cte.flags.overlays import overlay_snapshot
 from cte.scoring.compositor import score, tension_map
 from cte.transform.features import build_features
 from cte.transform.pairwise import carry_grid, carry_ranking
@@ -29,6 +29,7 @@ def build_snapshot(persist: bool = True) -> dict:
 
     tm, warns = tension_map()
     pill_struct, _ = score("struct_z", lz, snap)
+    pill_regime, _ = score("regime_z", lz, snap)
     pillars = pill_struct.pivot_table(index="ccy", columns="pillar",
                                       values="pscore").round(2)
 
@@ -58,6 +59,8 @@ def build_snapshot(persist: bool = True) -> dict:
         write_cache(nom_grid.reset_index(), "carry_grid_nominal")
         (CACHE_DIR / "warnings.json").write_text(json.dumps(warns, indent=2))
         append_today(tm)   # tension-map history: idempotent daily append (trails/dial)
+        append_today_details(pill_struct, pill_regime, lz, snap)
+        persist_history()  # weekly positioning panel for the app's Historical mode
 
     return {"tension_map": tm, "pillars": pillars, "overlays": snap,
             "carry_real": real_grid, "carry_nominal": nom_grid,

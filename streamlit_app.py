@@ -107,6 +107,27 @@ with st.container(border=True):
 
 flagged = set(warns)
 
+# ---- historical view frames (dial set) — every tab except Overlays renders as-of
+HIST_MODE = asof_sel != "Live" and _hist is not None
+tm_v, pillars_v, carry_v, pos_v = tm, pillars, None, overlays
+if HIST_MODE:
+    _d = pd.Timestamp(asof_sel)
+    tm_v = (_hist[(_hist.date + pd.offsets.MonthEnd(0)) == _d]
+            .sort_values("date").groupby("ccy").tail(1))
+    _ph = read_cache("pillar_history")
+    if _ph is not None:
+        _pr = (_ph[(_ph.date + pd.offsets.MonthEnd(0)) == _d]
+               .sort_values("date").groupby(["ccy", "pillar"]).tail(1))
+        if len(_pr):
+            pillars_v = (_pr.pivot_table(index="ccy", columns="pillar",
+                                         values="struct").round(2).reset_index())
+    _ch = read_cache("carry_history")
+    if _ch is not None:
+        carry_v = (_ch[(_ch.date + pd.offsets.MonthEnd(0)) == _d]
+                   .sort_values("date").groupby("ccy").tail(1).set_index("ccy"))
+    from cte.flags.positioning import positioning_asof
+    pos_v = positioning_asof(_d)
+
 crowded = set()
 if overlays is not None and "pos_label" in overlays.columns:
     crowded = set(overlays.loc[overlays.pos_label.astype(str)
@@ -144,7 +165,9 @@ st.markdown("---")
 t1, t2, t_pos, t3, t4 = st.tabs(["Pillar Scores", "Carry Grid", "Positioning", "Overlays", "Currency Detail"])
 
 with t1:
-    st.pyplot(pillar_heatmap_fig(pillars, tm, hz), use_container_width=True)
+    if HIST_MODE:
+        st.caption(f"As of {asof_sel} (structural pillar scores).")
+    st.pyplot(pillar_heatmap_fig(pillars_v, tm_v, hz), use_container_width=True)
     st.caption("Signed z-scores, ordered by fundamental score. Green = the axis's "
                "positive pole (Axis 1: supportive to the currency; Axis 2: more "
                "stretched). Inflation and Fiscal are overlay-adjusted for the trap "
@@ -152,28 +175,68 @@ with t1:
 
 with t2:
     basis = st.radio("Basis", ["2Y real", "2Y nominal"], horizontal=True)
-    gname = "carry_grid_real" if basis == "2Y real" else "carry_grid_nominal"
-    grid = _grid(gname)
+    _feat = "real_2y" if basis == "2Y real" else "nominal_2y"
     label = f"{basis.title()} Carry  ·  Base − Quote (%)"
-    if grid is not None:
+    if HIST_MODE:
+        grid = None
+        if carry_v is not None and _feat in carry_v.columns:
+            from cte.transform.pairwise import grid_from_values
+            grid = grid_from_values(carry_v[_feat])
+        st.caption(f"As of {asof_sel}." if grid is not None else
+                   "No carry history at this date.")
+    else:
+        gname = "carry_grid_real" if basis == "2Y real" else "carry_grid_nominal"
+        grid = _grid(gname)
+    if grid is not None and len(grid):
         st.pyplot(carry_heatmap_fig(grid, label), use_container_width=True)
     st.caption("Pairwise — the dollar is one leg of eight, not a hub. Nominal shows "
                "raw rate carry; real strips the inflation tax (fragile carry).")
 
 with t3:
-    st.dataframe(overlays.set_index("ccy"), use_container_width=True)
+    if HIST_MODE:
+        _oh = read_cache("overlay_history")
+        _ov = None
+        if _oh is not None:
+            _ov = (_oh[(_oh.date + pd.offsets.MonthEnd(0)) == _d]
+                   .sort_values("date").groupby("ccy").tail(1)
+                   .set_index("ccy").drop(columns=["date", "kind"],
+                                          errors="ignore"))
+        if _ov is not None and len(_ov):
+            st.caption(f"As of {asof_sel} — the conditioning state that bent that "
+                       "month's scores: FX-yield reward/stress regime, "
+                       "hike-feasibility, carry-to-vol crowding (percentile within "
+                       "history *up to that date*), and the positioning read from "
+                       "the last weekly report on or before it.")
+            _pcols_h = [c for c in ("lev_pct_oi", "am_pct_oi", "lev_z", "am_z",
+                                    "pos_label", "pos_date")
+                        if pos_v is not None and c in pos_v.columns]
+            if _pcols_h:
+                _ov = _ov.join(pos_v.set_index("ccy")[_pcols_h], how="left")
+            st.dataframe(_ov, use_container_width=True)
+        else:
+            st.caption("No overlay history at this date — run the workflow once "
+                       "to seed it.")
+    else:
+        st.dataframe(overlays.set_index("ccy"), use_container_width=True)
     st.caption("yld_fx_corr / yld_regime: is a currency rewarded or punished for its "
                "yield. feasibility / infl_mult: hike room vs. the inflation trap. "
                "ctv_pctile: carry-to-vol crowding.")
 
 with t4:
-    ccy = st.selectbox("Currency", list(tm["ccy"]))
-    row = tm.set_index("ccy").loc[ccy]
+    ccy = st.selectbox("Currency", list(tm_v["ccy"]))
+    if HIST_MODE:
+        st.caption(f"As of {asof_sel}. Warnings are live-only.")
+    row = tm_v.set_index("ccy").loc[ccy]
     c1, c2 = st.columns(2)
-    c1.metric(f"{ccy} fundamental ({hz})", f"{row[f'axis1_fundamental_{hz}']:+.2f}")
-    c2.metric(f"{ccy} stretch ({hz})", f"{row[f'axis2_stretch_{hz}']:+.2f}")
+    _f, _v = row.get(f"axis1_fundamental_{hz}"), row.get(f"axis2_stretch_{hz}")
+    c1.metric(f"{ccy} fundamental ({hz})",
+              f"{_f:+.2f}" if pd.notna(_f) else "n/a")
+    c2.metric(f"{ccy} stretch ({hz})",
+              f"{_v:+.2f}" if pd.notna(_v) else "n/a")
     st.write("**Pillars:**")
-    st.dataframe(pillars.set_index("ccy").loc[[ccy]], use_container_width=True)
+    _pt4 = pillars_v.set_index("ccy")
+    if ccy in _pt4.index:
+        st.dataframe(_pt4.loc[[ccy]], use_container_width=True)
     if ccy in warns:
         st.write("**Warnings:**")
         for n in warns[ccy]:
@@ -258,8 +321,11 @@ national debt offices for yield curves. Full mapping in `docs/DATA_SOURCES.md`.*
     )
 
 with t_pos:
-    if overlays is not None and "lev_z" in overlays.columns:
-        st.pyplot(positioning_fig(overlays), use_container_width=True)
+    if HIST_MODE:
+        st.caption(f"As of {asof_sel} — the last weekly CFTC report on or before "
+                   "that date, with its own 13-week path.")
+    if pos_v is not None and "lev_z" in getattr(pos_v, "columns", []):
+        st.pyplot(positioning_fig(pos_v), use_container_width=True)
         st.caption(
             "**Scope, honestly:** CFTC Traders-in-Financial-Futures, futures **and "
             "options combined** — the listed-derivatives slice (CME/ICE). It does not "
@@ -271,7 +337,7 @@ with t_pos:
             "Tuesday-dated, published Fridays (3-day lag).")
         _pcols = ["ccy", "pos_label", "lev_z", "lev_z_13w", "am_z", "am_z_13w",
                   "lev_pct_oi", "am_pct_oi", "pos_date"]
-        _pt = overlays[[c for c in _pcols if c in overlays.columns]].dropna(
+        _pt = pos_v[[c for c in _pcols if c in pos_v.columns]].dropna(
             subset=["lev_z"])
         st.dataframe(_pt, use_container_width=True, hide_index=True)
     else:

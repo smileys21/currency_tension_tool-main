@@ -13,12 +13,16 @@ import pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 
 from cte.adapters.base import CACHE_DIR                      # noqa: E402
-from cte.scoring.history import HISTORY_NAME, backfill      # noqa: E402
+from cte.scoring.history import (CARRY_HISTORY_NAME, HISTORY_NAME,   # noqa: E402
+                                 OVERLAY_HISTORY_NAME, PILLAR_HISTORY_NAME,
+                                 backfill)
 
 if __name__ == "__main__":
-    target = CACHE_DIR / f"{HISTORY_NAME}.parquet"
-    if "--if-missing" in sys.argv and target.exists():
-        print(f"history present ({target.name}) — skipping backfill; "
+    targets = [CACHE_DIR / f"{n}.parquet"
+               for n in (HISTORY_NAME, PILLAR_HISTORY_NAME, CARRY_HISTORY_NAME,
+                         OVERLAY_HISTORY_NAME)]
+    if "--if-missing" in sys.argv and all(t.exists() for t in targets):
+        print("history files present — skipping backfill; "
               "the engine appends daily.")
         sys.exit(0)
     h = backfill()

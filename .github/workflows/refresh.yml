@@ -56,6 +56,8 @@ jobs:
                      data/cache/commentary.md data/cache/commentary_meta.json \
                      data/cache/tension_map_prev.parquet \
                      data/cache/yields.parquet data/cache/snapshot_history.parquet \
+                     data/cache/pillar_history.parquet data/cache/carry_history.parquet \
+                     data/cache/pos_history.parquet data/cache/overlay_history.parquet \
                      2>/dev/null || true
           git commit -m "chore: daily snapshot refresh [skip ci]" || echo "no changes"
           git push || echo "nothing to push"

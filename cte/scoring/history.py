@@ -33,6 +33,9 @@ from cte.transform.features import build_features
 from cte.transform.zscore import dual_horizon_z
 
 HISTORY_NAME = "snapshot_history"
+PILLAR_HISTORY_NAME = "pillar_history"
+CARRY_HISTORY_NAME = "carry_history"
+OVERLAY_HISTORY_NAME = "overlay_history"
 _STALE_LIMIT = 12          # month-ends a feature may be carried forward as-of
 _AXIS_COLS = ["axis1_fundamental_struct", "axis2_stretch_struct",
               "axis1_fundamental_regime", "axis2_stretch_regime"]
@@ -74,6 +77,10 @@ def _overlay_history(z_grid: pd.DatetimeIndex,
         corr = corr[~corr.index.duplicated(keep="last")]
         r10[c] = np.tanh(2.0 * corr.reindex(z_grid).ffill(limit=2))
 
+    # keep the raw month-end corr too — the historical Overlays tab shows it
+    corr_me = {c: (np.arctanh(np.clip(v, -0.999999, 0.999999)) / 2.0)
+               for c, v in r10.items()}
+
     # infl_mult: growth composite minus real-policy restrictiveness, as-of
     g_feats = {"bcicp_slope": 1, "gdp_yoy": 1, "unemp_3m_chg": -1}
     out = {}
@@ -91,7 +98,21 @@ def _overlay_history(z_grid: pd.DatetimeIndex,
             imult = np.tanh(feas) if (pd.notna(growth) or pd.notna(rp)) else np.nan
             rmult = float(r10[c].loc[d]) if c in r10 and pd.notna(r10[c].loc[d]) \
                     else np.nan
-            rows.append({"ccy": c, "real10y_mult": rmult, "infl_mult": imult})
+            corr = float(corr_me[c].loc[d]) if c in corr_me and \
+                pd.notna(corr_me[c].loc[d]) else np.nan
+            label = (np.nan if pd.isna(corr) else
+                     "rewarded" if corr > 0.15 else
+                     "PUNISHED (stress)" if corr < -0.15 else "decoupled")
+            rows.append({"ccy": c, "yld_fx_corr": round(corr, 2) if pd.notna(corr)
+                         else np.nan, "yld_regime": label,
+                         "real10y_mult": round(rmult, 2) if pd.notna(rmult)
+                         else np.nan,
+                         "growth_z": round(growth, 2) if pd.notna(growth)
+                         else np.nan,
+                         "real_policy_z": round(rp, 2) if pd.notna(rp) else np.nan,
+                         "feasibility": round(feas, 2),
+                         "infl_mult": round(imult, 2) if pd.notna(imult)
+                         else np.nan})
         out[d] = pd.DataFrame(rows)
     return out
 
@@ -112,29 +133,45 @@ def _asof_frame(panels: dict, d: pd.Timestamp) -> pd.DataFrame:
 def backfill(persist: bool = True) -> pd.DataFrame:
     """Recompute the tension map as-of every month-end. Minutes, not hours; run
     once (the Action seeds it when the committed file is absent)."""
-    feats = build_features().rename(columns={"feature": "metric"})
+    raw_feats = build_features()
+    feats = raw_feats.rename(columns={"feature": "metric"})
     z = dual_horizon_z(feats)
     grid, panels = _monthly_panel(z)
     overlays = _overlay_history(grid, panels)
 
-    out = []
+    out, pill_out, carry_out, ovl_out = [], [], [], []
     for d in grid:
         asof = _asof_frame(panels, d)
         if asof.empty:
             continue
         snap = overlays[d]
-        row = {}
+        row, pill_acc = {}, {}
         for horizon, zcol in (("struct", "struct_z"), ("regime", "regime_z")):
             # early dates have no z on this horizon yet (window not filled) —
             # score() can't composite an empty frame, so skip the horizon
             if not asof[zcol].notna().any():
                 continue
-            _, axis = score(zcol, asof, snap)
+            pill, axis = score(zcol, asof, snap)
             for _, r in axis.iterrows():
                 row.setdefault(r["ccy"], {})[f"{r['axis']}_{horizon}"] = r["ascore"]
+            for _, r in pill.iterrows():
+                pill_acc.setdefault((r["ccy"], r["pillar"]), {})[horizon] = r["pscore"]
         for ccy, vals in row.items():
             if any(pd.notna(v) for v in vals.values()):
                 out.append({"date": d, "ccy": ccy, "kind": "month_end", **vals})
+        for (ccy, pillar), h in pill_acc.items():
+            pill_out.append({"date": d, "ccy": ccy, "pillar": pillar,
+                             "kind": "month_end",
+                             "struct": h.get("struct"), "regime": h.get("regime")})
+        ov = snap.copy()
+        ov["date"], ov["kind"] = d, "month_end"
+        ovl_out.append(ov)
+        cv = asof[asof.metric.isin(["real_2y", "nominal_2y"])]
+        for ccy, g in cv.groupby("ccy"):
+            vals2 = g.set_index("metric")["value"]
+            carry_out.append({"date": d, "ccy": ccy, "kind": "month_end",
+                              "real_2y": vals2.get("real_2y"),
+                              "nominal_2y": vals2.get("nominal_2y")})
 
     hist = pd.DataFrame(out)
     for c in _AXIS_COLS:
@@ -143,6 +180,26 @@ def backfill(persist: bool = True) -> pd.DataFrame:
     hist = hist[["date", "ccy", "kind"] + _AXIS_COLS].sort_values(["date", "ccy"])
     if persist:
         write_cache(hist.reset_index(drop=True), HISTORY_NAME)
+        def _frame(rows, cols, sort):
+            d = pd.DataFrame(rows, columns=None if rows else cols)
+            return d.sort_values(sort).reset_index(drop=True)
+        write_cache(_frame(pill_out,
+                           ["date", "ccy", "pillar", "kind", "struct", "regime"],
+                           ["date", "ccy", "pillar"]), PILLAR_HISTORY_NAME)
+        write_cache(_frame(carry_out,
+                           ["date", "ccy", "kind", "real_2y", "nominal_2y"],
+                           ["date", "ccy"]), CARRY_HISTORY_NAME)
+        from cte.flags.overlays import carry_to_vol_history
+        ovl = pd.concat(ovl_out, ignore_index=True)
+        ctv = carry_to_vol_history(raw_feats)
+        if len(ctv):
+            ctv = ctv.copy()
+            ctv["date"] = ctv["date"] + pd.offsets.MonthEnd(0)
+            ovl = ovl.merge(ctv, on=["date", "ccy"], how="left")
+        else:
+            ovl["carry_to_vol"], ovl["ctv_pctile"] = np.nan, np.nan
+        write_cache(ovl.sort_values(["date", "ccy"]).reset_index(drop=True),
+                    OVERLAY_HISTORY_NAME)
     return hist
 
 
@@ -165,6 +222,50 @@ def append_today(tm: pd.DataFrame, asof: pd.Timestamp | None = None) -> pd.DataF
     out = out.sort_values(["date", "ccy"]).reset_index(drop=True)
     write_cache(out, HISTORY_NAME)
     return out
+
+
+def _append_rows(name: str, add: pd.DataFrame, asof: pd.Timestamp,
+                 sort_cols: list[str]) -> None:
+    """Idempotent daily append shared by the pillar/carry histories."""
+    hist = read_cache(name)
+    if hist is None:
+        out = add
+    else:
+        keep = hist[~((hist.date == asof) & (hist.kind == "daily"))]
+        out = pd.concat([keep, add], ignore_index=True)
+    write_cache(out.sort_values(sort_cols).reset_index(drop=True), name)
+
+
+_OVL_COLS = ["ccy", "yld_fx_corr", "yld_regime", "real10y_mult", "growth_z",
+             "real_policy_z", "feasibility", "infl_mult", "carry_to_vol",
+             "ctv_pctile"]
+
+
+def append_today_details(pill_struct: pd.DataFrame, pill_regime: pd.DataFrame,
+                         lz: pd.DataFrame, snap: pd.DataFrame | None = None,
+                         asof: pd.Timestamp | None = None) -> None:
+    """Daily rows for the pillar, carry, and overlay histories (mirrors
+    append_today). snap = the live overlay_snapshot; its positioning columns are
+    excluded here (pos_history carries those at weekly grain)."""
+    asof = (asof or utcnow()).normalize()
+    pill = pill_struct.rename(columns={"pscore": "struct"})         .merge(pill_regime.rename(columns={"pscore": "regime"})[
+            ["ccy", "pillar", "regime"]], on=["ccy", "pillar"], how="outer")
+    pill = pill[["ccy", "pillar", "struct", "regime"]]
+    pill["date"], pill["kind"] = asof, "daily"
+    _append_rows(PILLAR_HISTORY_NAME, pill, asof, ["date", "ccy", "pillar"])
+
+    cv = lz[lz.metric.isin(["real_2y", "nominal_2y"])]         .pivot_table(index="ccy", columns="metric", values="value").reset_index()
+    for c in ("real_2y", "nominal_2y"):
+        if c not in cv.columns:
+            cv[c] = np.nan
+    cv = cv[["ccy", "real_2y", "nominal_2y"]]
+    cv["date"], cv["kind"] = asof, "daily"
+    _append_rows(CARRY_HISTORY_NAME, cv, asof, ["date", "ccy"])
+
+    if snap is not None:
+        ov = snap[[c for c in _OVL_COLS if c in snap.columns]].copy()
+        ov["date"], ov["kind"] = asof, "daily"
+        _append_rows(OVERLAY_HISTORY_NAME, ov, asof, ["date", "ccy"])
 
 
 def load_history() -> pd.DataFrame | None:

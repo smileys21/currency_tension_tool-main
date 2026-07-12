@@ -170,3 +170,93 @@ def test_positioning_snapshot_has_13w_tail_origin(tmp_cache):
     snap = positioning_snapshot().dropna(subset=["lev_z"])
     for col in ("lev_z_13w", "am_z_13w"):
         assert col in snap.columns and snap[col].notna().all()
+
+
+def test_backfill_persists_pillar_and_carry_histories(tmp_cache, monkeypatch):
+    import cte.adapters.base as base
+    H = _tiny_universe(tmp_cache, monkeypatch)
+    H.backfill()
+    ph = base.read_cache("pillar_history")
+    ch = base.read_cache("carry_history")
+    assert ph is not None and {"date", "ccy", "pillar", "struct",
+                               "regime"} <= set(ph.columns)
+    assert ch is not None and {"date", "ccy", "real_2y",
+                               "nominal_2y"} <= set(ch.columns)
+    # tiny universe has no real_2y/nominal_2y features -> carry history is an
+    # EMPTY frame with the right schema; pillar history must have real scores
+    late = ph[ph.date > "2024-01-01"]
+    assert late["regime"].notna().any()
+
+
+def test_append_today_details_idempotent(tmp_cache, monkeypatch):
+    import cte.adapters.base as base
+    from cte.scoring.history import append_today_details
+    pill_s = pd.DataFrame({"ccy": ["USD"], "pillar": ["A_growth"],
+                           "pscore": [0.5], "axis": ["axis1_fundamental"],
+                           "pw": [1.0]})
+    pill_r = pill_s.assign(pscore=0.2)
+    lz = pd.DataFrame({"ccy": ["USD", "USD"],
+                       "metric": ["real_2y", "nominal_2y"],
+                       "value": [1.1, 3.2]})
+    monkeypatch.setattr(base, "CACHE_DIR", tmp_cache)
+    append_today_details(pill_s, pill_r, lz)
+    append_today_details(pill_s, pill_r, lz)
+    ph = base.read_cache("pillar_history")
+    ch = base.read_cache("carry_history")
+    assert len(ph) == 1 and ph.struct.iloc[0] == 0.5 and ph.regime.iloc[0] == 0.2
+    assert len(ch) == 1 and ch.real_2y.iloc[0] == 1.1
+
+
+def test_positioning_asof_uses_only_data_through_date(tmp_cache):
+    """As-of must ignore reports after the dial date and produce its own 13w
+    origin from the pre-date panel."""
+    import cte.adapters.base as base
+    from cte.flags.positioning import (persist_history, positioning_asof,
+                                       positioning_snapshot)
+    hist = list(np.random.default_rng(5).normal(0, 3, 400))
+    _write_tff(tmp_cache, hist, hist)
+    persist_history()
+    ph = base.read_cache("pos_history")
+    cutoff = sorted(ph.date.unique())[-30]          # 30 reports back
+    snap = positioning_asof(pd.Timestamp(cutoff))
+    aud = snap[snap.ccy == "AUD"].iloc[0]
+    assert pd.Timestamp(aud.pos_date) <= pd.Timestamp(cutoff)
+    assert pd.notna(aud.lev_z_13w)
+    # and it differs from the live snapshot's read
+    live = positioning_snapshot()[lambda d: d.ccy == "AUD"].iloc[0]
+    assert pd.Timestamp(live.pos_date) > pd.Timestamp(aud.pos_date)
+
+
+def test_backfill_persists_overlay_history(tmp_cache, monkeypatch):
+    import cte.adapters.base as base
+    H = _tiny_universe(tmp_cache, monkeypatch)
+    H.backfill()
+    oh = base.read_cache("overlay_history")
+    assert oh is not None
+    need = {"date", "ccy", "kind", "yld_fx_corr", "yld_regime", "real10y_mult",
+            "growth_z", "real_policy_z", "feasibility", "infl_mult",
+            "carry_to_vol", "ctv_pctile"}
+    assert need <= set(oh.columns)
+    late = oh[oh.date > "2020-01-01"]
+    assert late["real10y_mult"].notna().any()
+    assert late["infl_mult"].notna().any()
+
+
+def test_ctv_history_expanding_percentile_semantics():
+    """A monotonically rising ratio must show a rising as-of percentile ending
+    near 100 — 'crowded vs everything seen so far', never vs the future."""
+    import cte.adapters.base as base
+    import tempfile, pathlib
+    base.CACHE_DIR = pathlib.Path(tempfile.mkdtemp())
+    idx = pd.date_range("2015-01-01", periods=2600, freq="B")
+    fx = pd.DataFrame({"date": idx, "ccy": "AUD",
+                       "value": 1 + np.linspace(0, .0001, len(idx))})
+    base.write_cache(fx, "fx_spot")
+    me = pd.date_range("2015-01-31", "2024-12-31", freq="ME")
+    feats = pd.DataFrame({"date": me, "ccy": "AUD", "feature": "real_2y",
+                          "value": np.linspace(0.1, 5.0, len(me))})
+    from cte.flags.overlays import carry_to_vol_history
+    h = carry_to_vol_history(feats)
+    a = h[h.ccy == "AUD"].dropna(subset=["ctv_pctile"])
+    assert len(a) and a.ctv_pctile.iloc[-1] == 100
+    assert a.ctv_pctile.iloc[-1] >= a.ctv_pctile.iloc[0]

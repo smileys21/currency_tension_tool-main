@@ -114,6 +114,38 @@ def carry_to_vol(window: int = _WIN) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
+def carry_to_vol_history(feats: pd.DataFrame | None = None) -> pd.DataFrame:
+    """Monthly carry-to-vol per ccy with the AS-OF percentile — the rank of each
+    month's ratio within its own history up to that month (the live number is this
+    same statistic evaluated at the final point). Feeds the historical Overlays."""
+    fx = _fx_wide()
+    if feats is None:
+        feats = build_features()
+    r2 = feats[feats.feature == "real_2y"]
+    out = []
+    for c in CURRENCIES:
+        if c not in fx:
+            continue
+        vol = (fx[c].pct_change().rolling(_WIN).std() * np.sqrt(252) * 100)
+        vol.index = vol.index + pd.offsets.MonthEnd(0)
+        vol = vol[~vol.index.duplicated(keep="last")]
+        carry = r2[r2.ccy == c].set_index("date")["value"]
+        j = pd.concat({"carry": carry, "vol": vol}, axis=1, sort=True).dropna()
+        ratio = (j["carry"] / j["vol"]).replace([np.inf, -np.inf], np.nan).dropna()
+        if len(ratio) < 24:
+            continue
+        vals = ratio.values
+        pct = [np.nan if i < 23 else
+               float((vals[:i + 1] <= vals[i]).mean() * 100)
+               for i in range(len(vals))]
+        out.append(pd.DataFrame({"date": ratio.index, "ccy": c,
+                                 "carry_to_vol": ratio.values.round(2),
+                                 "ctv_pctile": np.round(pct, 0)}))
+    if not out:
+        return pd.DataFrame(columns=["date", "ccy", "carry_to_vol", "ctv_pctile"])
+    return pd.concat(out, ignore_index=True)
+
+
 def warnings(snapshot: pd.DataFrame | None = None,
              lz: pd.DataFrame | None = None) -> dict[str, list[str]]:
     """Per-currency sidenotes that surface the balance when a conditional signal is

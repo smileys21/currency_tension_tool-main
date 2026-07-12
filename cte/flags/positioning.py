@@ -115,6 +115,42 @@ def positioning_snapshot() -> pd.DataFrame:
     return out.set_index("ccy").reindex(CURRENCIES).reset_index()
 
 
+POS_HISTORY_NAME = "pos_history"
+
+
+def persist_history() -> pd.DataFrame:
+    """Write the full weekly z panel to the committed cache — the app's Historical
+    mode reads this (it has no raw TFF cache on the public deploy)."""
+    from cte.adapters.base import write_cache
+    hist = positioning_history()
+    write_cache(hist, POS_HISTORY_NAME)
+    return hist
+
+
+def positioning_asof(asof: pd.Timestamp,
+                     hist: pd.DataFrame | None = None) -> pd.DataFrame:
+    """Snapshot as it stood at a past date: the last weekly report on/before asof,
+    with the 13-report-earlier origins, built from the committed pos_history."""
+    if hist is None:
+        hist = read_cache(POS_HISTORY_NAME)
+    if hist is None or hist.empty:
+        return pd.DataFrame({"ccy": list(CURRENCIES)})
+    h = hist[hist.date <= asof].sort_values("date")
+    if h.empty:
+        return pd.DataFrame({"ccy": list(CURRENCIES)})
+    last = h.groupby("ccy").tail(1).rename(columns={"date": "pos_date"})
+    g = h.groupby("ccy")
+    for col in ("lev_z", "am_z"):
+        prev = (g[col].apply(lambda s: s.iloc[-14] if len(s) >= 14 else np.nan)
+                .rename(f"{col}_13w"))
+        last = last.merge(prev, on="ccy", how="left")
+    last["pos_label"] = [_label(r.lev_z, r.am_z) for r in last.itertuples()]
+    cols = ["ccy", "lev_pct_oi", "am_pct_oi", "lev_z", "am_z",
+            "lev_z_13w", "am_z_13w", "lev_chg13w_z", "pos_label", "pos_date"]
+    out = last[[c for c in cols if c in last.columns]].round(2)
+    return out.set_index("ccy").reindex(CURRENCIES).reset_index()
+
+
 def positioning_warnings(snap: pd.DataFrame,
                          tm: pd.DataFrame | None = None) -> dict[str, list[str]]:
     """Crowding / divergence sidenotes, plus the three-way setup when the tension
