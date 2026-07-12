@@ -1,10 +1,9 @@
-**Regime: Strong dollar, risk-off overlay masking narrow fundamental signals across most pairs.**
+**Regime: Risk-premium mode—yield strength uncorrelated with FX; carry crowding on thin vol is the tail risk.**
 
-**Inflection points:**
-- **GBP short** — textbook carry unwind: +1.3 valuation on deteriorating fundamentals (-0.3), out-yields the field on a fragile base, policy tightening cycle exhausted (feasibility -1.0), and carry crowding at 94th percentile. Real yields aren't supporting the currency (risk-premium regime, mult -0.62); vol spike kills this trade.
-- **AUD short** — mirrors GBP: +1.9 valuation (stretched further since last snapshot, stretch +0.00 hold), soft fundamentals (-0.3), policy trap (growth weak, feasibility -0.8), 87th percentile carry crowding. Deterioration persistent.
-- **JPY long** — cheap (-0.69 valuation), fundamentals improving (+0.32), mean-reversion setup. Confounded by strong USD tape but yield stress (real 10Y high, -0.33 correlation to JPY) downgrades real-yield support signal; treat as secondary to USD momentum, not primary.
+**AUD & GBP at extremes—both expensive, deteriorating, carry-crowded (87th & 94th %ile).**
+Valuation doing nearly all work (+1.9 & +1.3); fundamentals softening; policy tightening exhausted. Real yields high but currencies weaken as yields rise (negative correlation = risk premium, not reward). vol spike unwinds both.
 
-**Carry standout:** GBP/JPY — short the stretched carry pair into thin vol, unwind risk acute given 94th/84th centile crowding contrast.
+**JPY & NZD cheap and improving—mean-reversion setups.**
+JPY: valuation -0.7, fundamentals +0.3, but real-yield support muted (-0.58 mult) in risk-premium regime. NZD: valuation -0.5, fundamentals +0.3; less crowded. Both vulnerable to USD strength if growth narrative firms.
 
-**Since last:** AUD stretch unchanged despite -0.25 fund deterioration; carry base increasingly fragile.
+**GBP/AUD carry pair is the crowding flashpoint.** Real yields are fat but sit on stretched valuation + fragile fundamental base. Any vol spike or carry unwind hits both hard; 94th percentile crowding on AUD is the tighter warning.
