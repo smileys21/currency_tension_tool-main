@@ -98,12 +98,20 @@ def positioning_snapshot() -> pd.DataFrame:
         return pd.DataFrame({"ccy": list(CURRENCIES)})
     last = (hist.sort_values("date").groupby("ccy").tail(1)
             .rename(columns={"date": "pos_date"}))
+    # z-positions 13 weekly reports before the latest — one quarter, matching the
+    # ~3-month (_WIN=63 trading-day) window used by the other overlays
+    g = hist.sort_values("date").groupby("ccy")
+    for col in ("lev_z", "am_z"):
+        prev = (g[col].apply(lambda s: s.iloc[-14] if len(s) >= 14 else np.nan)
+                .rename(f"{col}_13w"))
+        last = last.merge(prev, on="ccy", how="left")
     last["pos_label"] = [
         _label(r.lev_z, r.am_z) for r in last.itertuples()]
     cols = ["ccy", "lev_pct_oi", "am_pct_oi", "lev_z", "am_z",
-            "lev_chg13w_z", "pos_label", "pos_date"]
+            "lev_z_13w", "am_z_13w", "lev_chg13w_z", "pos_label", "pos_date"]
     out = last[cols].round({"lev_pct_oi": 1, "am_pct_oi": 1, "lev_z": 2,
-                            "am_z": 2, "lev_chg13w_z": 2})
+                            "am_z": 2, "lev_z_13w": 2, "am_z_13w": 2,
+                            "lev_chg13w_z": 2})
     return out.set_index("ccy").reindex(CURRENCIES).reset_index()
 
 

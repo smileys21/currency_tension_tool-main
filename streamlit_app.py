@@ -60,13 +60,8 @@ with st.sidebar:
                              "positions — which way it's moving, and how fast.")
     asof_sel = "Live"
     if _hist is not None and len(_hist):
-        # only offer month-ends where the CHOSEN horizon actually plots — i.e. at
-        # least half the universe has both axis scores (struct z's don't exist
-        # until the 10y window fills, so the struct dial starts later than regime)
-        _ac = [f"axis1_fundamental_{hz}", f"axis2_stretch_{hz}"]
-        _v = _hist.dropna(subset=[c for c in _ac if c in _hist.columns])
-        _cnt = _v.groupby(_v.date + pd.offsets.MonthEnd(0))["ccy"].nunique()
-        _avail = sorted(_cnt[_cnt >= 4].index)
+        from cte.scoring.history import dial_options
+        _avail = dial_options(_hist, hz)
         if _avail:
             _mode = st.radio("View", ["Live", "Historical"], horizontal=True,
                              help="Historical redraws the map as it stood at a past "
@@ -78,7 +73,7 @@ with st.sidebar:
                 _mopts = [d for d in _avail if d.year == _yr]
                 _mo = st.selectbox(
                     "Month", _mopts, index=len(_mopts) - 1,
-                    format_func=lambda d: d.strftime("%B %Y"))
+                    format_func=lambda d: d.strftime("%B"))
                 asof_sel = _mo.strftime("%Y-%m-%d")
                 st.caption(f"Dial range: {_avail[0].strftime('%b %Y')} — "
                            f"{_avail[-1].strftime('%b %Y')} on this horizon.")
@@ -274,7 +269,7 @@ with t_pos:
             "composites. Net positions are % of open interest, z-scored against each "
             "currency's own 10-year history; USD row = ICE Dollar Index. Weekly data, "
             "Tuesday-dated, published Fridays (3-day lag).")
-        _pcols = ["ccy", "pos_label", "lev_z", "am_z", "lev_chg13w_z",
+        _pcols = ["ccy", "pos_label", "lev_z", "lev_z_13w", "am_z", "am_z_13w",
                   "lev_pct_oi", "am_pct_oi", "pos_date"]
         _pt = overlays[[c for c in _pcols if c in overlays.columns]].dropna(
             subset=["lev_z"])

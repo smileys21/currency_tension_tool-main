@@ -139,3 +139,34 @@ def test_trails_fig_renders_and_asof_filters_future(tmp_cache, monkeypatch):
     assert (h[h.date < pd.Timestamp("2020-03-31")].date.max()
             < pd.Timestamp("2020-03-31"))
     assert fig2 is not None
+
+
+def test_dial_options_exclude_phantom_current_month(tmp_cache, monkeypatch):
+    """Daily appends snap to a FUTURE month-end; the dial must never offer that
+    phantom month — month_end rows only (the regression behind the 'as of
+    2026-07-31' default view)."""
+    from cte.scoring.history import dial_options
+    m = pd.date_range("2016-01-31", "2026-06-30", freq="ME")
+    rows = []
+    for c in ["USD", "EUR", "JPY", "GBP", "CHF", "CAD", "AUD", "NZD"]:
+        for d in m:
+            rows.append({"date": d, "ccy": c, "kind": "month_end",
+                         "axis1_fundamental_struct": 0.1,
+                         "axis2_stretch_struct": 0.2})
+        rows.append({"date": pd.Timestamp("2026-07-11"), "ccy": c,
+                     "kind": "daily", "axis1_fundamental_struct": 0.1,
+                     "axis2_stretch_struct": 0.2})
+    hist = pd.DataFrame(rows)
+    opts = dial_options(hist, "struct")
+    assert opts[-1] == pd.Timestamp("2026-06-30"), \
+        f"phantom month offered: {opts[-1]}"
+    assert all(o <= pd.Timestamp("2026-06-30") for o in opts)
+
+
+def test_positioning_snapshot_has_13w_tail_origin(tmp_cache):
+    from cte.flags.positioning import positioning_snapshot
+    hist = list(np.random.default_rng(2).normal(0, 3, 200))
+    _write_tff(tmp_cache, hist, hist)
+    snap = positioning_snapshot().dropna(subset=["lev_z"])
+    for col in ("lev_z_13w", "am_z_13w"):
+        assert col in snap.columns and snap[col].notna().all()

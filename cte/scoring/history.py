@@ -171,6 +171,24 @@ def load_history() -> pd.DataFrame | None:
     return read_cache(HISTORY_NAME)
 
 
+def dial_options(hist: pd.DataFrame, horizon: str,
+                 min_ccys: int = 4) -> list[pd.Timestamp]:
+    """Month-ends the time dial may offer for a horizon: completed month-end rows
+    only (kind == 'month_end'; daily appends are the LIVE terminal point, never a
+    historical option — otherwise the current partial month appears as a phantom
+    future-dated month-end), where at least min_ccys currencies have both axis
+    scores (struct z's start ~8y after regime z's)."""
+    if hist is None or not len(hist):
+        return []
+    h = hist[hist.kind == "month_end"] if "kind" in hist.columns else hist
+    cols = [f"axis1_fundamental_{horizon}", f"axis2_stretch_{horizon}"]
+    v = h.dropna(subset=[c for c in cols if c in h.columns])
+    if v.empty:
+        return []
+    cnt = v.groupby(v.date + pd.offsets.MonthEnd(0))["ccy"].nunique()
+    return sorted(cnt[cnt >= min_ccys].index)
+
+
 if __name__ == "__main__":
     h = backfill()
     print(f"backfilled {h.date.nunique()} month-ends x "

@@ -60,6 +60,8 @@ def tension_map_fig(tm, horizon="struct", flagged=None, history=None,
     trails = {}
     if history is not None and trail_months and len(history):
         h = history.dropna(subset=[xcol, ycol]).copy()
+        if "kind" in h.columns:          # daily appends are the live dot, not a vertex
+            h = h[h.kind == "month_end"]
         if asof_label:
             h = h[h.date < pd.Timestamp(asof_label)]
         me = (h.assign(me=h.date + pd.offsets.MonthEnd(0))
@@ -237,10 +239,13 @@ def pillar_heatmap_fig(pillars, tm=None, horizon="struct"):
 
 
 def positioning_fig(pos):
-    """Speculative-positioning dumbbell: per currency, leveraged-fund (fast money)
-    vs asset-manager (real money) net-%OI z-scores, sorted by lev z. Triangle shows
-    the direction of the 13-week swing in the lev position. Bands mark the crowded
+    """Speculative-positioning chart: per currency, two stacked rows — leveraged
+    funds (blue, fast money) above, asset managers (teal, real money) below. Each
+    shows the current net-%OI z (solid dot) and its path over the last 13 weekly
+    reports (hollow circle = where it was, tail = the move). Bands mark the crowded
     threshold. Scope: CFTC TFF futures+options combined — the listed slice only."""
+    from matplotlib.lines import Line2D
+    from matplotlib.patches import Patch
     from cte.config import POS_CROWDED_Z
     d = pos.dropna(subset=["lev_z"]).sort_values("lev_z").reset_index(drop=True)
     if d.empty:
@@ -252,38 +257,63 @@ def positioning_fig(pos):
         return fig
     _TEAL = "#4fae8b"
     n = len(d)
-    fig, ax = plt.subplots(figsize=(8.6, 0.62 * n + 2.2), facecolor=_BG)
+    OFF = 0.14                       # sub-row offset within each currency band
+    fig, ax = plt.subplots(figsize=(8.8, 0.72 * n + 2.6), facecolor=_BG)
     _style(ax)
-    lim = max(2.2, float(np.nanmax(np.abs(d[["lev_z", "am_z"]].values))) * 1.15)
+    zcols = d[["lev_z", "am_z", "lev_z_13w", "am_z_13w"]]         if "am_z_13w" in d.columns else d[["lev_z", "am_z"]]
+    lim = max(2.2, float(np.nanmax(np.abs(zcols.values))) * 1.12)
     ax.axvspan(POS_CROWDED_Z, lim, color=_WARN, alpha=0.10, zorder=0)
     ax.axvspan(-lim, -POS_CROWDED_Z, color=_WARN, alpha=0.10, zorder=0)
     ax.axvline(0, color=_GRID, lw=1.2)
     for v in (POS_CROWDED_Z, -POS_CROWDED_Z):
         ax.axvline(v, color=_WARN, lw=0.8, alpha=0.5, ls=":")
-    for i, r in d.iterrows():
-        if pd.notna(r.am_z):
-            ax.plot([r.am_z, r.lev_z], [i, i], color=_MUTE, lw=1.6,
-                    alpha=0.75, zorder=2)
-            ax.scatter(r.am_z, i, s=120, color=_TEAL, zorder=3,
-                       edgecolors=_BG, linewidths=1.2)
-        ax.scatter(r.lev_z, i, s=170, color=_BLUE, zorder=4,
+
+    def _cohort(y, now, was, color, pct):
+        if pd.isna(now):
+            return
+        if pd.notna(was) and abs(now - was) > 0.05:
+            ax.annotate("", xy=(now, y), xytext=(was, y),
+                        arrowprops=dict(arrowstyle="-|>", color=color, alpha=0.45,
+                                        lw=2.0, shrinkA=2, shrinkB=8,
+                                        mutation_scale=12), zorder=3)
+            ax.scatter(was, y, s=40, facecolors="none", edgecolors=color,
+                       linewidths=1.1, alpha=0.55, zorder=3)
+        ax.scatter(now, y, s=150, color=color, zorder=4,
                    edgecolors=_BG, linewidths=1.2)
-        if pd.notna(r.lev_chg13w_z) and abs(r.lev_chg13w_z) > 0.25:
-            ax.scatter(r.lev_z, i + 0.28, s=55, zorder=5, color=_FG, alpha=0.85,
-                       marker="^" if r.lev_chg13w_z > 0 else "v")
-        crowded = abs(r.lev_z) >= POS_CROWDED_Z
-        ax.text(lim * 1.03, i, f"{r.lev_pct_oi:+.0f}% OI",
-                color=_WARN if crowded else _MUTE, fontsize=8.5, va="center")
-    ax.set_yticks(range(n)); ax.set_yticklabels(d.ccy, fontsize=10.5)
-    ax.set_xlim(-lim, lim * 1.22)
-    ax.set_ylim(-0.7, n - 0.3)
+        if pd.notna(pct):
+            ax.text(lim * 1.03, y, f"{pct:+.0f}%", color=color, alpha=0.85,
+                    fontsize=8.2, va="center")
+
+    for i, r in d.iterrows():
+        if i:                        # soft dotted separator between currency bands
+            ax.axhline(i - 0.5, color=_MUTE, lw=0.8, ls=(0, (1, 3)), alpha=0.5,
+                       zorder=1)
+        _cohort(i + OFF, r.lev_z, getattr(r, "lev_z_13w", np.nan), _BLUE,
+                r.lev_pct_oi)
+        _cohort(i - OFF, r.am_z, getattr(r, "am_z_13w", np.nan), _TEAL,
+                r.am_pct_oi)
+
+    ax.set_yticks(range(n)); ax.set_yticklabels(d.ccy, fontsize=11)
+    ax.set_xlim(-lim, lim * 1.24)
+    ax.set_ylim(-0.6, n - 0.4)
     ax.set_xlabel("Net position, % of open interest — z vs own 10y history "
                   "(long the currency →)", fontsize=9.5, labelpad=8)
     ax.set_title("Speculative Positioning   ·   CFTC TFF, futures + options",
-                 fontsize=13, pad=14, fontweight="bold")
-    fig.text(0.5, 0.005,
-             "Blue = leveraged funds (fast money)   ·   teal = asset managers "
-             "(real money)   ·   ▲▼ = 13-week swing   ·   shaded = crowded",
-             color=_MUTE, fontsize=8.5, ha="center", va="bottom")
-    fig.tight_layout(rect=[0, 0.03, 1, 1])
+                 fontsize=13, pad=12, fontweight="bold")
+    handles = [
+        Line2D([], [], marker="o", ls="", color=_BLUE, markersize=9,
+               label="Leveraged funds (fast money)"),
+        Line2D([], [], marker="o", ls="", color=_TEAL, markersize=9,
+               label="Asset managers (real money)"),
+        Line2D([], [], marker="o", ls="-", color=_MUTE, markersize=7,
+               markerfacecolor="none", label="13 weeks ago → now"),
+        Patch(facecolor=_WARN, alpha=0.18,
+              label=f"Crowded (|z| ≥ {POS_CROWDED_Z:g})"),
+    ]
+    leg = ax.legend(handles=handles, loc="upper center", ncol=2, frameon=False,
+                    bbox_to_anchor=(0.5, -0.085), fontsize=8.8,
+                    handletextpad=0.6, columnspacing=1.6)
+    for t in leg.get_texts():
+        t.set_color(_FG)
+    fig.tight_layout(rect=[0, 0.045, 1, 1])
     return fig
