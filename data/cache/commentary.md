@@ -1,7 +1,11 @@
-**Regime: Strong dollar tape atop risk-premium compression; carry trades crowding into quiet vol.**
+**Regime: Risk-premium dominance; yield-FX decoupling persists; carry crowding at extremes.**
 
-- **GBP & AUD: dual carry unwind risk.** Both sit in the 87–94th percentile of carry crowding on richly stretched valuations (+1.3–1.9) with deteriorating fundamentals. Policy tailwinds (inflation support) are fading into soft growth; real yields punishing equities not rewarding them (yield stress multiplier −0.62 to −0.63). A vol spike liquidates these positions fast.
-- **JPY: mean-reversion long, but carry-crowding mirror.** Valuation −0.7 and fundamentals +0.4 frame a cheap, improving setup; carry is also crowded (88th percentile). Risk-premium regime dominates—higher yields drive *weaker* JPY, not stronger. Upside capped until vol normalizes.
-- **CAD & EUR: one-legged reads; anchor on valuation.** CAD cheap (−1.6 valuation), pillars neutral—narrow support; EUR rich (+1.4) on the same narrowness. Both yield-FX decoupled; treat real-rate support lightly this window.
+**Inflections:**
+- **GBP short**: Deteriorating fundamentals (-0.27) on stretched valuation (+1.27); policy trap deepening (growth soft, hike room gone); carry unwind setup at 94th percentile crowding. Real yields high but currency weakens into them—classic risk-premium regime, not reward.
+- **AUD short**: Mirror GBP—expensive (+1.91), softening (-0.30), policy-trapped. Carry crowded (87th). Valuation is doing all the work; carry reversal is the tail risk.
+- **JPY long**: Cheap (-0.69), fundamentals improving (+0.35), mean-reversion setup. But carry crowded (88th) and yield stress high (z +1.8)—will move on risk-off, not rate differentials. Real-yield support heavily discounted (mult -0.54). Fragile to vol spike.
 
-**Standout carry: NZD.** Cheap (−0.46), improving (+0.28 fundamental), and yield-rewarded (+0.38 real 10Y). Lower crowding (72nd percentile) offers more room than AUD/GBP; policy headwinds less acute.
+**Carry:**
+- **NZD/JPY**: NZD rewarded (yld_regime), cheap valuation, improving fundamentals; JPY the opposite but crowded short. Carry-unwind asymmetry favors long.
+
+**Since prior:** No prior snapshot provided.
