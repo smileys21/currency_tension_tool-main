@@ -340,3 +340,19 @@ def test_dial_options_empty_when_horizon_columns_absent():
                          "axis2_stretch_struct": 0.2})
     assert dial_options(hist, "secular", min_ccys=2) == []
     assert len(dial_options(hist, "struct", min_ccys=2)) == 24
+
+
+def test_map_title_matches_every_horizon():
+    """The pre-secular binary label fell through to 'Regime · ~2y' for any
+    non-struct horizon — titles must match the horizon rendered."""
+    import matplotlib
+    matplotlib.use("Agg")
+    from cte.dashboard.plots import tension_map_fig
+    tm = pd.DataFrame({"ccy": ["USD"],
+                       **{f"{a}_{h}": [0.1]
+                          for h in ("struct", "regime", "secular")
+                          for a in ("axis1_fundamental", "axis2_stretch")}})
+    for hz, want in (("struct", "~10y"), ("regime", "~2y"), ("secular", "~15y")):
+        fig = tension_map_fig(tm, hz, None)
+        assert want in fig.axes[0].get_title(), \
+            f"{hz} title shows: {fig.axes[0].get_title()}"

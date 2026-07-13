@@ -125,7 +125,9 @@ def tension_map_fig(tm, horizon="struct", flagged=None, history=None,
                 fontweight="bold", ha="center", va="center", zorder=5,
                 path_effects=[pe.withStroke(linewidth=1.4, foreground=_BLUE)])
 
-    hlabel = "Structural · ~10y" if horizon == "struct" else "Regime · ~2y"
+    _HZ_LABEL = {"struct": "Structural · ~10y", "regime": "Regime · ~2y",
+                 "secular": "Secular · ~15y"}
+    hlabel = _HZ_LABEL.get(horizon, horizon)
     ax.set_xlabel("←  Deteriorating        Fundamental trajectory        Improving  →",
                   fontsize=9.5, labelpad=8)
     ax.set_ylabel("←  Cheap        Valuation & policy stretch        Maxed-out  →",
