@@ -289,7 +289,9 @@ def dial_options(hist: pd.DataFrame, horizon: str,
         return []
     h = hist[hist.kind == "month_end"] if "kind" in hist.columns else hist
     cols = [f"axis1_fundamental_{horizon}", f"axis2_stretch_{horizon}"]
-    v = h.dropna(subset=[c for c in cols if c in h.columns])
+    if not all(c in h.columns for c in cols):
+        return []                     # horizon predates this history file's schema
+    v = h.dropna(subset=cols)
     if v.empty:
         return []
     cnt = v.groupby(v.date + pd.offsets.MonthEnd(0))["ccy"].nunique()

@@ -326,3 +326,17 @@ def test_secular_horizon_through_the_stack(tmp_cache, monkeypatch):
                                      "metric": "x", "value": np.arange(100.0)}))
     assert "secular_z" in z.columns
     assert z["secular_z"].notna().sum() < z["regime_z"].notna().sum()
+
+
+def test_dial_options_empty_when_horizon_columns_absent():
+    """A history file written under an older schema must offer no dates for a
+    newer horizon — never every date (the pre-v13 bug: an empty dropna subset)."""
+    from cte.scoring.history import dial_options
+    m = pd.date_range("2020-01-31", periods=24, freq="ME")
+    hist = pd.DataFrame({"date": list(m) * 2,
+                         "ccy": ["USD"] * 24 + ["EUR"] * 24,
+                         "kind": "month_end",
+                         "axis1_fundamental_struct": 0.1,
+                         "axis2_stretch_struct": 0.2})
+    assert dial_options(hist, "secular", min_ccys=2) == []
+    assert len(dial_options(hist, "struct", min_ccys=2)) == 24

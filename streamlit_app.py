@@ -50,8 +50,8 @@ st.caption("Two axes: **fundamental trajectory** (deteriorating ↔ improving) �
 with st.sidebar:
     st.header("Controls")
     horizon = st.radio("Horizon",
-                       ["Structural (~10y)", "Regime (~2y)", "Secular (~15y)"],
-                       index=0,
+                       ["Regime (~2y)", "Structural (~10y)", "Secular (~15y)"],
+                       index=1,
                        help="Secular scores each input against ~15 years of its "
                             "own history — a full generation of cycles. Rate "
                             "pillars have shorter source series (EUR yields 2004, "
@@ -119,6 +119,15 @@ with st.sidebar:
                "See docs/DATA_SOURCES.md.")
 
 tm, pillars, overlays, warns = _load()
+
+# schema guard: if the committed snapshot predates the selected horizon (e.g. the
+# Secular columns before the reseeding workflow run), degrade to Structural with a
+# notice instead of crashing — code schema may briefly run ahead of committed data
+if f"axis1_fundamental_{hz}" not in tm.columns:
+    st.warning(f"The committed snapshot doesn't include **{horizon}** scores yet — "
+               "run the daily workflow once (it reseeds the histories and the "
+               "snapshot under the new schema), then reload. Showing Structural.")
+    hz, horizon = "struct", "Structural (~10y)"
 if tm is None:
     st.warning("No snapshot in cache. Run `python -m scripts.backfill` then "
                "`python -m cte.scoring.engine`, or click Rebuild.")
