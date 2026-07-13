@@ -1,9 +1,7 @@
-**Regime: Risk-premium mode—yield strength uncorrelated with FX; carry crowding on thin vol is the tail risk.**
+**Regime: Risk-premium mode; USD firm but yield-FX decoupled; carry crowding at extremes.**
 
-**AUD & GBP at extremes—both expensive, deteriorating, carry-crowded (87th & 94th %ile).**
-Valuation doing nearly all work (+1.9 & +1.3); fundamentals softening; policy tightening exhausted. Real yields high but currencies weaken as yields rise (negative correlation = risk premium, not reward). vol spike unwinds both.
+- **GBP & AUD sinking under same trap:** Rich valuations (+1.3, +1.9) propped by carry alone; fundamentals deteriorating; policy tightening credibility collapsed (feasibility -1.0, -0.8); real yields rising but currency weakening (risk-premium, not reward). Both carry crowded (94th, 87th percentiles). Unwind exposure if vol spikes.
+- **JPY & NZD the mean-reversion pair:** Cheap valuations, improving fundies (JPY +1.1 structural, NZD +0.3); JPY surged +0.74 fundamental since last snapshot—the big move. Both have policy headwinds (hike feasibility deeply negative) but valuation and real external balances anchor upside.
+- **CAD & EUR both one-legged:** CAD cheap (-1.6 val) but rest neutral—narrow thesis. EUR valuation propping it (+1.4) while all other pillars flatlining; FX-yield decoupling kills real-yield read.
 
-**JPY & NZD cheap and improving—mean-reversion setups.**
-JPY: valuation -0.7, fundamentals +0.3, but real-yield support muted (-0.58 mult) in risk-premium regime. NZD: valuation -0.5, fundamentals +0.3; less crowded. Both vulnerable to USD strength if growth narrative firms.
-
-**GBP/AUD carry pair is the crowding flashpoint.** Real yields are fat but sit on stretched valuation + fragile fundamental base. Any vol spike or carry unwind hits both hard; 94th percentile crowding on AUD is the tighter warning.
+- **JPY carry strongest risk-adjusted:** Negative carry but deep discount + structural improvement + real external surplus (1.72) = non-crowded long.
