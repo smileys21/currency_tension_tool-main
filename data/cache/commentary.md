@@ -1,7 +1,7 @@
-**Regime: Risk-premium mode; carry crowding at extremes across AUD, GBP, JPY; USD firm on fiscal/policy, not yield reward.**
+**Risk-premium regime: carry crowding at breaking points amid soft growth and policy constraint.**
 
-- **GBP & AUD are the carry-unwind candidates.** Both sit on +1.3/+1.9 valuation stretch atop deteriorating fundamentals (growth -0.3/−0.5) and policy fatigue (feasibility −1.0/−0.8). Carry percentiles 94th/87th—fragile to vol spike. Real-yield multipliers downweighted (−0.62/−0.63); yields rise but FX weakens; this is risk-off, not support.
+- **GBP short**: Valuation +1.3 on deteriorating fundamentals (-0.3); real-yield stress (yield-FX corr -0.36) strips support; carry at 94th percentile crowding—fragile on soft growth and policy already tight (feasibility -1.0).
+- **AUD short**: Stretched valuation (+1.9) doing all the work; fundamentals rolling over (-0.3); carry at 87th percentile; real 10Y stress (corr -0.37) negates yield reward; stagflation trap tightening (inflation drag mult -0.69).
+- **JPY long**: Cheap (-0.69), improving fundamentals (+0.35), external pillar strong (+1.72); carry crowded (88th percentile) but mean-reversion signal clear; real-yield stress read (mult -0.54) reflects risk-premium regime not reward—JPY upside gated by USD strength.
 
-- **JPY cheap and mean-reverting, but carry crowded at 88th percentile.** Fundamentals improving (+0.35), valuation deep (−0.7), yet yield stress multiplier (−0.54) and negative yield correlation (−0.30) mean real-rate moves don't carry the currency. Quiet vol holding carry; fragile.
-
-- **NZD the standout carry pair:** rewarded yield regime (+0.38 real 10Y), improving fundamentals (+0.28), valuation cheap (−0.46), carry only 72nd percentile—least crowded of the yielders.
+**NZD carry**: Long at cheap valuation (-0.46), improving macro (+0.28), real-yield rewarded (+0.38), uncrowded (72nd percentile)—cleanest carry risk-reward vs AUD/GBP.
