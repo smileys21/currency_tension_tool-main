@@ -1,9 +1,11 @@
-**Regime: Risk-premium tape; carry fragility rising.**
+**Regime: Risk-premium dominance; yield-FX decoupling persists; carry crowding at extremes.**
 
-• **GBP & AUD** at the cliff edge — both expensive (+1.3–1.9 stretch) on deteriorating fundamentals, propped by carry (94th and 87th percentile crowding) that sits atop yield-stress regime (real 10Y rises, currency weakens). Policy tightening is exhausted; stagflation drag emerging. Vol spike unwinds both.
+**Inflections:**
+- **GBP short**: Deteriorating fundamentals (-0.27) on stretched valuation (+1.27); policy trap deepening (growth soft, hike room gone); carry unwind setup at 94th percentile crowding. Real yields high but currency weakens into them—classic risk-premium regime, not reward.
+- **AUD short**: Mirror GBP—expensive (+1.91), softening (-0.30), policy-trapped. Carry crowded (87th). Valuation is doing all the work; carry reversal is the tail risk.
+- **JPY long**: Cheap (-0.69), fundamentals improving (+0.35), mean-reversion setup. But carry crowded (88th) and yield stress high (z +1.8)—will move on risk-off, not rate differentials. Real-yield support heavily discounted (mult -0.54). Fragile to vol spike.
 
-• **JPY** the mean-reversion long — valuation -0.69 (cheap), fundamentals +0.35 (improving). Carry crowded (88th pctile) but corr to yields is risk-premium negative (-0.30), so real-yield support downweighted. JPY fund improved sharply (-0.71) since prior; watch for vol as unwind trigger.
+**Carry:**
+- **NZD/JPY**: NZD rewarded (yld_regime), cheap valuation, improving fundamentals; JPY the opposite but crowded short. Carry-unwind asymmetry favors long.
 
-• **NZD carry pair** — rewarded yield regime (+0.38 real 10Y mult), cheap valuation (-0.46), improving fundamentals (+0.28). Policy trap exists (inflation/tight/soft growth) but less crowded (72nd pctile) than GBP/AUD; sits alone as the clean long-carry trade.
-
-**Prior move:** JPY fundamentals rallied 0.71; no change in stretch — technical setup sharpens.
+**Since prior:** No prior snapshot provided.
