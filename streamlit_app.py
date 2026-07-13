@@ -26,8 +26,11 @@ def _grid(name):
     return g.set_index(g.columns[0]) if g is not None else None
 
 
-@st.cache_data(show_spinner=False)
+@st.cache_data(show_spinner=False, ttl=600)
 def _load():
+    """ttl: the daily Action pushes data-only commits that can rerun this script
+    inside the SAME container without clearing st.cache_data — a 10-minute ttl
+    means fresh snapshots surface on their own instead of demanding a reboot."""
     tm = read_cache("tension_map")
     pillars = read_cache("pillar_scores")
     overlays = read_cache("overlays")
