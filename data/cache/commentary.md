@@ -1,7 +1,9 @@
-**Regime: Risk-premium mode; USD firm but yield-FX decoupled; carry crowding at extremes.**
+**Regime: Risk-premium tape; carry fragility rising.**
 
-- **GBP & AUD sinking under same trap:** Rich valuations (+1.3, +1.9) propped by carry alone; fundamentals deteriorating; policy tightening credibility collapsed (feasibility -1.0, -0.8); real yields rising but currency weakening (risk-premium, not reward). Both carry crowded (94th, 87th percentiles). Unwind exposure if vol spikes.
-- **JPY & NZD the mean-reversion pair:** Cheap valuations, improving fundies (JPY +1.1 structural, NZD +0.3); JPY surged +0.74 fundamental since last snapshot—the big move. Both have policy headwinds (hike feasibility deeply negative) but valuation and real external balances anchor upside.
-- **CAD & EUR both one-legged:** CAD cheap (-1.6 val) but rest neutral—narrow thesis. EUR valuation propping it (+1.4) while all other pillars flatlining; FX-yield decoupling kills real-yield read.
+• **GBP & AUD** at the cliff edge — both expensive (+1.3–1.9 stretch) on deteriorating fundamentals, propped by carry (94th and 87th percentile crowding) that sits atop yield-stress regime (real 10Y rises, currency weakens). Policy tightening is exhausted; stagflation drag emerging. Vol spike unwinds both.
 
-- **JPY carry strongest risk-adjusted:** Negative carry but deep discount + structural improvement + real external surplus (1.72) = non-crowded long.
+• **JPY** the mean-reversion long — valuation -0.69 (cheap), fundamentals +0.35 (improving). Carry crowded (88th pctile) but corr to yields is risk-premium negative (-0.30), so real-yield support downweighted. JPY fund improved sharply (-0.71) since prior; watch for vol as unwind trigger.
+
+• **NZD carry pair** — rewarded yield regime (+0.38 real 10Y mult), cheap valuation (-0.46), improving fundamentals (+0.28). Policy trap exists (inflation/tight/soft growth) but less crowded (72nd pctile) than GBP/AUD; sits alone as the clean long-carry trade.
+
+**Prior move:** JPY fundamentals rallied 0.71; no change in stretch — technical setup sharpens.
