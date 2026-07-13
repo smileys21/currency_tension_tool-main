@@ -37,8 +37,10 @@ PILLAR_HISTORY_NAME = "pillar_history"
 CARRY_HISTORY_NAME = "carry_history"
 OVERLAY_HISTORY_NAME = "overlay_history"
 _STALE_LIMIT = 12          # month-ends a feature may be carried forward as-of
-_AXIS_COLS = ["axis1_fundamental_struct", "axis2_stretch_struct",
-              "axis1_fundamental_regime", "axis2_stretch_regime"]
+from cte.transform.zscore import HORIZONS
+
+_AXIS_COLS = [f"{a}_{h}" for h, _, _ in HORIZONS
+              for a in ("axis1_fundamental", "axis2_stretch")]
 
 
 # ------------------------------------------------------------------ as-of panels
@@ -54,7 +56,8 @@ def _monthly_panel(z: pd.DataFrame) -> tuple[pd.DatetimeIndex, dict]:
         g = g[~g.index.duplicated(keep="last")]
         g.index = g.index + pd.offsets.MonthEnd(0)
         g = g[~g.index.duplicated(keep="last")]
-        panels[(ccy, metric)] = (g[["value", "struct_z", "regime_z"]]
+        zc = [z for _, z, _ in HORIZONS]
+        panels[(ccy, metric)] = (g[["value"] + zc]
                                  .reindex(grid).ffill(limit=_STALE_LIMIT))
     return grid, panels
 
@@ -118,13 +121,14 @@ def _overlay_history(z_grid: pd.DatetimeIndex,
 
 
 def _asof_frame(panels: dict, d: pd.Timestamp) -> pd.DataFrame:
+    zcols = [z for _, z, _ in HORIZONS]
     rows = []
     for (ccy, metric), p in panels.items():
         r = p.loc[d]
-        if pd.isna(r["value"]) and pd.isna(r["struct_z"]) and pd.isna(r["regime_z"]):
+        if r[["value"] + zcols].isna().all():
             continue
         rows.append({"ccy": ccy, "metric": metric, "value": r["value"],
-                     "struct_z": r["struct_z"], "regime_z": r["regime_z"]})
+                     **{z: r[z] for z in zcols}})
     return pd.DataFrame(rows)
 
 
@@ -146,7 +150,7 @@ def backfill(persist: bool = True) -> pd.DataFrame:
             continue
         snap = overlays[d]
         row, pill_acc = {}, {}
-        for horizon, zcol in (("struct", "struct_z"), ("regime", "regime_z")):
+        for horizon, zcol, _ in HORIZONS:
             # early dates have no z on this horizon yet (window not filled) —
             # score() can't composite an empty frame, so skip the horizon
             if not asof[zcol].notna().any():
@@ -162,7 +166,8 @@ def backfill(persist: bool = True) -> pd.DataFrame:
         for (ccy, pillar), h in pill_acc.items():
             pill_out.append({"date": d, "ccy": ccy, "pillar": pillar,
                              "kind": "month_end",
-                             "struct": h.get("struct"), "regime": h.get("regime")})
+                             "struct": h.get("struct"), "regime": h.get("regime"),
+                             "secular": h.get("secular")})
         ov = snap.copy()
         ov["date"], ov["kind"] = d, "month_end"
         ovl_out.append(ov)
@@ -184,7 +189,7 @@ def backfill(persist: bool = True) -> pd.DataFrame:
             d = pd.DataFrame(rows, columns=None if rows else cols)
             return d.sort_values(sort).reset_index(drop=True)
         write_cache(_frame(pill_out,
-                           ["date", "ccy", "pillar", "kind", "struct", "regime"],
+                           ["date", "ccy", "pillar", "kind", "struct", "regime", "secular"],
                            ["date", "ccy", "pillar"]), PILLAR_HISTORY_NAME)
         write_cache(_frame(carry_out,
                            ["date", "ccy", "kind", "real_2y", "nominal_2y"],
@@ -243,7 +248,8 @@ _OVL_COLS = ["ccy", "yld_fx_corr", "yld_regime", "real10y_mult", "growth_z",
 
 def append_today_details(pill_struct: pd.DataFrame, pill_regime: pd.DataFrame,
                          lz: pd.DataFrame, snap: pd.DataFrame | None = None,
-                         asof: pd.Timestamp | None = None) -> None:
+                         asof: pd.Timestamp | None = None,
+                         pill_secular: pd.DataFrame | None = None) -> None:
     """Daily rows for the pillar, carry, and overlay histories (mirrors
     append_today). snap = the live overlay_snapshot; its positioning columns are
     excluded here (pos_history carries those at weekly grain)."""

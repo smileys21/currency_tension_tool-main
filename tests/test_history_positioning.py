@@ -260,3 +260,69 @@ def test_ctv_history_expanding_percentile_semantics():
     a = h[h.ccy == "AUD"].dropna(subset=["ctv_pctile"])
     assert len(a) and a.ctv_pctile.iloc[-1] == 100
     assert a.ctv_pctile.iloc[-1] >= a.ctv_pctile.iloc[0]
+
+
+def test_axes_from_pillars_reproduces_engine_axes_exactly(tmp_cache, monkeypatch):
+    """The slider machinery must be exact recomposition: default weights over the
+    persisted pillar scores == the engine's own axis scores, bit-for-bit."""
+    import cte.adapters.base as base
+    from cte.scoring.compositor import axes_from_pillars
+    H = _tiny_universe(tmp_cache, monkeypatch)
+    H.backfill()
+    ph = base.read_cache("pillar_history")
+    sh = base.read_cache("snapshot_history")
+    ks = ("date", "ccy", "kind")
+    re = axes_from_pillars(ph, "struct", None, keys=ks).merge(
+        axes_from_pillars(ph, "regime", None, keys=ks), on=list(ks), how="outer")
+    j = sh.merge(re, on=["date", "ccy"], suffixes=("", "_re"))
+    for c in ["axis1_fundamental_struct", "axis2_stretch_struct",
+              "axis1_fundamental_regime", "axis2_stretch_regime"]:
+        a, b = j[c], j[f"{c}_re"]
+        ok = np.isclose(a, b, atol=1e-12) | (a.isna() & b.isna())
+        assert ok.all(), f"{c}: recomposition diverged from engine"
+
+
+def test_axes_from_pillars_zero_weight_excludes_pillar(tmp_cache, monkeypatch):
+    import cte.adapters.base as base
+    from cte.scoring.compositor import axes_from_pillars
+    H = _tiny_universe(tmp_cache, monkeypatch)
+    H.backfill()
+    ph = base.read_cache("pillar_history")
+    d = ph[ph.date == ph.date.max()]
+    default = axes_from_pillars(d, "regime")
+    no_growth = axes_from_pillars(d, "regime", {"A_growth": 0.0})
+    # manual check for one ccy: axis1 without growth = wmean of remaining pillars
+    ccy = default.ccy.iloc[0]
+    rows = d[(d.ccy == ccy) & d.regime.notna()]
+    rest = rows[rows.pillar != "A_growth"]
+    rest = rest[rest.pillar.isin(["B_inflation", "C_external", "D_fiscal"])]
+    if len(rest):
+        manual = np.average(rest.regime, weights=np.ones(len(rest)))
+        got = no_growth.set_index("ccy").loc[ccy, "axis1_fundamental_regime"]
+        assert np.isclose(got, manual, atol=1e-12)
+    assert not np.allclose(
+        default["axis1_fundamental_regime"].fillna(0),
+        no_growth.set_index("ccy").reindex(default.ccy)
+        ["axis1_fundamental_regime"].fillna(0).values)
+
+
+def test_secular_horizon_through_the_stack(tmp_cache, monkeypatch):
+    """secular_z exists, requires the longer window (starts after regime),
+    lands in snapshot/pillar histories, and the dial bounds it separately."""
+    import cte.adapters.base as base
+    from cte.scoring.history import dial_options
+    from cte.transform.zscore import dual_horizon_z
+    H = _tiny_universe(tmp_cache, monkeypatch)
+    hist = H.backfill()
+    assert {"axis1_fundamental_secular", "axis2_stretch_secular"} <= set(hist.columns)
+    ph = base.read_cache("pillar_history")
+    assert "secular" in ph.columns and ph["secular"].notna().any()
+    d_reg = dial_options(hist, "regime", min_ccys=2)
+    d_sec = dial_options(hist, "secular", min_ccys=2)
+    assert d_sec and d_sec[0] > d_reg[0], "secular dial must start later than regime"
+    # z engine emits the column with a genuinely longer requirement
+    idx = pd.date_range("2015-01-31", periods=100, freq="ME")
+    z = dual_horizon_z(pd.DataFrame({"date": idx, "ccy": "USD",
+                                     "metric": "x", "value": np.arange(100.0)}))
+    assert "secular_z" in z.columns
+    assert z["secular_z"].notna().sum() < z["regime_z"].notna().sum()

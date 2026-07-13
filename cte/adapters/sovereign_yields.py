@@ -33,7 +33,7 @@ import zipfile
 
 import pandas as pd
 
-from cte.adapters.base import http_get, make_session, tidy_yields, utcnow
+from cte.adapters.base import http_get, make_session, tidy_yields
 from cte.config import CARRY_TENOR, HTTP_TIMEOUT, HTTP_UA, TENORS_WANTED
 
 # ----------------------------------------------------------------- USD
@@ -398,7 +398,8 @@ def fetch_all_yields(primary_only: bool = True,
     overrides = {}
     if full_history:
         overrides = {"GBP": lambda: fetch_boe(history=True),
-                     "EUR": lambda: fetch_ecb(years_back=30)}
+                     "EUR": lambda: fetch_ecb(years_back=30),
+                     "USD": lambda: fetch_us(years_back=30)}
     for name, fn in reg.items():
         call = overrides.get(name, fn)
         try:

@@ -21,8 +21,17 @@ if __name__ == "__main__":
     targets = [CACHE_DIR / f"{n}.parquet"
                for n in (HISTORY_NAME, PILLAR_HISTORY_NAME, CARRY_HISTORY_NAME,
                          OVERLAY_HISTORY_NAME)]
-    if "--if-missing" in sys.argv and all(t.exists() for t in targets):
-        print("history files present — skipping backfill; "
+    def _schema_current() -> bool:
+        try:
+            import pandas as pd
+            sh = pd.read_parquet(CACHE_DIR / f"{HISTORY_NAME}.parquet")
+            return "axis1_fundamental_secular" in sh.columns
+        except Exception:
+            return False
+
+    if "--if-missing" in sys.argv and all(t.exists() for t in targets) \
+            and _schema_current():
+        print("history files present and schema current — skipping; "
               "the engine appends daily.")
         sys.exit(0)
     h = backfill()

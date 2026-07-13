@@ -147,7 +147,9 @@ def positioning_asof(asof: pd.Timestamp,
     last["pos_label"] = [_label(r.lev_z, r.am_z) for r in last.itertuples()]
     cols = ["ccy", "lev_pct_oi", "am_pct_oi", "lev_z", "am_z",
             "lev_z_13w", "am_z_13w", "lev_chg13w_z", "pos_label", "pos_date"]
-    out = last[[c for c in cols if c in last.columns]].round(2)
+    out = last[[c for c in cols if c in last.columns]]
+    num = out.select_dtypes("number").columns
+    out[num] = out[num].round(2)
     return out.set_index("ccy").reindex(CURRENCIES).reset_index()
 
 

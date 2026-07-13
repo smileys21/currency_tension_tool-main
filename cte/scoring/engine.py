@@ -30,6 +30,7 @@ def build_snapshot(persist: bool = True) -> dict:
     tm, warns = tension_map()
     pill_struct, _ = score("struct_z", lz, snap)
     pill_regime, _ = score("regime_z", lz, snap)
+    pill_secular, _ = score("secular_z", lz, snap)
     pillars = pill_struct.pivot_table(index="ccy", columns="pillar",
                                       values="pscore").round(2)
 
@@ -59,7 +60,8 @@ def build_snapshot(persist: bool = True) -> dict:
         write_cache(nom_grid.reset_index(), "carry_grid_nominal")
         (CACHE_DIR / "warnings.json").write_text(json.dumps(warns, indent=2))
         append_today(tm)   # tension-map history: idempotent daily append (trails/dial)
-        append_today_details(pill_struct, pill_regime, lz, snap)
+        append_today_details(pill_struct, pill_regime, lz, snap,
+                             pill_secular=pill_secular)
         persist_history()  # weekly positioning panel for the app's Historical mode
 
     return {"tension_map": tm, "pillars": pillars, "overlays": snap,

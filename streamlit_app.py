@@ -49,8 +49,15 @@ st.caption("Two axes: **fundamental trajectory** (deteriorating ↔ improving) �
 
 with st.sidebar:
     st.header("Controls")
-    horizon = st.radio("Horizon", ["Structural (~10y)", "Regime (~2y)"], index=0)
-    hz = "struct" if horizon.startswith("Structural") else "regime"
+    horizon = st.radio("Horizon",
+                       ["Structural (~10y)", "Regime (~2y)", "Secular (~15y)"],
+                       index=0,
+                       help="Secular scores each input against ~15 years of its "
+                            "own history — a full generation of cycles. Rate "
+                            "pillars have shorter source series (EUR yields 2004, "
+                            "US TIPS 2003), so the secular dial starts later than "
+                            "the others; today's snapshot is fully populated.")
+    hz = {"St": "struct", "Re": "regime", "Se": "secular"}[horizon[:2]]
 
     st.markdown("---")
     st.subheader("History")
@@ -59,6 +66,7 @@ with st.sidebar:
                         help="Fading path of each currency's last N month-end "
                              "positions — which way it's moving, and how fast.")
     asof_sel = "Live"
+    CUSTOM_W, user_w = False, {}
     if _hist is not None and len(_hist):
         from cte.scoring.history import dial_options
         _avail = dial_options(_hist, hz)
@@ -77,6 +85,27 @@ with st.sidebar:
                 asof_sel = _mo.strftime("%Y-%m-%d")
                 st.caption(f"Dial range: {_avail[0].strftime('%b %Y')} — "
                            f"{_avail[-1].strftime('%b %Y')} on this horizon.")
+
+    st.markdown("---")
+    with st.expander("Pillar weights"):
+        from cte.config import PILLAR_AXIS, PILLAR_DISPLAY, PILLAR_WEIGHT
+        st.caption("Re-weight how the pillars aggregate into the two axes — the "
+                   "map, trails, and time dial recompute instantly from the same "
+                   "pillar scores. 0 excludes a pillar. Warnings, notes, "
+                   "commentary, and carry grids keep the default weighting.")
+        _wp = [p for p in PILLAR_WEIGHT if p != "F_carry"]
+        if st.button("Reset to defaults"):
+            for _p in _wp:
+                st.session_state[f"pw_{_p}"] = float(PILLAR_WEIGHT[_p])
+        user_w = {}
+        for _axis, _lbl in (("axis1_fundamental", "Axis 1 · fundamental"),
+                            ("axis2_stretch", "Axis 2 · stretch")):
+            st.markdown(f"**{_lbl}**")
+            for _p in [p for p in _wp if PILLAR_AXIS.get(p) == _axis]:
+                user_w[_p] = st.slider(PILLAR_DISPLAY[_p], 0.0, 3.0,
+                                       float(PILLAR_WEIGHT[_p]), 0.25,
+                                       key=f"pw_{_p}")
+        CUSTOM_W = any(abs(user_w[p] - PILLAR_WEIGHT[p]) > 1e-9 for p in _wp)
     # rebuild is admin-only: it needs the raw cache + API keys, absent on the public
     # deploy (there the scheduled Action refreshes the snapshot instead)
     import os
@@ -107,6 +136,25 @@ with st.container(border=True):
 
 flagged = set(warns)
 
+# ---- custom pillar weights: recompose the map + entire history client-side from
+# the persisted pillar scores (exact — same aggregation the engine applies)
+if CUSTOM_W:
+    _ph_all = read_cache("pillar_history")
+    if _ph_all is not None and len(_ph_all):
+        from cte.scoring.compositor import axes_from_pillars
+        _ks = ("date", "ccy", "kind")
+        _re = axes_from_pillars(_ph_all, "struct", user_w, keys=_ks).merge(
+            axes_from_pillars(_ph_all, "regime", user_w, keys=_ks),
+            on=list(_ks), how="outer")
+        if len(_re):
+            _hist = _re
+            _last = _re[_re.date == _re.date.max()]
+            tm = _last.drop(columns=["date", "kind"]).reset_index(drop=True)
+    else:
+        st.warning("Custom weights need the pillar history — run the daily "
+                   "workflow once to seed it. Showing default weighting.")
+        CUSTOM_W = False
+
 # ---- historical view frames (dial set) — every tab except Overlays renders as-of
 HIST_MODE = asof_sel != "Live" and _hist is not None
 tm_v, pillars_v, carry_v, pos_v = tm, pillars, None, overlays
@@ -119,14 +167,22 @@ if HIST_MODE:
         _pr = (_ph[(_ph.date + pd.offsets.MonthEnd(0)) == _d]
                .sort_values("date").groupby(["ccy", "pillar"]).tail(1))
         if len(_pr):
+            _vcol = hz if hz in _pr.columns else "struct"
             pillars_v = (_pr.pivot_table(index="ccy", columns="pillar",
-                                         values="struct").round(2).reset_index())
+                                         values=_vcol).round(2).reset_index())
     _ch = read_cache("carry_history")
     if _ch is not None:
         carry_v = (_ch[(_ch.date + pd.offsets.MonthEnd(0)) == _d]
                    .sort_values("date").groupby("ccy").tail(1).set_index("ccy"))
     from cte.flags.positioning import positioning_asof
     pos_v = positioning_asof(_d)
+elif hz != "struct":
+    _ph2 = read_cache("pillar_history")
+    if _ph2 is not None and hz in getattr(_ph2, "columns", []):
+        _lastp = _ph2[_ph2.date == _ph2.date.max()]
+        if len(_lastp) and _lastp[hz].notna().any():
+            pillars_v = (_lastp.pivot_table(index="ccy", columns="pillar",
+                                            values=hz).round(2).reset_index())
 
 crowded = set()
 if overlays is not None and "pos_label" in overlays.columns:
@@ -148,6 +204,13 @@ with left:
         st.pyplot(tension_map_fig(tm, hz, flagged, history=_hist,
                                   trail_months=trail_n, crowded=crowded),
                   use_container_width=True)
+        if CUSTOM_W:
+            _cw = ", ".join(f"{k.split('_', 1)[1].title()} {v:g}"
+                            for k, v in user_w.items())
+            st.caption(f"**Custom pillar weights active** ({_cw}) — map, trails, "
+                       "and dial recomposed; scored as of "
+                       f"{pd.Timestamp(tm['date'].iloc[0]).date() if 'date' in tm.columns else 'latest snapshot'}. "
+                       "Warnings, notes, and carry reflect default weights.")
 with right:
     st.subheader("Currency Notes")
     st.caption("Per-currency context and objective flags in plain language — the "
@@ -166,7 +229,7 @@ t1, t2, t_pos, t3, t4 = st.tabs(["Pillar Scores", "Carry Grid", "Positioning", "
 
 with t1:
     if HIST_MODE:
-        st.caption(f"As of {asof_sel} (structural pillar scores).")
+        st.caption(f"As of {asof_sel} ({hz} pillar scores).")
     st.pyplot(pillar_heatmap_fig(pillars_v, tm_v, hz), use_container_width=True)
     st.caption("Signed z-scores, ordered by fundamental score. Green = the axis's "
                "positive pole (Axis 1: supportive to the currency; Axis 2: more "
@@ -246,9 +309,11 @@ st.markdown("---")
 with st.expander("Methodology — what goes into each pillar and leg"):
     st.markdown(
         """
-Every currency is scored against **its own history** on two lookbacks shown via the
+Every currency is scored against **its own history** on the lookbacks shown via the
 sidebar toggle: **Structural (~10y)** is the level anchor; **Regime (~2y)** shows which
-way it has moved lately. Read them as a pair. Each raw input is turned into a z-score
+way it has moved lately; **Secular (~15y)** stretches the anchor across a full
+generation of cycles (rate pillars: EUR yield data begins 2004 and US TIPS 2003, so
+secular history starts later than structural). Read structural and regime as a pair. Each raw input is turned into a z-score
 (distance from its own norm), signed so a positive value points to the axis's positive
 pole, then averaged into pillars and the two axes.
 
