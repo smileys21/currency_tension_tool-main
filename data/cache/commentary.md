@@ -1,9 +1,7 @@
-**Regime: Risk-premium tape; carry fragility rising.**
+**Regime: Strong dollar tape atop risk-premium compression; carry trades crowding into quiet vol.**
 
-• **GBP & AUD** at the cliff edge — both expensive (+1.3–1.9 stretch) on deteriorating fundamentals, propped by carry (94th and 87th percentile crowding) that sits atop yield-stress regime (real 10Y rises, currency weakens). Policy tightening is exhausted; stagflation drag emerging. Vol spike unwinds both.
+- **GBP & AUD: dual carry unwind risk.** Both sit in the 87–94th percentile of carry crowding on richly stretched valuations (+1.3–1.9) with deteriorating fundamentals. Policy tailwinds (inflation support) are fading into soft growth; real yields punishing equities not rewarding them (yield stress multiplier −0.62 to −0.63). A vol spike liquidates these positions fast.
+- **JPY: mean-reversion long, but carry-crowding mirror.** Valuation −0.7 and fundamentals +0.4 frame a cheap, improving setup; carry is also crowded (88th percentile). Risk-premium regime dominates—higher yields drive *weaker* JPY, not stronger. Upside capped until vol normalizes.
+- **CAD & EUR: one-legged reads; anchor on valuation.** CAD cheap (−1.6 valuation), pillars neutral—narrow support; EUR rich (+1.4) on the same narrowness. Both yield-FX decoupled; treat real-rate support lightly this window.
 
-• **JPY** the mean-reversion long — valuation -0.69 (cheap), fundamentals +0.35 (improving). Carry crowded (88th pctile) but corr to yields is risk-premium negative (-0.30), so real-yield support downweighted. JPY fund improved sharply (-0.71) since prior; watch for vol as unwind trigger.
-
-• **NZD carry pair** — rewarded yield regime (+0.38 real 10Y mult), cheap valuation (-0.46), improving fundamentals (+0.28). Policy trap exists (inflation/tight/soft growth) but less crowded (72nd pctile) than GBP/AUD; sits alone as the clean long-carry trade.
-
-**Prior move:** JPY fundamentals rallied 0.71; no change in stretch — technical setup sharpens.
+**Standout carry: NZD.** Cheap (−0.46), improving (+0.28 fundamental), and yield-rewarded (+0.38 real 10Y). Lower crowding (72nd percentile) offers more room than AUD/GBP; policy headwinds less acute.
