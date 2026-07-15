@@ -1,9 +1,9 @@
-**Regime: Strong dollar on valuation and fiscal pillars, but carry crowding and risk-premium dynamics (not real-yield reward) are fraying at edges.**
+**Risk-premium regime; carry crowding extreme across AUD/GBP/JPY; mean-reversion long JPY vs USD on cheap valuation + improving fundamentals.**
 
-- **GBP short**: Deteriorating fundamentals (-0.27) anchoring rich valuation (+1.27); carry crowded at 94th percentile on fragile base. Yield stress shows negative correlation to rate moves (−0.36)—risk premium, not reward. Unwind risk acute.
+- **GBP short** – expensive (+1.3 valuation) on deteriorating fundamentals (-0.27); carry at 94th percentile crowding (real yield +1.1% on fragile base); policy tightening cycle spent (feasibility -1.0), inflation tailwind fading into stagflation drag; real-yield correlation negative (-0.36), so stress regime not reward.
+- **AUD short** – same vulnerable profile: +1.9 valuation on -0.30 fundamental drift; 86th percentile carry crowding; policy trap (tight, soft growth); yield stress regime; one-legged valuation-dependent read.
+- **JPY long vs USD** – valuation cheap (-0.69) while fundamentals turn positive (+0.40); mean-reversion setup. Carry crowded (88th percentile) but fundamentals improving. Real-yield support downweighted in risk-premium regime, so entry/sizing is vol-aware not yield-chasing.
 
-- **AUD short**: Mirror GBP: expensive (+1.91 stretch), weakening fundamentals (−0.30), carry at 88th percentile. Policy constraint (feasibility −0.8) kills hawkish tailwind. Real yields high but currency weakens as yields rise—risk-regime signal, not fundamental.
+**Carry standout: GBP/NZD** – both punished-regime yields with extreme crowding (94th, 79th percentile) and tightening cycles unable to deliver growth support; unwind risk is asymmetric.
 
-- **JPY long**: Cheap (−0.68 stretch) with improving fundamentals (+0.35). Valuation mean-reversion setup intact. Caveat: carry crowded (88th percentile) on stressed yield regime (−0.53 mult); vol spike is tail risk. Cross vs USD noise material.
-
-- **NZD/AUD carry**: Deteriorating AUD on stretched valuation + softening growth; NZD cheap and improving. Relative carry attractive, but both face policy-constraint stagflation drag.
+NZD fundamentals deteriorated 16bp since prior snapshot; no offset from stretch, reinforcing carry-unwind vulnerability.
