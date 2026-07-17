@@ -1,9 +1,11 @@
-**Regime: Risk-premium regime — carry fragile across all major pairs; vol spike is the tail risk.**
+**Regime: Risk-premium mode; yield strength decoupled from FX support across most majors—classic carry fragility.**
 
-• **GBP**: Vulnerable carry unwind. Valuation +1.3 on deteriorating fundamentals (-0.3); real 10Y z-score +1.5 but currency weakens as yields rise (corr -0.36). Carry crowded at 94th percentile. Policy tightness (feasibility -1.0) fading; inflation multiplier muted at -0.77. Break-risk asymmetric to downside.
+**Inflection extremes:**
+- **GBP short:** Carry crowded to the 94th percentile on a fragile stagflation base (policy trap: growth soft, tightening nearly exhausted). Real yields punish the move; correlation to rises is -0.36. Unwind risk is acute.
+- **AUD short:** Expensive stretch (+1.92) on deteriorating fundamentals (-0.30); valuation doing all the work. Yield stress regime (mult -0.63) and 88th-percentile carry crowding make mean reversion a live tail.
+- **CAD long:** Valuation cheap (-1.55), fundamentals steady at +0.04. Narrow read but directionally clean; offer support if risk unwinds.
 
-• **AUD**: Expensive on soft trajectory. Valuation +2.7 carrying the narrative; fundamentals flat to negative (-0.3). Real 10Y high but yield-FX decoupling (-0.37 corr) signals risk-premium, not support. Carry at 87th percentile. Policy trap intact (feasibility -0.8).
+**Carry pair:**
+- **GBP/USD:** Highest-yielding major (+1.1% real) on the most crowded carry trade (94th pctile) facing policy exhaustion and stagflation drag. Vol spike triggers immediate unwinding.
 
-• **JPY**: Mean-reversion setup with execution risk. Valuation cheap (-0.7), fundamentals improving (+0.4), external pillar strong (+1.7). But carry crowded at 88th percentile; real 10Y z +1.8 yet currency weakens on yield rises (corr -0.24) — all risk-premium. USD strength confounds the cross.
-
-**Carry standout: GBP/USD** — highest real-yield pick-up (~1.1%) riding 94th-percentile vol crowding on a deteriorating macro base and policy trap. Unwind catalyst highest here.
+**Since last snapshot:** No prior data provided.
