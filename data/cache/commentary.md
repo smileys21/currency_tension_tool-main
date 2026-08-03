@@ -1,11 +1,7 @@
-**Regime: Risk-premium dominance; carry crowded and fragile across major pairs.**
+**Regime: Risk-premium mode; real yields high but currencies weaken into them — structural carry unwind risk.**
 
-**Currencies at inflection:**
+- **GBP & AUD at breaking point.** Both expensive (+1.3, +1.7 stretch) on deteriorating fundamentals (−0.28 fund each); policy trapped (growth soft, inflation sticky, hikes exhausted). Carry crowded at 95th and 90th percentile respectively — fragile to vol spike. AUD's valuation doing all work; GBP's real yield support halved by stress regime.
+- **JPY best asymmetry.** Cheap (−0.67 stretch), improving fundamentals (+0.47), yet yields are stress-regime (−0.34 mult), not supportive. Yen weakens as real yields rise — mean-reversion signal underpowered by strong-dollar backdrop, but the setup is there.
+- **CAD offer narrowly priced.** Valuation (−2.13) carries the entire bull case; other pillars flat. One-legged reads are fragile.
 
-- **GBP short** — deteriorating fundamentals (-0.28) collide with expensive valuation (+1.30) and policy trap (feasibility -1.54). Carry crowded (95th percentile); real yields weaken currency despite high nominal levels (-0.62 mult). Unwind risk acute on vol spike.
-
-- **AUD short** — same architecture: soft growth/inflation backdrop, valuation at +1.65, carry at 90th percentile. Real-yield regime turns tailwind into headwind (-0.68 mult). Policy exhaustion evident.
-
-- **JPY long** — cheap (-0.70) with improving fundamentals (+0.45), especially external pillar (+1.72). Valuation mean reversion live despite stressed yield regime. Strong-dollar tape masks underlying attractiveness vs risk assets.
-
-**Carry pair:** USD/JPY structurally bid (USD +0.83 stretch, JPY -0.68), but vol compression supporting the trade (JPY carry 82nd percentile). Unwind tail material if risk-off accelerates.
+**Carry pair: GBP/JPY rollover risk.** Real yield advantage (+1.2%) on highest carry crowding (95th) against the currency most resistant to its own valuation signals.
