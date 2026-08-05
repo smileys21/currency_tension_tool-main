@@ -1,9 +1,9 @@
-**Regime: Risk-premium grip; carry crowding at extremes across AUD, GBP, JPY—vol spike would unwind fast.**
+**Regime: Strong dollar on growth/fiscal reprieve, but carry trades (GBP, AUD, EUR) are crowded at extremes and vulnerable to vol spike.**
 
-**AUD at breaking point.** Valuation (+2.3) isolated; fundamentals deteriorating (-0.28), yield stress acute (-0.68 mult), carry 90th percentile. Rich-on-soft is the vulnerable combo. Watch for unwind trigger.
+- **GBP: Maximum vulnerability.** Carry-to-vol at 97th percentile on stretched valuation (+1.4 stretch). Policy trap deepening (feasibility -1.5); real-yield regime is risk-premium, not reward (corr -0.17). Unwind trigger is a vol lift or growth shock.
 
-**GBP: The carry trap.** Real yield high but negatively correlated to FX (−0.17); feasibility cratering (−1.53) as policy room narrows. Carry crowded at 97th percentile on stagflation drag. Downside event risk.
+- **AUD: Deteriorating into rich.** Fundamentals sliding (-0.3 fund) while valuation bloated (+1.7 stretch); yield stress (corr -0.42) and carry crowded (90th percentile). One-legged on valuation; the mean-revert case builds.
 
-**JPY: Mean reversion setup.** Cheap (−0.64 stretch), fundamentals improving (+0.57), valuation below norm. Policy tailwind (+1.49) intact. Hedges likely unwind on soft-vol trigger; directional bid vs carry pairs.
+- **JPY: Cheap + improving.** Valuation -0.6, fundamentals +0.6, both pillars turning. External pillar strong (+1.7). Real-yield backdrop decoupled but carry risk low (84th percentile). Asymmetric upside if risk-off or vol spikes.
 
-**GBP/AUD: Carry pair to fade.** Both stretched, both crowded; AUD deteriorating faster. Unwind would compress the spread as carry unwinds.
+- **GBP/USD → EUR/GBP carry pair:** GBP is the crowded unwind target; EUR safer on policy tailwind fading more gradually and lower carry saturation (85th vs 97th).
