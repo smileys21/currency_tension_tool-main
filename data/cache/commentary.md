@@ -1,9 +1,8 @@
-**Regime: Strong dollar on growth/fiscal reprieve, but carry trades (GBP, AUD, EUR) are crowded at extremes and vulnerable to vol spike.**
+**Regime: Risk-premium world; carry crowded and fragile to vol spike; real yields punishing commodity/commodity-proxy currencies while rewarding neither USD nor funding pairs durably.**
 
-- **GBP: Maximum vulnerability.** Carry-to-vol at 97th percentile on stretched valuation (+1.4 stretch). Policy trap deepening (feasibility -1.5); real-yield regime is risk-premium, not reward (corr -0.17). Unwind trigger is a vol lift or growth shock.
+- **GBP at peak carry risk** — 97th percentile crowding on a stagflation trap (feasibility -1.5, growth soft, policy already tight). Real yields high but weakening as yields rise (risk-premium regime, not reward). Unwind tail is asymmetric.
+- **AUD vulnerable on twin deterioration** — fundamentals rolling over (-0.28) while valuation stays stretched (+1.65). Carry crowded (90th percentile), policy trap intact, real-yield support is broken (-0.42 yield-FX correlation). Classic unwind setup.
+- **JPY the lone mean-reversion candidate** — valuation cheap (-0.63), fundamentals improving (+0.60), growth pillar positive (+0.71). Policy decoupled from yields; BoJ ease still intact. Best asymmetric long in this snapshot.
+- **GBP/AUD carry pair crowded in tandem** — both under valuation stretch + yield-regime stress, both in policy trap. Vol spike would liquidate together.
 
-- **AUD: Deteriorating into rich.** Fundamentals sliding (-0.3 fund) while valuation bloated (+1.7 stretch); yield stress (corr -0.42) and carry crowded (90th percentile). One-legged on valuation; the mean-revert case builds.
-
-- **JPY: Cheap + improving.** Valuation -0.6, fundamentals +0.6, both pillars turning. External pillar strong (+1.7). Real-yield backdrop decoupled but carry risk low (84th percentile). Asymmetric upside if risk-off or vol spikes.
-
-- **GBP/USD → EUR/GBP carry pair:** GBP is the crowded unwind target; EUR safer on policy tailwind fading more gradually and lower carry saturation (85th vs 97th).
+No prior snapshot provided; no move attribution.
