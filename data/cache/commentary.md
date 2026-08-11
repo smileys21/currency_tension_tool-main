@@ -1,12 +1,9 @@
-**Regime: Stagflation drag eroding hawkish tailwinds; carry crowding + yield-stress mismatches signal unwind risk.**
+**Regime: Strong dollar on carry crowding; policy traps (EUR, GBP, AUD, NZD) narrowing hawkish tailwinds as growth softens.**
 
-**Inflection pair — GBP (short candidate):**
-Sits at 97th percentile carry crowding on 1.5% real yield pickup, but fundamentals are cracking: growth soft, inflation above target yet policy already tight (feasibility -1.5). Real yields rising *inverse* to GBP (negative correlation) — pure risk-premium regime, not reward. Unwind fragile positioning on vol spike.
+• **GBP short** — 97th percentile carry crowding on a policy trap (inflation hot, growth soft, hike room exhausted). Real yields high but currency weakens into them (risk-premium regime, not reward). Unwind risk acute.
 
-**Inflection pair — JPY (long candidate):**
-Valuation -0.60 (cheap) meeting fundamentals +0.58 (improving) — classic mean reversion. External pillar +1.72 is anchor. But carry crowding 87th percentile means vol shock is the single largest tail risk; quiet vol masking fragility.
+• **AUD vulnerable** — Rich valuation (+1.6 stretch) deteriorating fundamentals (−0.29 fund). Carry crowded (89th %ile), policy trap identical to GBP. Valuation doing nearly all work; narrow, unstable long.
 
-**Carry standout — AUD (downside risk):**
-Expensive (+1.65 stretch) on deteriorating fundamentals (-0.29); valuation doing all the work (+2.3 pillar), masking soft growth. Crowded at 89th percentile; yield-stress regime (corr -0.45) not reward. Twin vulnerability to carry unwind + mean reversion.
+• **JPY long** — Improving fundamentals (+0.59), cheap valuation (−0.60 stretch), mean reversion setup. Carry crowded at 87th %ile but the fundamental turn is real; vol spike would flush crowding and push JPY higher into risk-off.
 
-**Since prior snap:** No prior snapshot provided.
+• **GBP/AUD carry pair in the cross is unstable** — both sit on identical policy traps and carry extremes; GBP's real-yield disadvantage vs AUD's valuation vulnerability create conflicting pressure; watch for unwind cascade.
