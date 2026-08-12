@@ -1,12 +1,13 @@
 {
   "EUR": [
     "Policy trap: inflation above target but growth soft and policy already tight (feasibility -0.6) \u2014 the hawkish tailwind is fading toward a stagflation drag; inflation's axis-1 contribution is dampened (mult -0.56).",
-    "FX and yields are decoupled \u2014 the real-yield reward/stress read is ambiguous this window; treat Pillar D lightly."
+    "FX and yields are decoupled \u2014 the real-yield reward/stress read is ambiguous this window; treat Pillar D lightly.",
+    "Carry crowded: carry-to-vol in the 85th percentile \u2014 a lot of carry riding on quiet vol, fragile to a vol spike."
   ],
   "JPY": [
     "Cheap and improving \u2014 the mean-reversion setup: valuation is below its own norm (-0.6) while fundamentals are turning up (+0.6).",
     "FX and yields are decoupled \u2014 the real-yield reward/stress read is ambiguous this window; treat Pillar D lightly.",
-    "Carry crowded: carry-to-vol in the 87th percentile \u2014 a lot of carry riding on quiet vol, fragile to a vol spike."
+    "Carry crowded: carry-to-vol in the 88th percentile \u2014 a lot of carry riding on quiet vol, fragile to a vol spike."
   ],
   "GBP": [
     "Fat carry on a fragile base: out-yields the field in real terms (avg +1.5%) but sits on a stretched valuation \u2014 the classic carry-unwind setup.",
@@ -18,10 +19,6 @@
     "Rich versus its decade (+0.9) but easing versus its recent 2-year range (-0.2) \u2014 read as 'off its highs,' not absolute cheap.",
     "Yield stress: real 10Y is high (z +0.5) but the currency weakens as yields rise (-0.18 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.35). Note: cross vs USD partly confounds this in a strong-dollar tape."
   ],
-  "CAD": [
-    "One-legged read: Valuation (-2.1) is doing almost all the work; the other pillars are near neutral, so treat this as narrow, not broad-based.",
-    "FX and yields are decoupled \u2014 the real-yield reward/stress read is ambiguous this window; treat Pillar D lightly."
-  ],
   "AUD": [
     "Expensive and deteriorating \u2014 the vulnerable combination: rich valuation (+1.6) on a softening fundamental trajectory (-0.3).",
     "One-legged read: Valuation (+2.3) is doing almost all the work; the other pillars are near neutral, so treat this as narrow, not broad-based.",
@@ -32,8 +29,11 @@
   "NZD": [
     "Policy trap: inflation above target but growth soft and policy already tight (feasibility -0.6) \u2014 the hawkish tailwind is fading toward a stagflation drag; inflation's axis-1 contribution is dampened (mult -0.55)."
   ],
+  "CAD": [
+    "One-legged read: Valuation (-2.1) is doing almost all the work; the other pillars are near neutral, so treat this as narrow, not broad-based."
+  ],
   "USD": [
     "Rich versus its decade (+0.8) but easing versus its recent 2-year range (-0.2) \u2014 read as 'off its highs,' not absolute cheap.",
-    "Fat carry on a fragile base: out-yields the field in real terms (avg +0.7%) but sits on a stretched valuation \u2014 the classic carry-unwind setup."
+    "Fat carry on a fragile base: out-yields the field in real terms (avg +0.6%) but sits on a stretched valuation \u2014 the classic carry-unwind setup."
   ]
 }

@@ -1,9 +1,9 @@
-**Regime: Strong dollar on carry crowding; policy traps (EUR, GBP, AUD, NZD) narrowing hawkish tailwinds as growth softens.**
+**Regime: Risk-premium mode — yield rises weaken, not strengthen, high-beta currencies; carry is crowded across the board.**
 
-• **GBP short** — 97th percentile carry crowding on a policy trap (inflation hot, growth soft, hike room exhausted). Real yields high but currency weakens into them (risk-premium regime, not reward). Unwind risk acute.
+**AUD at breaking point.** Expensive (+1.65 stretch) on deteriorating fundamentals (−0.29); valuation carrying all the signal while growth and policy pillars offer no support. Real-yield stress regime (yields up, AUD down; −0.45 corr) compounds the risk. Carry at 89th percentile — vol spike unwinds fast.
 
-• **AUD vulnerable** — Rich valuation (+1.6 stretch) deteriorating fundamentals (−0.29 fund). Carry crowded (89th %ile), policy trap identical to GBP. Valuation doing nearly all work; narrow, unstable long.
+**JPY mean-reversion setup.** Cheap (−0.59 stretch) with improving fundamentals (+0.59); valuation discount sits alongside strong growth and policy pillars. External surplus is genuine (+1.75). Crowded carry (88th percentile) is the tail risk, but the asymmetry favors long positioning on a quiet vol frame.
 
-• **JPY long** — Improving fundamentals (+0.59), cheap valuation (−0.60 stretch), mean reversion setup. Carry crowded at 87th %ile but the fundamental turn is real; vol spike would flush crowding and push JPY higher into risk-off.
+**GBP: the carry trap.** Real yields are fat (+1.5% avg) but the currency weakens as yields rise — textbook risk-premium inversion. Tight policy feasibility (−1.53) signals the hawkish bid is exhausted; inflation's push is already dampened (mult −0.91). Stretched valuation (+1.38) on deteriorating fundamentals (−0.17). Carry at 97th percentile — tightest crowding on the map.
 
-• **GBP/AUD carry pair in the cross is unstable** — both sit on identical policy traps and carry extremes; GBP's real-yield disadvantage vs AUD's valuation vulnerability create conflicting pressure; watch for unwind cascade.
+**EUR/GBP longs: both stuck in policy cages with fading hawkish tailwinds; watch for vol as the carry unwind trigger.**
