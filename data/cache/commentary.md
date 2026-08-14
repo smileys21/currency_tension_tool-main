@@ -1,13 +1,11 @@
-**Regime: Strong-dollar carry trade on a knife-edge—yield crowding at extremes, policy hawkishness fading into stagflation drag.**
+**Regime: USD-led carry unwind on policy divergence fading; AUD/GBP/JPY in vol-crowding risk.**
 
-**Inflection points:**
+• **GBP**: Extreme carry trap (97th %ile crowding). Real yields high but currency weakens as rates rise (−0.17 corr)—classic risk-premium regime. Policy trap deepening: hawkish tailwind (inflation above target) colliding with soft growth and tight feasibility (−1.53). Unwind catalyst live.
 
-- **GBP short** — 97th percentile carry crowding on real-yield stress (yields rise, cable weakens; -0.17 corr). Policy trap: hawkish fade imminent as growth softens. Stretched valuation (+1.38) with deteriorating fundamentals (-0.17). Unwind risk acute.
+• **AUD**: Expensive (+1.67 stretch) on deteriorating fundamentals (−0.30 fund). Valuation carrying the entire signal; one-legged setup. Real-yield support inverted (−0.72 mult). Carry crowded at 92nd %ile—fragile to vol spike.
 
-- **AUD short** — Expensive (+1.65 stretch) on softening fundmentals (-0.29). Valuation carrying the full trade; policy trap identical to GBP. Real-yield regime punishing (-0.71 mult), 90th percentile carry crowding. One-legged short.
+• **JPY**: Cheap and improving—the mean reversion play. Valuation −0.57 (below norm) while fundamentals turn positive (+0.58). Carry crowded (88th %ile) but positioning setup cleaner than AUD/GBP given decoupled-yield regime. Policy tailwind intact (+1.70).
 
-- **JPY long** — Improving fundamentals (+0.57) meeting cheap valuation (-0.57); mean-reversion signal. Crowded long (88th), but structural setup cleanest in the map. Policy and growth pillars both positive (+1.69, +0.71).
+• **Standout carry pair**: EUR–GBP widening carry flow into carry-crowding extremes (EUR 85th, GBP 97th). EUR's policy support still translating (pillar E +1.16) but both sitting on fading hawkish narratives and stretched valuations. Vulnerable to vol shock.
 
-**Standout carry pair:** EUR/AUD—EUR improving policy tail (+1.17) versus AUD's deteriorating growth and stretched valuation, both in stress regimes. EUR carry crowded (85th) but better-hedged by fundamental drift than AUD.
-
-No prior snapshot given; unable to compare intraday moves.
+• **Prior snapshot**: No prior provided; unable to flag intraday momentum shift.
