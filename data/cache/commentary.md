@@ -1,11 +1,7 @@
-**Regime: USD-led carry unwind on policy divergence fading; AUD/GBP/JPY in vol-crowding risk.**
+**Regime: stagflation drag on developed-market carry — policy tailwinds fading into growth headwinds.**
 
-• **GBP**: Extreme carry trap (97th %ile crowding). Real yields high but currency weakens as rates rise (−0.17 corr)—classic risk-premium regime. Policy trap deepening: hawkish tailwind (inflation above target) colliding with soft growth and tight feasibility (−1.53). Unwind catalyst live.
+- **GBP & AUD are the unwind candidates.** Both sit on fat real yields (1.4–1.7% z-scores) but with negative real-yield correlation (yields rise, currency falls) in a risk-premium regime. GBP's policy trap is acute (feasibility –1.5); AUD's deteriorating fundamentals (–0.3) collide with stretched valuation (+1.7). Carry crowding extremes (97th and 92nd percentiles) amplify unwind risk.
 
-• **AUD**: Expensive (+1.67 stretch) on deteriorating fundamentals (−0.30 fund). Valuation carrying the entire signal; one-legged setup. Real-yield support inverted (−0.72 mult). Carry crowded at 92nd %ile—fragile to vol spike.
+- **JPY is the mean-reversion long.** Valuation cheap (–0.6), fundamentals turning (policy +1.7, external +1.75), and carry crowding high (88th percentile) create a crowded short vulnerable to reversal. FX–yield decoupling leaves real-rate support ambiguous, but the pillar breadth is solid.
 
-• **JPY**: Cheap and improving—the mean reversion play. Valuation −0.57 (below norm) while fundamentals turn positive (+0.58). Carry crowded (88th %ile) but positioning setup cleaner than AUD/GBP given decoupled-yield regime. Policy tailwind intact (+1.70).
-
-• **Standout carry pair**: EUR–GBP widening carry flow into carry-crowding extremes (EUR 85th, GBP 97th). EUR's policy support still translating (pillar E +1.16) but both sitting on fading hawkish narratives and stretched valuations. Vulnerable to vol shock.
-
-• **Prior snapshot**: No prior provided; unable to flag intraday momentum shift.
+- **CAD carry stands out:** cheap valuation (–2.1), improving fundamentals (+0.14), and lower carry crowding (66th percentile) make it the least fragile funded position.
