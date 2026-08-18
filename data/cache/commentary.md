@@ -1,7 +1,8 @@
-**Regime: stagflation drag on developed-market carry — policy tailwinds fading into growth headwinds.**
+**Regime: Risk-premium dominance; carry crowded across all major pairs; policy traps in AUD, GBP, NZD.**
 
-- **GBP & AUD are the unwind candidates.** Both sit on fat real yields (1.4–1.7% z-scores) but with negative real-yield correlation (yields rise, currency falls) in a risk-premium regime. GBP's policy trap is acute (feasibility –1.5); AUD's deteriorating fundamentals (–0.3) collide with stretched valuation (+1.7). Carry crowding extremes (97th and 92nd percentiles) amplify unwind risk.
+**Extremes:**
+- **AUD short.** Valuation doing all the work (+2.3 pillar); fundamentals deteriorating (-0.3); yield stress regime (negative corr to own rates, -0.45); carry crowded at 90th percentile. Unwind candidate if vol spikes.
+- **JPY long.** Cheap on valuation (-0.53 stretch, -1.7 pillar) with improving fundamentals (+0.6 fund); external pillar strong (1.75). Carry crowded at 89th percentile but mean-reversion setup intact if risk-off reverses crowding.
+- **GBP fade.** Classic carry trap: fat real yield (+1.4%) on stretched valuation (+1.38); yield stress regime (real rates high but currency weakens into them); policy feasibility cratering (-1.4) as growth softens; carry at 97th percentile—highest crowding of all.
 
-- **JPY is the mean-reversion long.** Valuation cheap (–0.6), fundamentals turning (policy +1.7, external +1.75), and carry crowding high (88th percentile) create a crowded short vulnerable to reversal. FX–yield decoupling leaves real-rate support ambiguous, but the pillar breadth is solid.
-
-- **CAD carry stands out:** cheap valuation (–2.1), improving fundamentals (+0.14), and lower carry crowding (66th percentile) make it the least fragile funded position.
+**Carry standout: EUR carry long, least crowded.** Carry-to-vol at 85th percentile (vs GBP 97, AUD 90, JPY 89); policy still supportive (1.19 pillar E) though inflation tailwind fading; real-yield regime ambiguous but crowding risk lower.
