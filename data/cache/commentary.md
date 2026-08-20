@@ -1,8 +1,11 @@
-**Regime: Dollar-funded carry on unwind risk; stagflation drag pinning hawkish tails.**
+**Regime: Stagflation drag eroding hawkish tailwinds; carry crowding at extremes across AUD, GBP, JPY.**
 
-- **GBP**: At extreme crowding (97th %ile carry-to-vol) on a policy trap—inflation elevated but growth soft, feasibility collapsing to -1.4. Real yields high but currency weakens on rising yields (risk-premium regime); unwind fragile to vol spike. Sell into rallies.
-- **AUD**: Deteriorating fundamentals (-0.30) with expensive valuation (+1.67) doing all the work—narrow bullish case. Real yields high yet currency negative on yield rises (-0.45 corr). At 90th %ile carry crowding; vulnerable to mean reversion.
-- **JPY**: Cheap (-0.53 stretch), improving fundamentals (+0.50), valuation mean-reverting setup. But carry at 89th %ile crowding on decoupled FX-yield regime; vol spike is the tail risk. Near-term: hold longs; watch positioning.
-- **CAD carry (AUD/CAD)**: AUD deteriorating/stretched vs CAD improving/cheap on valuation tilt. Unwind vector intact; CAD funding flows into carry unwinds.
+- **GBP**: Maxed-out carry crowding (97th percentile) on a stretched base with policy trap closing. Real yields rising but currency weakens with yields (–0.17 corr)—risk-premium regime, not support. Growth soft, hike feasibility cratering (–1.4). Unwind risk severe.
 
-EUR fundamentals improved +0.24 since last snapshot; stretch unchanged. Policy trap (feasibility -0.63) still binding stagflation drag outward.
+- **AUD**: Expensive (valuation +1.7) and deteriorating (fund –0.3); classic carry-unwind setup on soft fundamentals. One-legged valuation prop collapsing into crowded carry (90th percentile). Same yield-weakness pattern (–0.45 corr). Policy trap entrenched (feasibility –1.0).
+
+- **JPY**: Cheap (valuation –0.5) with improving fundamentals (+0.51). Mean-reversion setup tight, but carry crowding at 89th percentile—fragile to vol spike. Decoupled yield regime masks real-rate support; policy and growth both constructive.
+
+**Carry standout**: GBP carry at maximum crowding on maximum fragility—highest unwind trigger.
+
+**Since prior**: EUR structural unchanged (fund –0.20 decay offset by zero stretch shift); policy trap and growth drag now explicit; inflation support fading across all three cyclicals.
