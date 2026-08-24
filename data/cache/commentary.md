@@ -1,11 +1,7 @@
-**Regime: Risk-premium mode; carry crowding at extremes; stagflation drag overtaking hawkish tailwinds.**
+**Regime: Risk-premium dominates; yield strength decoupled from FX support, stagflation drag eroding hawkish tailwinds.**
 
-**Inflection pair — JPY:** Improving fundamentals (+0.60) meeting cheap valuation (-0.57); mean-reversion setup intact. Policy constraint is real (feasibility +0.22), but the macro pillars (growth +0.72, inflation +0.64, external +1.34) are the strongest on the board. Yield decoupling mutes real-rate support, but valuation floor is durable.
+**Inflection currencies:**
+- **AUD short / GBP short** — Both trapped in carry-unwind setup: stretched valuation (+1.5, +1.4 stretch) riding atop deteriorating fundamentals and policy exhaustion (feasibility -1.0, -1.4). Carry crowding extreme (92nd, 97th percentile); real yields rising but FX weakening (negative correlation = risk-premium regime). Valuation is the sole pillar prop; unwind risk is asymmetric.
+- **JPY long** — Rare mean-reversion: cheap valuation (-0.6 stretch) + improving fundamentals (+0.6 fund) + strongest policy tailwind (E +1.66). Yield decoupling cuts both ways here, but the valuation+growth combo is structural and uncontested.
 
-**Inflection pair — CAD:** Cheap on valuation (-2.03) and improving fundamentals (+0.17); narrow base but real-yield rewarded (+0.45 mult). Hike feasibility near neutral (-0.02). Lacks breadth but technicals could reward on mean reversion.
-
-**Danger zone — AUD & GBP:** Both stretched, deteriorating, and *crowded* (AUD 92nd percentile carry-to-vol, GBP 97th). Policy traps in both (feasibility -1.0 and -1.4). AUD's valuation is the sole pillar (+2.05); rest are flat—brittle. GBP's out-yield (+1.5% real) sits on fat carry positioning and negative yield-FX correlation (-0.17): classic unwind setup. Vol spike kills both.
-
-**Carry standout — USD:** Out-yields on real terms (+0.8% avg), but valuation stretched (+0.86); yield-rewarded regime supports hold, but positioning risk mirrors AUD/GBP if vol reprices.
-
-**Since prior:** AUD stretch eased -0.15; CHF -0.26 (both off highs, not cheap); NZD stretch tightened +0.17. Incremental relief, not repricing.
+**Carry pair:** **AUD/JPY squeezed** — AUD unwinding into JPY bid; the short AUD / long JPY trade is the crowded-carry reversal in real time.
