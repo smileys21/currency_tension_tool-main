@@ -1,7 +1,6 @@
-**Regime: Risk-premium dominates; yield strength decoupled from FX support, stagflation drag eroding hawkish tailwinds.**
+**Regime: USD-led carry unwind on stagflation anxiety; hawkish tailwinds fading across G10.**
 
-**Inflection currencies:**
-- **AUD short / GBP short** — Both trapped in carry-unwind setup: stretched valuation (+1.5, +1.4 stretch) riding atop deteriorating fundamentals and policy exhaustion (feasibility -1.0, -1.4). Carry crowding extreme (92nd, 97th percentile); real yields rising but FX weakening (negative correlation = risk-premium regime). Valuation is the sole pillar prop; unwind risk is asymmetric.
-- **JPY long** — Rare mean-reversion: cheap valuation (-0.6 stretch) + improving fundamentals (+0.6 fund) + strongest policy tailwind (E +1.66). Yield decoupling cuts both ways here, but the valuation+growth combo is structural and uncontested.
-
-**Carry pair:** **AUD/JPY squeezed** — AUD unwinding into JPY bid; the short AUD / long JPY trade is the crowded-carry reversal in real time.
+- **GBP & AUD at inflection—both fat carry on stretched valuations in crowded trades (95th & 92nd percentile CTV), policy tightening already exhausted, real-yield support deteriorating despite nominal yields high. Vol spike is tail risk; unwind would be sharp.**
+- **JPY & CAD diverge on valuation: JPY cheap with improving fundamentals (policy +1.67, growth +0.72) and a mean-reversion floor; CAD cheap but narrow (valuation doing all the work). JPY the safer contrarian.**
+- **AUD/JPY the standout carry pair—maximum tension between stretched AUD yield (carrying on broken policy transmission) and cheap JPY (fundamentals inflecting up; BoJ easing window closing).**
+- **Carry crowding in AUD/GBP/USD peaked; inflation multiples have collapsed (AUD -0.68, GBP -0.85) as soft growth trumps above-target CPI. EUR policy trap sharpening too.**

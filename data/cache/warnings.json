@@ -8,20 +8,20 @@
     "FX and yields are decoupled \u2014 the real-yield reward/stress read is ambiguous this window; treat Pillar D lightly."
   ],
   "GBP": [
-    "Fat carry on a fragile base: out-yields the field in real terms (avg +1.5%) but sits on a stretched valuation \u2014 the classic carry-unwind setup.",
-    "Policy trap: inflation above target but growth soft and policy already tight (feasibility -1.4) \u2014 the hawkish tailwind is fading toward a stagflation drag; inflation's axis-1 contribution is dampened (mult -0.88).",
-    "Yield stress: real 10Y is high (z +1.7) but the currency weakens as yields rise (-0.17 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.33). Note: cross vs USD partly confounds this in a strong-dollar tape.",
-    "Carry crowded: carry-to-vol in the 97th percentile \u2014 a lot of carry riding on quiet vol, fragile to a vol spike."
+    "Fat carry on a fragile base: out-yields the field in real terms (avg +1.2%) but sits on a stretched valuation \u2014 the classic carry-unwind setup.",
+    "One-legged read: Valuation (+1.6) is doing almost all the work; the other pillars are near neutral, so treat this as narrow, not broad-based.",
+    "Policy trap: inflation above target but growth soft and policy already tight (feasibility -1.2) \u2014 the hawkish tailwind is fading toward a stagflation drag; inflation's axis-1 contribution is dampened (mult -0.85).",
+    "Yield stress: real 10Y is high (z +1.5) but the currency weakens as yields rise (-0.17 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.33). Note: cross vs USD partly confounds this in a strong-dollar tape.",
+    "Carry crowded: carry-to-vol in the 95th percentile \u2014 a lot of carry riding on quiet vol, fragile to a vol spike."
   ],
   "CHF": [
     "Rich versus its decade (+0.6) but easing versus its recent 2-year range (-0.8) \u2014 read as 'off its highs,' not absolute cheap.",
     "Yield stress: real 10Y is high (z +0.6) but the currency weakens as yields rise (-0.18 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.35). Note: cross vs USD partly confounds this in a strong-dollar tape."
   ],
   "AUD": [
-    "Expensive and deteriorating \u2014 the vulnerable combination: rich valuation (+1.5) on a softening fundamental trajectory (-0.3).",
     "Fat carry on a fragile base: out-yields the field in real terms (avg +0.5%) but sits on a stretched valuation \u2014 the classic carry-unwind setup.",
     "One-legged read: Valuation (+2.0) is doing almost all the work; the other pillars are near neutral, so treat this as narrow, not broad-based.",
-    "Policy trap: inflation above target but growth soft and policy already tight (feasibility -1.0) \u2014 the hawkish tailwind is fading toward a stagflation drag; inflation's axis-1 contribution is dampened (mult -0.75).",
+    "Policy trap: inflation above target but growth soft and policy already tight (feasibility -0.8) \u2014 the hawkish tailwind is fading toward a stagflation drag; inflation's axis-1 contribution is dampened (mult -0.68).",
     "Yield stress: real 10Y is high (z +0.8) but the currency weakens as yields rise (-0.32 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.56). Note: cross vs USD partly confounds this in a strong-dollar tape.",
     "Carry crowded: carry-to-vol in the 92th percentile \u2014 a lot of carry riding on quiet vol, fragile to a vol spike."
   ],
@@ -32,6 +32,6 @@
     "One-legged read: Valuation (-2.0) is doing almost all the work; the other pillars are near neutral, so treat this as narrow, not broad-based."
   ],
   "USD": [
-    "Fat carry on a fragile base: out-yields the field in real terms (avg +0.8%) but sits on a stretched valuation \u2014 the classic carry-unwind setup."
+    "Fat carry on a fragile base: out-yields the field in real terms (avg +0.9%) but sits on a stretched valuation \u2014 the classic carry-unwind setup."
   ]
 }
