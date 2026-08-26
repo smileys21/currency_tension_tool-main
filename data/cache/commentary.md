@@ -1,6 +1,11 @@
-**Regime: USD-led carry unwind on stagflation anxiety; hawkish tailwinds fading across G10.**
+**Regime: Risk-premium dominance; yield strength uncoupled from FX; carry crowding at extremes.**
 
-- **GBP & AUD at inflection—both fat carry on stretched valuations in crowded trades (95th & 92nd percentile CTV), policy tightening already exhausted, real-yield support deteriorating despite nominal yields high. Vol spike is tail risk; unwind would be sharp.**
-- **JPY & CAD diverge on valuation: JPY cheap with improving fundamentals (policy +1.67, growth +0.72) and a mean-reversion floor; CAD cheap but narrow (valuation doing all the work). JPY the safer contrarian.**
-- **AUD/JPY the standout carry pair—maximum tension between stretched AUD yield (carrying on broken policy transmission) and cheap JPY (fundamentals inflecting up; BoJ easing window closing).**
-- **Carry crowding in AUD/GBP/USD peaked; inflation multiples have collapsed (AUD -0.68, GBP -0.85) as soft growth trumps above-target CPI. EUR policy trap sharpening too.**
+**Inflection zones:**
+
+- **GBP & AUD** — textbook carry unwinds: both fat real yields (real 10Y z +1.5, +0.8) but negative yield–FX correlation signals risk-premium regime, not reward. Valuation doing all the work (+1.6, +2.0); fundamentals near zero. Carry percentile 95th, 92nd — fragile to vol spike. Policy traps (feasibility –1.2, –0.8) mean hawkish tailwind is spent; stagflation drag ahead.
+
+- **JPY** — pure mean-reversion: cheap (valuation –0.6), improving fundamentals (+0.6), only major currency with positive growth and inflation pillars (+0.72, +0.64). Decoupled yield regime masks real 10Y stress, but policy feasibility +0.22 is uniquely supportive.
+
+- **CAD** — inverse of the problem. Undervalued (–2.0) on near-zero fundamental read; real yield rewarded at +0.50 with positive feasibility (+0.09).
+
+**Carry standout:** **AUD/JPY** — AUD yield/vol compression versus JPY structural improvement is the cleanest directional asymmetry; crowd positioning risk is acute.
