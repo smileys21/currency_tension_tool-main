@@ -1,9 +1,11 @@
-**Regime: Risk-premium dominates; carry crowding at extremes (AUD/GBP 92–95th); policy traps widening in AUD/GBP/NZD as hawkish fade meets soft growth.**
+**Regime: Risk-premium dominance; carry unwinds into stagflation headwinds.**
 
-**AUD at inflection—deteriorating fundamental, severely stretched valuation (+2.0), carry crowded (92nd percentile).** Yield stress (-0.56 mult) overwhelms real-10Y strength; real yields falling as risk premium rises. Stagflation policy trap (feasibility -0.8) signals end of hawkish tailwind. Unwind catalyst live.
+**Extremes:**
 
-**JPY cheap and improving—valuation -0.6, fundamentals +0.6, highest policy pillar (+1.69).** Mean reversion setup; decoupled yield regime ambiguous but growth & inflation pillars strongly supportive. Entry zone forming.
+- **AUD (deteriorating / stretched):** Valuation prop (+2.0) is nearly the entire story; fundamentals and policy are weak, and carry is crowded (92nd percentile). Yield support inverts (–0.61 mult) in a risk-off regime. Unwind risk is acute.
+- **JPY (improving / cheap):** Mean-reversion setup: valuation deep (–1.7), fundamentals rallying (+0.6 fund, +0.59 growth), policy floor raised (+1.69). Yields decoupled; treat as structural revaluation candidate into softer growth.
+- **GBP (improving / stretched):** Carry fat (+1.2% real avg) on narrow base—valuation +1.57 doing the work. Policy trap: inflation above target, growth soft, feasibility –1.25. Fundament jumped +0.51 but sits on fragile footing. Classic unwind setup, now with higher vol sensitivity.
 
-**GBP same trap as AUD—valuation +1.6 doing all work, feasibility -1.2, carry 95th percentile.** Real-yield weakness (-0.33 mult) despite nominal strength; fragile one-legged base.
+**Standout carry pair:** **AUD/JPY**—compressed into unwind into stagflation; AUD crowded, JPY cheap and structurally improving.
 
-**Standout carry: CAD—cheap (-2.0 valuation), improving fundamentals (+0.17), policy & fiscal supportive (+0.35/+0.49), carry at 57th percentile (uncrowded).** Real yield rewarded (+0.53 mult). Structural short-squeeze candidate.
+**Since prior:** GBP fundamentals surged +0.51; policy trap deepens as growth stays weak—carry appeal aging fast.
