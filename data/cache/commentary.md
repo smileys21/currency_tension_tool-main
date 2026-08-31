@@ -1,11 +1,9 @@
-**Regime: Risk-premium dominance; carry unwinds into stagflation headwinds.**
+**Regime: Risk-premium trade (yield rises hurt carry; vol-fragile shorts crowded; policy traps widening).**
 
-**Extremes:**
+• **GBP & AUD at extremes—both carry unwinds waiting to happen.** GBP valuation (+1.6) doing all the work on a policy-trapped, growth-soft base; carry-to-vol at 95th percentile and spec/real-money split (fast money *against* institutions) signals sharp capitulation risk. AUD similar: valuation (+2.0) masking deteriorating fundamentals, yield stress (corr -0.35), and 92nd-percentile carry crowding. GBP deteriorated sharply (+0.51 fund swing since prior).
 
-- **AUD (deteriorating / stretched):** Valuation prop (+2.0) is nearly the entire story; fundamentals and policy are weak, and carry is crowded (92nd percentile). Yield support inverts (–0.61 mult) in a risk-off regime. Unwind risk is acute.
-- **JPY (improving / cheap):** Mean-reversion setup: valuation deep (–1.7), fundamentals rallying (+0.6 fund, +0.59 growth), policy floor raised (+1.69). Yields decoupled; treat as structural revaluation candidate into softer growth.
-- **GBP (improving / stretched):** Carry fat (+1.2% real avg) on narrow base—valuation +1.57 doing the work. Policy trap: inflation above target, growth soft, feasibility –1.25. Fundament jumped +0.51 but sits on fragile footing. Classic unwind setup, now with higher vol sensitivity.
+• **JPY turning (fund +1.07, +0.48 move).** Cheap valuation (-0.54) with improving pillars—growth, inflation, external, fiscal, policy all positive. Mean-reversion candidate if risk sentiment cracks or USD carry unwinds.
 
-**Standout carry pair:** **AUD/JPY**—compressed into unwind into stagflation; AUD crowded, JPY cheap and structurally improving.
+• **CAD cheap and improving (valuation -2.0, fund +0.18); sits on the other side.** Fundamental backdrop narrowly supportive; valuation bed is deep.
 
-**Since prior:** GBP fundamentals surged +0.51; policy trap deepens as growth stays weak—carry appeal aging fast.
+• **AUD/USD carry most vulnerable—fragile base, max crowding, negative yield correlation, policy fading.**

@@ -3,32 +3,36 @@
     "Policy trap: inflation above target but growth soft and policy already tight (feasibility -0.6) \u2014 the hawkish tailwind is fading toward a stagflation drag; inflation's axis-1 contribution is dampened (mult -0.50).",
     "FX and yields are decoupled \u2014 the real-yield reward/stress read is ambiguous this window; treat Pillar D lightly."
   ],
-  "JPY": [
-    "Cheap and improving \u2014 the mean-reversion setup: valuation is below its own norm (-0.6) while fundamentals are turning up (+0.6).",
-    "FX and yields are decoupled \u2014 the real-yield reward/stress read is ambiguous this window; treat Pillar D lightly."
-  ],
   "GBP": [
     "Fat carry on a fragile base: out-yields the field in real terms (avg +1.2%) but sits on a stretched valuation \u2014 the classic carry-unwind setup.",
-    "Policy trap: inflation above target but growth soft and policy already tight (feasibility -1.2) \u2014 the hawkish tailwind is fading toward a stagflation drag; inflation's axis-1 contribution is dampened (mult -0.85)."
+    "One-legged read: Valuation (+1.6) is doing almost all the work; the other pillars are near neutral, so treat this as narrow, not broad-based.",
+    "Policy trap: inflation above target but growth soft and policy already tight (feasibility -1.2) \u2014 the hawkish tailwind is fading toward a stagflation drag; inflation's axis-1 contribution is dampened (mult -0.85).",
+    "Yield stress: real 10Y is high (z +1.5) but the currency weakens as yields rise (-0.17 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.33). Note: cross vs USD partly confounds this in a strong-dollar tape.",
+    "Carry crowded: carry-to-vol in the 95th percentile \u2014 a lot of carry riding on quiet vol, fragile to a vol spike.",
+    "Spec vs real money split: leveraged funds (+1.1z) and asset managers (-1.2z) are on opposite sides \u2014 fast money is leaning against the institutional stance, a setup that resolves sharply when one side capitulates."
   ],
   "CHF": [
     "Rich versus its decade (+0.6) but easing versus its recent 2-year range (-0.8) \u2014 read as 'off its highs,' not absolute cheap.",
     "Yield stress: real 10Y is high (z +0.6) but the currency weakens as yields rise (-0.18 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.35). Note: cross vs USD partly confounds this in a strong-dollar tape."
   ],
   "AUD": [
-    "Fat carry on a fragile base: out-yields the field in real terms (avg +0.6%) but sits on a stretched valuation \u2014 the classic carry-unwind setup.",
+    "Fat carry on a fragile base: out-yields the field in real terms (avg +0.5%) but sits on a stretched valuation \u2014 the classic carry-unwind setup.",
     "One-legged read: Valuation (+2.0) is doing almost all the work; the other pillars are near neutral, so treat this as narrow, not broad-based.",
     "Policy trap: inflation above target but growth soft and policy already tight (feasibility -0.8) \u2014 the hawkish tailwind is fading toward a stagflation drag; inflation's axis-1 contribution is dampened (mult -0.68).",
     "Yield stress: real 10Y is high (z +0.7) but the currency weakens as yields rise (-0.35 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.61). Note: cross vs USD partly confounds this in a strong-dollar tape.",
     "Carry crowded: carry-to-vol in the 92th percentile \u2014 a lot of carry riding on quiet vol, fragile to a vol spike."
   ],
   "NZD": [
-    "Policy trap: inflation above target but growth soft and policy already tight (feasibility -0.6) \u2014 the hawkish tailwind is fading toward a stagflation drag; inflation's axis-1 contribution is dampened (mult -0.55)."
+    "Policy trap: inflation above target but growth soft and policy already tight (feasibility -0.6) \u2014 the hawkish tailwind is fading toward a stagflation drag; inflation's axis-1 contribution is dampened (mult -0.55).",
+    "Positioning crowded: leveraged funds are short at a -1.6z extreme (-35% of open interest, futures+options). Consensus side of the boat \u2014 unwind risk is elevated if the tape turns. (Listed-derivatives slice only; OTC positioning is not visible here.)"
   ],
   "CAD": [
     "One-legged read: Valuation (-2.0) is doing almost all the work; the other pillars are near neutral, so treat this as narrow, not broad-based."
   ],
+  "JPY": [
+    "Cheap and improving \u2014 the mean-reversion setup: valuation is below its own norm (-0.5) while fundamentals are turning up (+1.1)."
+  ],
   "USD": [
-    "Fat carry on a fragile base: out-yields the field in real terms (avg +0.9%) but sits on a stretched valuation \u2014 the classic carry-unwind setup."
+    "Fat carry on a fragile base: out-yields the field in real terms (avg +1.0%) but sits on a stretched valuation \u2014 the classic carry-unwind setup."
   ]
 }
