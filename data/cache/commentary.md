@@ -1,11 +1,13 @@
-**Regime: Carry unwind risk rising; hawkish tailwinds fading into stagflation drag across AUD, GBP, NZD.**
+**Regime: Risk-premium world; carry crowded across all high-yielders; mean-reversion bids in JPY and CAD being muffled by dollar strength.**
 
-- **AUD / GBP**: Both fat carry on stretched valuation (AUD +2.0, GBP +1.6 pillar G), both crowded (92nd, 95th percentile carry-to-vol). Yield stress in both—real yields rising but currencies weakening on yields, signalling risk-premium not reward. Policy trap identical: inflation above target, growth soft, feasibility underwater (AUD -0.8, GBP -1.2). Unwind trigger: vol spike or RBA/BOE pivot.
+**Inflection currencies:**
 
-- **JPY**: Cheap and improving—valuation -0.53, fund swing +0.59 since last snapshot. Fundamentals strongest in the map (growth +0.72, inflation +0.64, external +1.34, policy +1.80). Decoupled yields mask the setup. Mean-reversion candidate if risk appetite falters.
+- **GBP** — the fat carry-unwind poster child. Valuation doing 90% of the work (+1.6), other pillars flat. Carry in 95th percentile. Policy trap active (feasibility -1.2, inflation multiple -0.85): hawkish tailwind is dead. Real yields rising but sterling weakens into it—risk-premium regime, not reward. Spec vs real-money split (fast long +1.1z vs asset manager short -1.2z) unresolved; sharp capitulation likely when one side breaks.
 
-- **CAD**: Only clean cheap read (stretch -1.17, valuation -2.0). Fund +0.18 supports. Yield regime rewarded, feasibility +0.10. Contrarian long relative to crowded carry pairs.
+- **AUD** — identical carry-unwind setup to GBP but one notch less crowded (92nd percentile). Valuation +2.0 carrying the ball. Same policy trap and yield-inversion signal. Deteriorating fundamentals (-0.22) vs stretched technicals (+1.53).
 
-- **Standout carry**: GBP—highest real yield but one-legged (valuation doing 90% of work), carry at extreme crowding (spec vs real-money split). Fast money leaning against institutional stance; sharp resolution on capitulation.
+- **JPY** — rare bright spot. Valuation -0.5 (cheap vs own history), fundamentals +0.52 (improving), carry-to-vol only 83rd percentile. Mean reversion bid intact but real-yield decoupling (ambiguous signal) and strong-dollar overlay are dampening the play.
 
-JPY improved +0.59 fundamental since prior; AUD/GBP/NZD deteriorating on policy fading into stagflation.
+**Standout carry pair:** **GBP/USD** short — highest yield premium but carry crowding, policy pivot risk, and spec/real-money divergence make it the most likely unwind candidate.
+
+**Change:** CAD fundamentals rose +0.19; valuation held. Cheap mean-reversion trade gaining traction (fund now +0.56 vs prior +0.37).
