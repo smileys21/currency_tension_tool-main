@@ -1,11 +1,9 @@
-**Regime: Risk-premium compression with carry crowding at extremes across G10 — unwind fragility rising.**
+**Regime: Strong dollar on yield carry; three major pairs (GBP, AUD, EUR) in classic carry-unwind setup—crowded at 86–97th percentile vol-to-carry; mean-reversion bids in JPY and CAD.**
 
-**Inflection points:**
-- **GBP & AUD short** — both sit on valuation extremes (+1.6, +2.0) while policy tightening capacity has collapsed (feasibility -1.2, -0.9). Real-yield support is inverted (negative correlation to rising yields); carry is in the 92–95th percentile. Classic unwind setup when vol spikes.
-- **JPY & CAD long** — mean-reversion pair. JPY cheap (-0.47 stretch) with improving fundamentals (+0.52 fund), policy tailwind still live (+1.96 pillar E). CAD cheap (-1.17 stretch) and improving (+0.37 fund), valuation driving the signal but external pillar solid (+1.06).
+- **GBP at peak unwind risk**: Valuation +1.6 carrying the whole trade (other pillars neutral); carry crowded at 97th percentile; fast money vs real money split (lev +1.1z vs asset mgrs −1.2z) signals sharp capitulation risk. Policy trap (feasibility −1.2) is the deepest in the field.
+- **AUD similarly fragile**: Valuation +2.0 isolated; carry at 95th percentile; yield corr negative (−0.33)—real yields don't reward; growth pillar −0.47. Hawkish tailwind fading.
+- **JPY cheap and improving**: Valuation −0.5, fundamentals +0.5; carry-to-vol 87th percentile but mean-reversion setup dominates. Real-yield support downweighted (mult −0.31) in risk-premium regime, not reward.
 
-**Carry standout:**
-- EUR/GBP or EUR/AUD: EUR policy still anchored (+1.28) while GBP and AUD are brittle on valuation alone; if carry unwinds, the flow reversal favors EUR against both — and EUR carry crowding (86th percentile) is at least symmetric to the shorts.
+**Standout carry unwind: GBPUSD short.** Spec positioning vs institution split; policy trap deepening; 97th percentile crowding is terminal.
 
-**Since last snapshot:**
-No prior snapshot provided; directionally, the tension map confirms stretched G10 carry pairs need a vol event to reset.
+**Change:** USD fundamental improved +0.18 since prior; stretch flat. Carry-unwind window closing if vol normalizes.
