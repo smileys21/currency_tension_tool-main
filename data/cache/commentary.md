@@ -1,9 +1,10 @@
-**Regime: Strong dollar on yield carry; three major pairs (GBP, AUD, EUR) in classic carry-unwind setup—crowded at 86–97th percentile vol-to-carry; mean-reversion bids in JPY and CAD.**
+**Regime: Risk-premium mode; carry crowding at extremes (GBP 97th, AUD 94th, JPY 86th) threatens unwind on vol spike.**
 
-- **GBP at peak unwind risk**: Valuation +1.6 carrying the whole trade (other pillars neutral); carry crowded at 97th percentile; fast money vs real money split (lev +1.1z vs asset mgrs −1.2z) signals sharp capitulation risk. Policy trap (feasibility −1.2) is the deepest in the field.
-- **AUD similarly fragile**: Valuation +2.0 isolated; carry at 95th percentile; yield corr negative (−0.33)—real yields don't reward; growth pillar −0.47. Hawkish tailwind fading.
-- **JPY cheap and improving**: Valuation −0.5, fundamentals +0.5; carry-to-vol 87th percentile but mean-reversion setup dominates. Real-yield support downweighted (mult −0.31) in risk-premium regime, not reward.
+**At the extremes:**
+- **GBP & AUD: Unwind risk.** Both carry fat real yields (+1.1% and +0.7%) but valuation is doing *all* the work (+1.6 and +2.0); fundamentals and growth are near flat. Policy feasibility is fading (GBP -0.60, AUD -0.90) as growth softens against sticky inflation—hawkish tailwind exhausting. Carry crowded in the 94–97th percentile on quiet vol; fragile.
+- **JPY: Mean-reversion setup.** Cheap (-0.49 stretch) + improving fundamentals (+0.45 fund) + strong pillars (growth +0.52, inflation +0.64, policy +1.91). Real yields high but currency weakens as yields rise (risk-premium regime, not reward). Carry crowded at 86th percentile but setup is genuine.
+- **CAD: Cheap + improving.** Valuation doing the work (-2.0) but fundamentals turning (+0.44); external pillar solid (+1.06). Narrow read but underpinned.
 
-**Standout carry unwind: GBPUSD short.** Spec positioning vs institution split; policy trap deepening; 97th percentile crowding is terminal.
+**Carry pair to watch: AUD/JPY.** Classic long-vol, long-JPY liquidation candidate if vol spikes; AUD's one-legged carry unravels fastest.
 
-**Change:** USD fundamental improved +0.18 since prior; stretch flat. Carry-unwind window closing if vol normalizes.
+**Since prior:** CHF, GBP, NZD improved +0.18–0.21 fundamentally; USD slipped -0.18. No regime shift, but carry crowding tightened further into quiet conditions.
