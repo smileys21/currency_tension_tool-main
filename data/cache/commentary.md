@@ -1,9 +1,9 @@
-**Regime: Carry crowding in risk-premium mode—vol-starved longs on AUD, GBP, JPY vulnerable; USD and EUR stretched but policy-anchored.**
+**Regime: Dollar strong on valuation stretch; carry crowding at extremes across AUD, GBP, JPY—fragile to vol spike.**
 
-- **AUD & GBP: Twin unwind risks.** Both pinned on valuation alone (+2.0, +1.6) with deteriorating fundamentals and policy trapped (feasibility -0.9, -0.73). Carry at 96th–97th percentile; real yields inversely correlated with FX (risk-premium regime, not reward). AUD especially fragile: growth collapsing (-0.47), external dragging (-0.49 fiscal).
+- **AUD & GBP in unwind territory.** Both sit on fat carry (real +0.6–0.9%) atop stretched valuations (+2.0, +1.6) with policy trapped (growth soft, hike room gone). Carry-to-vol at 97th percentile—classic crowded-carry-reversal setup. AUD worse: fundamental deterioration (-0.24), negative yield-currency correlation (-0.33) signals risk premium, not reward.
 
-- **JPY: Cheap mean reversion.** Valuation -1.69 (well below norm) while fundamentals improving (+0.39); real yield stress (-0.55 mult) is offset by strong policy (+1.94) and growth (+0.53). Carry crowded (86th percentile) but technicals favor range-support into vol spikes.
+- **JPY cheaper, improving fundamentals (+0.38, +0.53 growth), but carry also crowded (86th percentile).** Real-yield regime punishes it (-0.57 mult); correlation with USD strength overrides valuation mean-reversion signal. Mean reversion live, but timing depends on USD stabilization or vol normalization.
 
-- **CAD: Inverse mirror—cheap and improving.** Valuation -2.03, fundamentals +0.35; only carry pair trading *below* norm. Real-yield reward intact (mult +0.45). Narrow setup but structurally aligned.
+- **CAD mean-reversion candidate.** Cheap vs own norm (-1.1), fundamentals rising (+0.35), external pillar strong (+1.06). Feasibility positive (+0.03 vs peers' negatives). Carry not crowded (76th).
 
-- **Carry standout: USD.** Rewarded yield, policy-supported (+0.92), but stretched valuation (+0.97). Profits sitting on quiet vol; less crowded downside than AUD/GBP/JPY.
+- **GBP carry pair most fragile:** 97th percentile crowding + policy fade + stagflation drag—unwind vector sharpest on vol shock.
