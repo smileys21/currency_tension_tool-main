@@ -1,9 +1,11 @@
-**Regime: Dollar strong on valuation stretch; carry crowding at extremes across AUD, GBP, JPY—fragile to vol spike.**
+**Regime: Strong dollar, carry crowded across all yield baskets—AUD, GBP, JPY in 96–97th carry percentile; policy-driven EUR narrowly supported; mean-reversion setup in JPY and CAD.**
 
-- **AUD & GBP in unwind territory.** Both sit on fat carry (real +0.6–0.9%) atop stretched valuations (+2.0, +1.6) with policy trapped (growth soft, hike room gone). Carry-to-vol at 97th percentile—classic crowded-carry-reversal setup. AUD worse: fundamental deterioration (-0.24), negative yield-currency correlation (-0.33) signals risk premium, not reward.
+• **AUD & GBP at the knife edge.** Both stretched at +1.7/+1.4 on valuation alone (+2.2 and +1.6 pillar G), with growth and inflation pillars near neutral—pure carry unwinds waiting for vol to spike. Yield stress regime: yields rising *into* currency weakness (corr –0.33/–0.11), not reward. Carry-to-vol 96–97th: fragile.
 
-- **JPY cheaper, improving fundamentals (+0.38, +0.53 growth), but carry also crowded (86th percentile).** Real-yield regime punishes it (-0.57 mult); correlation with USD strength overrides valuation mean-reversion signal. Mean reversion live, but timing depends on USD stabilization or vol normalization.
+• **JPY: Mean-reversion long.** Cheap (stretch –0.4), improving fundamentals (+0.39), strong policy (+1.96) and external (+1.28)—but crowded carry (86th percentile) and yield-stress regime mask it. Real 10Y high yet currency weakens on yield rises: risk-premium play, not yield-gradient one. Ideal for vol spike hedge.
 
-- **CAD mean-reversion candidate.** Cheap vs own norm (-1.1), fundamentals rising (+0.35), external pillar strong (+1.06). Feasibility positive (+0.03 vs peers' negatives). Carry not crowded (76th).
+• **CAD: Underowned cheap.** Stretch –0.93 (best on map), improving fundamentals, but valuation pillar does all work—narrow base. Feasibility slightly positive: upside vol play if growth data reaccelerates.
 
-- **GBP carry pair most fragile:** 97th percentile crowding + policy fade + stagflation drag—unwind vector sharpest on vol shock.
+• **Standout carry: EUR 1Y real yield +1.0%, but 93rd percentile crowded and policy-only supported—fragile without broad pillar confirmation.**
+
+**Since last: EUR stretched 20bp higher, NZD/CHF also up; USD eased 17bp off extremes—rally beginning to fatigue.**
