@@ -1,9 +1,11 @@
-**Risk-off backdrop favouring safe havens and shorts on crowded, rich carry.**
+**Regime: Risk-premium mode; carry crowding at extremes (AUD/GBP >90th percentile) colliding with deteriorating fundamentals.**
 
-- **AUD / GBP shorts:** Both stretched valuation (+1.8, +1.6) anchoring on thin fundamentals; carry crowded (99th, 97th percentile). AUD deteriorating (-0.28 fund) into policy trap (feasibility -0.9); real yields fail to support (mult -0.66). GBP stagflation drag as inflation tailwind fades. Unwind risk acute.
+- **AUD near unwind trigger.** Valuation stretched +1.77, fundamentals deteriorating -0.28; real-yield support has flipped (mult -0.66, risk-regime not reward). Carry is at the 99th percentile. Policy feasibility collapsing (-0.9) into soft growth—hawkish tailwind exhausted. One-legged trade (valuation only) on fragile base.
 
-- **JPY long:** Cheap valuation (-0.4), improving fundamentals (+0.37), mean-reversion setup. Carry crowding (87th percentile) poses volatility risk, but real-yield regime is punishing all carry anyway; JPY benefits as risk-off trigger.
+- **GBP similarly brittle.** Carry crowded at 93rd percentile on stretched valuation (+1.42); real-yield decoupled and feasibility underwater (-0.65). Pillars near zero except valuation—narrow read. Unwind risk material if vol spikes.
 
-- **CAD long:** Cheap (-0.93 stretch), improving (+0.49 fund), real-yield rewarded (mult 0.44). Tight pillar base but external (+1.65) and policy (+0.83) support.
+- **CAD and JPY the cheap-improving pair.** CAD fundamentals +0.50, valuation -0.94; JPY fundamentals +0.99 (up +0.62 since prior), valuation -0.39. Both offer mean-reversion anchor in a carry-unwind environment. JPY acceleration in growth pillar material.
 
-- **Carry pair to fade:** GBP/JPY — the textbook unwind: stretched GBP at crowded carry highs; JPY poised to rally on vol spike.
+- **AUDJPY or GBPJPY short.** Long crowded, rich commodity-linked carries into deteriorating real yields and policy exhaustion; JPY anchored cheap on improving fundamentals. Asymmetry favors yen.
+
+**JPY gained +0.62 on growth pillar since prior read—structural improvement, not just technical.** Carry break becoming the path of least resistance.
