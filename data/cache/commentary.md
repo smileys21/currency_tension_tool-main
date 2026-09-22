@@ -1,11 +1,11 @@
-**Regime: Risk-premium mode; carry crowding at extremes (AUD/GBP >90th percentile) colliding with deteriorating fundamentals.**
+**Regime: Strong dollar on valuation-carry crowding; carry unwinds fragile across stretched pairs (AUD, GBP, USD); JPY and CAD are mean-reversion plays into deteriorating technicals.**
 
-- **AUD near unwind trigger.** Valuation stretched +1.77, fundamentals deteriorating -0.28; real-yield support has flipped (mult -0.66, risk-regime not reward). Carry is at the 99th percentile. Policy feasibility collapsing (-0.9) into soft growth—hawkish tailwind exhausted. One-legged trade (valuation only) on fragile base.
+- **AUD**: Expense + deterioration = vulnerability. Valuation +2.2 is doing all work; fundamentals rolling over -0.3. Carry at 100th percentile on yield-stress regime (real yields rise, AUD weakens). Classic unwind setup.
 
-- **GBP similarly brittle.** Carry crowded at 93rd percentile on stretched valuation (+1.42); real-yield decoupled and feasibility underwater (-0.65). Pillars near zero except valuation—narrow read. Unwind risk material if vol spikes.
+- **GBP**: Fat carry (93rd percentile crowding) on stretched valuation +1.6, but pillars hollow—policy trap tightening as inflation fades into soft growth. Real-yield decoupled from FX. Unwind trigger dormant but primed.
 
-- **CAD and JPY the cheap-improving pair.** CAD fundamentals +0.50, valuation -0.94; JPY fundamentals +0.99 (up +0.62 since prior), valuation -0.39. Both offer mean-reversion anchor in a carry-unwind environment. JPY acceleration in growth pillar material.
+- **JPY**: Mean-reversion inflection: cheap valuation (-0.39) + improving fundamentals (+0.37); policy +1.99 leads. But carry crowded 87th percentile in stress regime (real 10Y elevated, yen weakens into rising yields). Fundamentals improved 0.62 since last snap; technicals fragile to vol spike.
 
-- **AUDJPY or GBPJPY short.** Long crowded, rich commodity-linked carries into deteriorating real yields and policy exhaustion; JPY anchored cheap on improving fundamentals. Asymmetry favors yen.
+- **CAD**: Cheap (-0.94) + improving (+0.50). External pillar +1.65 does the work; broad enough. Carry pair: USD/CAD sell on mean reversion; yield regime rewarded, feasibility neutral. Positioning lower risk than AUD/GBP.
 
-**JPY gained +0.62 on growth pillar since prior read—structural improvement, not just technical.** Carry break becoming the path of least resistance.
+**USD/CAD short** dominates: cheap CAD against rich USD, both improving/deteriorating respectively; carry sustainable (rewarded regime, lower crowding).
