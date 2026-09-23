@@ -1,11 +1,11 @@
-**Regime: Strong dollar on valuation-carry crowding; carry unwinds fragile across stretched pairs (AUD, GBP, USD); JPY and CAD are mean-reversion plays into deteriorating technicals.**
+**Regime: Risk-premium regime (yield stress, carry crowding, mean-reversion tension) masking policy fragmentation.**
 
-- **AUD**: Expense + deterioration = vulnerability. Valuation +2.2 is doing all work; fundamentals rolling over -0.3. Carry at 100th percentile on yield-stress regime (real yields rise, AUD weakens). Classic unwind setup.
+**At inflection:**
 
-- **GBP**: Fat carry (93rd percentile crowding) on stretched valuation +1.6, but pillars hollow—policy trap tightening as inflation fades into soft growth. Real-yield decoupled from FX. Unwind trigger dormant but primed.
+- **AUD short** — deteriorating fundamentals (-0.28) meeting extreme stretch (+1.77) and extreme carry crowding (99th percentile). Valuation is doing all the work (+2.2); growth, inflation, and fiscal pillars near flat. Policy trap: feasibility -0.9, inflation multiplier -0.71. Real yields rise but AUD weakens (neg corr) — regime is risk-off, not yield-reward. Break risk is sharp on vol spike.
 
-- **JPY**: Mean-reversion inflection: cheap valuation (-0.39) + improving fundamentals (+0.37); policy +1.99 leads. But carry crowded 87th percentile in stress regime (real 10Y elevated, yen weakens into rising yields). Fundamentals improved 0.62 since last snap; technicals fragile to vol spike.
+- **GBP short** — milder version of AUD: stretched (+1.42), fat carry (93rd percentile) on collapsed growth support. Policy already tight (feasibility -0.65); inflation's tailwind dampened (-0.57 mult). FX–yield decoupling signals unwind risk.
 
-- **CAD**: Cheap (-0.94) + improving (+0.50). External pillar +1.65 does the work; broad enough. Carry pair: USD/CAD sell on mean reversion; yield regime rewarded, feasibility neutral. Positioning lower risk than AUD/GBP.
+- **JPY long** — cheap (-0.39) with improving fundamentals (+0.37). Valuation below norm, policy strong (+1.99). Carry crowding (87th) is elevated but lower than GBP/AUD; mean-reversion edge. Dollar strength partly masks; watch for volatility relief to unlock.
 
-**USD/CAD short** dominates: cheap CAD against rich USD, both improving/deteriorating respectively; carry sustainable (rewarded regime, lower crowding).
+**Carry standout:** AUD/JPY — unwind the extreme stretch in AUD against JPY's improving setup; 165bp of yield is embedded in positioning at breaking point.
