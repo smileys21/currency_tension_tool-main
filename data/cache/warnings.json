@@ -1,8 +1,7 @@
 {
   "EUR": [
-    "One-legged read: Policy (+1.5) is doing almost all the work; the other pillars are near neutral, so treat this as narrow, not broad-based.",
-    "FX and yields are decoupled \u2014 the real-yield reward/stress read is ambiguous this window; treat Pillar D lightly.",
-    "Carry crowded: carry-to-vol in the 86th percentile \u2014 a lot of carry riding on quiet vol, fragile to a vol spike."
+    "One-legged read: Policy (+1.4) is doing almost all the work; the other pillars are near neutral, so treat this as narrow, not broad-based.",
+    "FX and yields are decoupled \u2014 the real-yield reward/stress read is ambiguous this window; treat Pillar D lightly."
   ],
   "JPY": [
     "Cheap and improving \u2014 the mean-reversion setup: valuation is below its own norm (-0.3) while fundamentals are turning up (+0.3).",
@@ -17,6 +16,7 @@
     "Carry crowded: carry-to-vol in the 93th percentile \u2014 a lot of carry riding on quiet vol, fragile to a vol spike."
   ],
   "CHF": [
+    "Rich versus its decade (+0.5) but easing versus its recent 2-year range (-1.0) \u2014 read as 'off its highs,' not absolute cheap.",
     "FX and yields are decoupled \u2014 the real-yield reward/stress read is ambiguous this window; treat Pillar D lightly."
   ],
   "AUD": [
@@ -29,10 +29,11 @@
   ],
   "NZD": [
     "One-legged read: External (+1.6) is doing almost all the work; the other pillars are near neutral, so treat this as narrow, not broad-based.",
-    "Yield stress: real 10Y is high (z +0.6) but the currency weakens as yields rise (-0.33 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.58). Note: cross vs USD partly confounds this in a strong-dollar tape."
+    "Yield stress: real 10Y is high (z +0.6) but the currency weakens as yields rise (-0.29 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.53). Note: cross vs USD partly confounds this in a strong-dollar tape."
   ],
   "CAD": [
-    "Cheap and improving \u2014 the mean-reversion setup: valuation is below its own norm (-0.9) while fundamentals are turning up (+0.6)."
+    "Cheap and improving \u2014 the mean-reversion setup: valuation is below its own norm (-0.9) while fundamentals are turning up (+0.5).",
+    "One-legged read: Valuation (-1.8) is doing almost all the work; the other pillars are near neutral, so treat this as narrow, not broad-based."
   ],
   "USD": [
     "Rich versus its decade (+0.8) but easing versus its recent 2-year range (-0.3) \u2014 read as 'off its highs,' not absolute cheap.",

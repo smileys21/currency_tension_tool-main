@@ -1,12 +1,13 @@
-**Regime: Strong dollar on carry crowding; mean-reversion setups in JPY and CAD offset by stretched AUD, GBP, and EUR policy-driven longs.**
+**Regime: Strong dollar on yield reward; carry crowding and valuation stretch limit duration.**
 
-**Inflection points:**
-- **AUD short**: Deteriorating fundamentals (-0.32) collide with extreme stretch (+1.75) and 99th-percentile carry crowding. Valuation doing all the work; policy tightening exhausted (feasibility -1.1). Unwind tail-risk extreme.
-- **GBP short**: Carry-to-vol at 93rd percentile on a one-legged policy read. Hawkish tailwind fading into stagflation; real yields punished despite rich pricing. Fragile base, fat carry = classic unwind setup.
-- **JPY long**: Mean-reversion inflection—valuation cheap (-0.32) while fundamentals improve (+0.33). Carry crowded (89th percentile) but the asymmetry favors shorts covering into vol stress; real-yield regime is risk-premium (mult -0.61), not reward.
+**At the extremes:**
 
-**Carry standout:**
-- **AUD/JPY**: Both at extreme carry crowding (AUD 99th, JPY 89th); AUD fundamentally deteriorating while JPY mean-reverts. Short AUD/long JPY capture dual unwind + better risk-adjusted macro.
+- **AUD short**: Valuation stretched (+1.8), fundamentals deteriorating (-0.3), carry in 99th percentile crowding. Policy trap (feasibility -1.1) caps hawkish tailwind. Yield weakness on rising rates (-0.43 corr) signals risk-premium regime, not reward. Vulnerable to vol spike unwind.
 
-**Since prior:**
-No prior snapshot provided.
+- **GBP short**: Narrow carry setup—valuation (+1.6) doing all work, other pillars neutral. Out-yields at +0.8% real but sits on stretched base. Inflation above target but policy already tight (feasibility -0.6); hawkish fade looms. Crowded at 93rd percentile; fragile to vol spike.
+
+- **CAD long**: Cheap (-0.9 valuation) and improving fundamentals (+0.5). External pillar strong (+1.65). Mean-reversion setup from below-norm valuation. Yield regime rewarded.
+
+- **JPY long**: Improving fundamentals (+0.3) against cheap valuation (-0.34). Carry crowded (89th percentile) but real-yield support discounted (-0.61 mult) in risk-premium regime. Upside if vol normalizes; downside if carry unwind triggers.
+
+**Carry pair:** AUD/JPY—both stretched but AUD more vulnerable (99th vs 89th crowding); JPY has mean-reversion backdrop.
