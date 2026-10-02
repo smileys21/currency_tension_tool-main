@@ -1,13 +1,7 @@
-**Regime: Strong dollar on yield reward; carry crowding and valuation stretch limit duration.**
+**Regime: Carry crowded at extremes; mean-reversion setups emerging in JPY and CAD, but vol-regime fragility dominates.**
 
-**At the extremes:**
+- **AUD**: Deteriorating fundamentals (-0.35) meeting stretched valuation (+1.75) in the ultimate carry trap—99th percentile crowding. Yield stress regime (real 10Y weakens FX, mult -0.76) undermines the carry narrative. Unwind risk acute.
+- **JPY**: Cheap valuation (-0.39), improving fundamentals (+0.33), classic mean-reversion setup. Real-yield regime is *risk premium*, not support; 87th percentile carry crowding and weak yield correlation (-0.36) expose fragility to vol spike. A dislocation candidate if risk-off triggers.
+- **GBP**: Narrow bull case: valuation heavy-lifting (+1.59) with soft fundamentals and policy tightness (feasibility -0.64). 93rd percentile carry crowding on decoupled yields. Stagflation drag looming; unwind vector clear.
 
-- **AUD short**: Valuation stretched (+1.8), fundamentals deteriorating (-0.3), carry in 99th percentile crowding. Policy trap (feasibility -1.1) caps hawkish tailwind. Yield weakness on rising rates (-0.43 corr) signals risk-premium regime, not reward. Vulnerable to vol spike unwind.
-
-- **GBP short**: Narrow carry setup—valuation (+1.6) doing all work, other pillars neutral. Out-yields at +0.8% real but sits on stretched base. Inflation above target but policy already tight (feasibility -0.6); hawkish fade looms. Crowded at 93rd percentile; fragile to vol spike.
-
-- **CAD long**: Cheap (-0.9 valuation) and improving fundamentals (+0.5). External pillar strong (+1.65). Mean-reversion setup from below-norm valuation. Yield regime rewarded.
-
-- **JPY long**: Improving fundamentals (+0.3) against cheap valuation (-0.34). Carry crowded (89th percentile) but real-yield support discounted (-0.61 mult) in risk-premium regime. Upside if vol normalizes; downside if carry unwind triggers.
-
-**Carry pair:** AUD/JPY—both stretched but AUD more vulnerable (99th vs 89th crowding); JPY has mean-reversion backdrop.
+**Carry standout**: **AUD/JPY** — AUD's deterioration + maximal crowding vs. JPY's mean-reversion + risk-regime setup. Structural mismatch widening.
