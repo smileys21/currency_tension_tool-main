@@ -1,8 +1,11 @@
-**Regime: Strong dollar persists; carry unwinds into crowded extremes.**
+**Regime: Risk-premium dominance; real yields rising but FX decoupled—carry crowding at extremes across AUD, GBP, JPY.**
 
-**Inflection currencies:**
-- **AUD**: Deteriorating fundamentals (-0.35) meeting stretched valuation (+1.75) and maxed-out carry crowding (99th percentile). Real yields weaken the currency despite high nominal levels. Vulnerable to vol spike or policy disappointment.
-- **GBP**: Narrow carry setup—valuation doing all work (+1.6), pillars near neutral. Feasibility collapsed (-0.63); inflation's tailwind fading into stagflation drag. Crowded at 98th carry percentile; unwind risk acute.
-- **JPY**: Cheap, improving fundamentals (+0.28), but yield stress regime persists (real 10Y stretched; negative yield–FX correlation). Carry at 87th percentile. Mean-reversion candidate if vol spikes.
+- **AUD short**: Valuation stretched (+1.8) deteriorating fundamentals (−0.35), carry-to-vol at 99th percentile, policy room exhausted (feasibility −1.1). Yield-FX decoupling (−0.49 corr) means real-rate support evaporates in vol spike. Unwind risk acute.
 
-**Standout carry pair:** **GBP/JPY** remains bid but structurally fragile—inflation support is waning in GBP while JPY crowding creates dual unwind risk on any volatility event.
+- **GBP sell**: Narrow carry setup—valuation (+1.6) carrying the freight while growth soft and inflation multiply dampened (−0.56). Crowding at 98th percentile; policy tightening done. Decoupled yield regime adds ambiguity; treat as fragile.
+
+- **JPY tactical long**: Cheap (−0.41), fundamentals improving (+0.28), mean-reversion candidate. But carry crowded (87th), stress-regime yield (−0.61 mult), and cross confounded by USD strength. Play short-vol reversion or pairs.
+
+- **Standout carry pair**: **GBP/JPY unwind**—both crowded (GBP 98, JPY 87), both vulnerable to vol; AUD/JPY equally toxic.
+
+No prior snapshot given; compare next print on carry-to-vol and real-10Y Z-scores.
