@@ -1,11 +1,12 @@
-**Regime: Strong dollar with carry crowding at extremes; mean-reversion setups emerging in JPY and CAD, unwind risk high in AUD and GBP.**
+**Regime: Risk-premium dominance; yield support downweighted across AUD, NZD, JPY; carry crowded at extremes (AUD/GBP 99th, 98th percentile).**
 
-**Inflection currencies:**
+**Inflection extremes:**
 
-- **AUD short**: deteriorating fundamentals (-0.28) meet bloated valuation (+1.75) in a classic unwind trap. Growth soft, policy boxed, and yield stress regime (-0.76 real10y mult) means AUD weakens as yields rise. Carry at 99th percentile—fragile.
-- **GBP short**: all valuation (+1.59), no breadth. Real yield decoupled; carry crowded at 98th. One-legged positioning ahead of vol spike.
-- **JPY long**: cheap (-0.39 stretch) with improving fundamentals (+0.34); valuation-to-fundamentals spread is the setup. Yield stress (-0.62 mult) means BoJ tightness is priced as risk premium, not carry. Carry tail-risk at 87th.
+- **AUD short** – expensive (+1.75 stretch, +2.24 valuation) on deteriorating fundamentals (–0.28 fund); policy trap (growth soft, tightness already priced); carry at 99th percentile, fragile to vol shock. Yield regime punishes on strength (–0.76 mult, –0.49 corr).  
+- **JPY long** – cheap (–0.50 stretch) with improving fundamentals (+0.34 fund); valuation mean-reversion play, but carry crowded (88th percentile) and stress regime suppresses real-yield support (–0.62 mult). Tactical long if vol spikes; structural weakness remains if USD stays bid.
 
-**Standout carry: NZD**, improving fundamentals (+0.80) offset by yield stress; real-yield support muted (-0.47 mult), but growth pillar (+1.15) is firm.
+**Standout carry unwind risk:**
 
-**Since prior:** GBP fund +0.17 (modest improvement, valuation drift unchanged—unwind fragility intact); NZD fund +0.53 (sharp jump, now the cleanest long outside carry-crowding risk).
+- **GBP** – outweighs field in real terms but rests on valuation alone (+1.6 pillar doing all work); carry at 98th percentile with no fundamental anchor beneath. First to crack in a vol spike.
+
+**No prior snapshot provided for delta summary.**
