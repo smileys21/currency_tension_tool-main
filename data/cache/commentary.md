@@ -1,12 +1,11 @@
-**Regime: Risk-premium dominance; yield support downweighted across AUD, NZD, JPY; carry crowded at extremes (AUD/GBP 99th, 98th percentile).**
+**Regime: Risk-premium tape—yield strength decoupled from FX, carry crowding extreme across majors.**
 
-**Inflection extremes:**
+**Inflection pairs:**
+- **JPY**: Cheap (+improving fundamentals) meets carry crowding (87th percentile). Valuation mean-reversion case undercut by real-yield stress regime (mult –0.63) and tight vol; fragile to spike. Policy support (+1.64) is the lone broad pillar.
+- **AUD**: Deteriorating fundamentals collide with rich valuation (+1.75, +2.24 on val pillar alone). Stagflation trap: policy tightening room exhausted, inflation tail-wind fading. Carry at 98th crowding—unwind risk acute. Short candidate.
+- **GBP**: Valuation (+1.6) carrying the trade; other pillars neutral. Carry at 98th percentile on a narrow base. Decoupled yield regime obscures real-rate anchor. Fragile.
 
-- **AUD short** – expensive (+1.75 stretch, +2.24 valuation) on deteriorating fundamentals (–0.28 fund); policy trap (growth soft, tightness already priced); carry at 99th percentile, fragile to vol shock. Yield regime punishes on strength (–0.76 mult, –0.49 corr).  
-- **JPY long** – cheap (–0.50 stretch) with improving fundamentals (+0.34 fund); valuation mean-reversion play, but carry crowded (88th percentile) and stress regime suppresses real-yield support (–0.62 mult). Tactical long if vol spikes; structural weakness remains if USD stays bid.
+**Carry standout:**
+- **CAD**: Cheap (–1.81 val) with improving fundamentals (+0.50 fund). Sole mean-reversion setup with room; rewarded yield regime (0.45 mult) and moderate crowding (69th). Long-biased against shorts.
 
-**Standout carry unwind risk:**
-
-- **GBP** – outweighs field in real terms but rests on valuation alone (+1.6 pillar doing all work); carry at 98th percentile with no fundamental anchor beneath. First to crack in a vol spike.
-
-**No prior snapshot provided for delta summary.**
+**Since prior:** EUR fundamentals improved +0.23; stretch flat. Tracking with improving external backdrop but valuation still stretched.
