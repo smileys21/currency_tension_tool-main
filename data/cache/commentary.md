@@ -1,11 +1,11 @@
-**Regime: Risk-premium tape—yield strength decoupled from FX, carry crowding extreme across majors.**
+**Regime: Risk-premium dominance; yield support fading into carry-crowding fragility.**
 
-**Inflection pairs:**
-- **JPY**: Cheap (+improving fundamentals) meets carry crowding (87th percentile). Valuation mean-reversion case undercut by real-yield stress regime (mult –0.63) and tight vol; fragile to spike. Policy support (+1.64) is the lone broad pillar.
-- **AUD**: Deteriorating fundamentals collide with rich valuation (+1.75, +2.24 on val pillar alone). Stagflation trap: policy tightening room exhausted, inflation tail-wind fading. Carry at 98th crowding—unwind risk acute. Short candidate.
-- **GBP**: Valuation (+1.6) carrying the trade; other pillars neutral. Carry at 98th percentile on a narrow base. Decoupled yield regime obscures real-rate anchor. Fragile.
+**Inflection:**
+- **JPY**: Cheap (fund +0.33, valuation -0.51) with improving fundamentals and crowded carry (87th pctile). Yield stress regime (-0.63 mult) confounds the signal—weakens on rising yields. Mean-reversion candidate if vol spikes or carry unwinds.
+- **GBP**: Stretched valuation (+1.59) doing all the work; carry crowded at 98th pctile on a narrow fundamental base. One-legged unwind risk if decoupling breaks.
+- **CAD**: Cheap and improving (fund +0.50, val -1.81). Valuation alone driving the setup; external and policy pillars near zero. Clean mean-reversion candidate if flows turn.
 
 **Carry standout:**
-- **CAD**: Cheap (–1.81 val) with improving fundamentals (+0.50 fund). Sole mean-reversion setup with room; rewarded yield regime (0.45 mult) and moderate crowding (69th). Long-biased against shorts.
+- **AUD**: Fat yield over peers, but valuation bloated (+2.24) and policy tightening feasibility exhausted (hike room -0.90). Stagflation drag emerging as inflation's tailwind fades; carry-unwind trigger if growth misses.
 
-**Since prior:** EUR fundamentals improved +0.23; stretch flat. Tracking with improving external backdrop but valuation still stretched.
+**Since prior:** AUD fundamental score jumped +0.42; stretch unchanged. Suggests near-term data beat offset by cumulative stretch; medium-term fragility persists.
