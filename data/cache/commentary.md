@@ -1,11 +1,11 @@
-**Regime: Strong USD, carry-crowded extremes (AUD/GBP/JPY at 98/98/87th percentile vol-to-carry)—vol spike risk outweighs yield reward.**
+**Regime: Strong USD tape masking carry fragility and mean-reversion setups in JPY and CAD.**
 
-- **AUD short:** Deteriorating fundamentals (-0.28) collide with stretched valuation (+1.70); growth soft, policy trapped between above-target inflation and weak activity; carry crowded at 98th percentile; real yields punish rather than reward the currency despite high nominal rates.
+**Inflection currencies:**
+- **AUD short:** Deteriorating fundamentals (-0.26) meet stretched valuation (+1.69); policy hawkish tailwind fading into soft growth. Carry crowded at 98th percentile; yield regime punishing (real 10Y weakens the currency). Risk-unwind accelerator.
+- **JPY long:** Cheap valuation (-0.53) with improving fundamentals (+0.35); classic mean-reversion. Carry crowding at 87th percentile is the brake—vol spike triggers unwinding. Real yields punish, not reward; USD strength masks the setup.
+- **CAD long:** Cheap valuation (-0.98) with improving fundamentals (+0.48); narrow mean-reversion play. External pillar (+1.65) is the sole broad support; rest near neutral.
 
-- **GBP short:** Valuation (+1.6) carrying the entire bull case while pillars cluster near neutral; highest carry crowding (98th percentile) on decoupled yield regime; unwind risk acute.
+**Carry pair:**
+- **GBP/USD bleed risk:** Carry crowded at 98th percentile on thin fundamentals (valuation doing all work, other pillars neutral). Decoupled yield regime obscures real-yield anchor. Fragile unwind candidate if vol spikes or real rates reprice.
 
-- **JPY long:** Cheap (-0.52 stretch), improving fundamentals (+0.36), mean-reversion setup underway; 87th percentile carry crowding cuts both ways—fragile long, but real-yield regime (stress, -0.60 mult) means weakness on vol spikes, not yield rises; a tactical hedge into any risk-off.
-
-- **CAD long:** Mirror-image cheap play to AUD; valuation (-1.8) mean-reverting on improving fundamentals (+0.49); rewarded yield regime, feasibility near neutral; narrower crowding (68th percentile) than the three above.
-
-**Standout carry unwind vector:** AUD/JPY—twin carry crowding, opposite fundamental momentum, vol-spike ignition.
+**Move since prior snapshot:** None given; map is static.
