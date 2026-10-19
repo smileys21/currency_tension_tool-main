@@ -1,11 +1,11 @@
-**Regime: Strong USD tape masking carry fragility and mean-reversion setups in JPY and CAD.**
+**Regime: USD strength persists but stretched; carry crowding at extremes across AUD, GBP, JPY.**
 
-**Inflection currencies:**
-- **AUD short:** Deteriorating fundamentals (-0.26) meet stretched valuation (+1.69); policy hawkish tailwind fading into soft growth. Carry crowded at 98th percentile; yield regime punishing (real 10Y weakens the currency). Risk-unwind accelerator.
-- **JPY long:** Cheap valuation (-0.53) with improving fundamentals (+0.35); classic mean-reversion. Carry crowding at 87th percentile is the brake—vol spike triggers unwinding. Real yields punish, not reward; USD strength masks the setup.
-- **CAD long:** Cheap valuation (-0.98) with improving fundamentals (+0.48); narrow mean-reversion play. External pillar (+1.65) is the sole broad support; rest near neutral.
+- **AUD short.** Expensive (+1.69 stretch) with deteriorating fundamentals (–0.26). Valuation doing all the work; policy hawkish tailwind fading into stagflation drag. Carry at 97th percentile—fragile to vol spike. Short the overextended yield-carry narrative.
 
-**Carry pair:**
-- **GBP/USD bleed risk:** Carry crowded at 98th percentile on thin fundamentals (valuation doing all work, other pillars neutral). Decoupled yield regime obscures real-yield anchor. Fragile unwind candidate if vol spikes or real rates reprice.
+- **JPY long / tactical short USD.** Cheap (–0.52 stretch) + improving fundamentals (+0.35) = mean reversion. Yield regime penalizes, but real 10Y z-score elevated; carry crowding (87th) is the vol-spike risk, not the entry. Works best vs AUD/GBP, less vs USD if dollar momentum holds.
 
-**Move since prior snapshot:** None given; map is static.
+- **GBP: avoid.** Carry at 98th percentile on narrow valuation base (+1.6); all other pillars neutral. Decoupled yield/FX regime obscures true support. Unwind risk is asymmetric.
+
+- **Standout carry unwind: AUDJPY.** Both sit on extreme carry crowding (AUD 97th, JPY 87th) with opposing vol-regime fragility. AUD deteriorating, JPY mean-reverting. A vol spike triggers simultaneous unwind.
+
+- (No prior snapshot provided for delta.)
