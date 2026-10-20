@@ -1,11 +1,9 @@
-**Regime: USD strength persists but stretched; carry crowding at extremes across AUD, GBP, JPY.**
+**Regime: Risk-premium tape with strong USD, carry crowded at extremes, mean-reversion setups in JPY and CAD colliding with stretched shorts.**
 
-- **AUD short.** Expensive (+1.69 stretch) with deteriorating fundamentals (–0.26). Valuation doing all the work; policy hawkish tailwind fading into stagflation drag. Carry at 97th percentile—fragile to vol spike. Short the overextended yield-carry narrative.
+• **AUD — sell into any bounce.** Deteriorating fundamentals (-0.26) on bloated valuation (+1.69); one-pillar story (valuation +2.2, everything else flat). Yield regime punishing, carry at 97th percentile—classic unwind trigger. Policy tightening cycle exhausted with soft growth; inflation tailwind fading.
 
-- **JPY long / tactical short USD.** Cheap (–0.52 stretch) + improving fundamentals (+0.35) = mean reversion. Yield regime penalizes, but real 10Y z-score elevated; carry crowding (87th) is the vol-spike risk, not the entry. Works best vs AUD/GBP, less vs USD if dollar momentum holds.
+• **GBP — highest carry crowding (98th percentile) on a decoupled yield regime; real yield story broken.** Valuation stretched (+1.52), fundamentals barely improving (+0.23). Fragile carry base—vol spike could trigger rapid deleveraging.
 
-- **GBP: avoid.** Carry at 98th percentile on narrow valuation base (+1.6); all other pillars neutral. Decoupled yield/FX regime obscures true support. Unwind risk is asymmetric.
+• **JPY — mean-reversion long.** Cheap (-0.53 stretch), improving fundamentals (+0.33); valuation support real. Risk-premium regime (corr -0.42 yields–FX) suppresses nominal yield lift, but that cap is structural, not cyclical. Carry crowding (87th) is lower than AUD/GBP; unwind risk contained. Real carry still paying.
 
-- **Standout carry unwind: AUDJPY.** Both sit on extreme carry crowding (AUD 97th, JPY 87th) with opposing vol-regime fragility. AUD deteriorating, JPY mean-reverting. A vol spike triggers simultaneous unwind.
-
-- (No prior snapshot provided for delta.)
+• **Standout carry pair: NZD long / AUD short.** NZD cheap, improving, yield-regime blind (neutral valuation); AUD deteriorating, overleveraged. Unwind asymmetry favours the unwind target, not the crowded short.
