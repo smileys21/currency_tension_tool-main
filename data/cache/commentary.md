@@ -1,9 +1,9 @@
-**Regime: Risk-premium tape with strong USD, carry crowded at extremes, mean-reversion setups in JPY and CAD colliding with stretched shorts.**
+**Regime: Strong dollar on carry crowding; mean-reversion signals flashing in JPY and CAD, but carry unwinds (GBP, AUD) are the tail risk.**
 
-• **AUD — sell into any bounce.** Deteriorating fundamentals (-0.26) on bloated valuation (+1.69); one-pillar story (valuation +2.2, everything else flat). Yield regime punishing, carry at 97th percentile—classic unwind trigger. Policy tightening cycle exhausted with soft growth; inflation tailwind fading.
+- **JPY**: Cheap, improving fundamentals (+0.34), but 87th-percentile carry crowding and yield-stress regime (real rates don't support FX) create fragile setup. Vol spike unwinds carry faster than mean reversion pays. Short-term downside to hedging demand; longer-term reversion play if vol normalizes.
 
-• **GBP — highest carry crowding (98th percentile) on a decoupled yield regime; real yield story broken.** Valuation stretched (+1.52), fundamentals barely improving (+0.23). Fragile carry base—vol spike could trigger rapid deleveraging.
+- **GBP**: 98th-percentile carry crowding on stretched valuation—the textbook unwind candidate. Decoupled yield regime masks the vulnerability. Real carry edge is narrow; any vol spike or risk-off torpedoes the trade.
 
-• **JPY — mean-reversion long.** Cheap (-0.53 stretch), improving fundamentals (+0.33); valuation support real. Risk-premium regime (corr -0.42 yields–FX) suppresses nominal yield lift, but that cap is structural, not cyclical. Carry crowding (87th) is lower than AUD/GBP; unwind risk contained. Real carry still paying.
+- **CAD**: Cheap, improving, one-legged on valuation. Clean mean-reversion candidate with room to run if risk sentiment holds; lacks the carry-crowding red flag of GBP/JPY/AUD.
 
-• **Standout carry pair: NZD long / AUD short.** NZD cheap, improving, yield-regime blind (neutral valuation); AUD deteriorating, overleveraged. Unwind asymmetry favours the unwind target, not the crowded short.
+**Carry pair to watch**: GBP/USD—highest crowding percentile and most stretched fundamental base; first to roll if vol breaks.

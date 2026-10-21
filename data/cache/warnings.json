@@ -1,7 +1,7 @@
 {
   "JPY": [
     "Cheap and improving \u2014 the mean-reversion setup: valuation is below its own norm (-0.5) while fundamentals are turning up (+0.3).",
-    "Yield stress: real 10Y is high (z +1.5) but the currency weakens as yields rise (-0.42 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.69). Note: cross vs USD partly confounds this in a strong-dollar tape.",
+    "Yield stress: real 10Y is high (z +1.5) but the currency weakens as yields rise (-0.42 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.68). Note: cross vs USD partly confounds this in a strong-dollar tape.",
     "Carry crowded: carry-to-vol in the 87th percentile \u2014 a lot of carry riding on quiet vol, fragile to a vol spike."
   ],
   "GBP": [
@@ -22,14 +22,17 @@
     "Carry crowded: carry-to-vol in the 97th percentile \u2014 a lot of carry riding on quiet vol, fragile to a vol spike."
   ],
   "NZD": [
-    "Yield stress: real 10Y is high (z +0.6) but the currency weakens as yields rise (-0.26 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.48). Note: cross vs USD partly confounds this in a strong-dollar tape."
+    "Yield stress: real 10Y is high (z +0.6) but the currency weakens as yields rise (-0.25 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.47). Note: cross vs USD partly confounds this in a strong-dollar tape."
   ],
   "CAD": [
-    "Cheap and improving \u2014 the mean-reversion setup: valuation is below its own norm (-1.0) while fundamentals are turning up (+0.5).",
+    "Cheap and improving \u2014 the mean-reversion setup: valuation is below its own norm (-0.9) while fundamentals are turning up (+0.5).",
     "One-legged read: Valuation (-1.8) is doing almost all the work; the other pillars are near neutral, so treat this as narrow, not broad-based."
   ],
+  "EUR": [
+    "One-legged read: External (+1.6) is doing almost all the work; the other pillars are near neutral, so treat this as narrow, not broad-based."
+  ],
   "USD": [
-    "Rich versus its decade (+0.7) but easing versus its recent 2-year range (-0.5) \u2014 read as 'off its highs,' not absolute cheap.",
+    "Rich versus its decade (+0.7) but easing versus its recent 2-year range (-0.4) \u2014 read as 'off its highs,' not absolute cheap.",
     "Fat carry on a fragile base: out-yields the field in real terms (avg +1.0%) but sits on a stretched valuation \u2014 the classic carry-unwind setup."
   ]
 }
