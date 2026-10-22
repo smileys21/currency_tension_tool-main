@@ -1,9 +1,11 @@
-**Regime: Strong dollar on carry crowding; mean-reversion signals flashing in JPY and CAD, but carry unwinds (GBP, AUD) are the tail risk.**
+**Regime: Risk-premium regime; carry crowding at extremes across GBP, AUD, JPY; mean-reversion setups in JPY, NZD, CAD.**
 
-- **JPY**: Cheap, improving fundamentals (+0.34), but 87th-percentile carry crowding and yield-stress regime (real rates don't support FX) create fragile setup. Vol spike unwinds carry faster than mean reversion pays. Short-term downside to hedging demand; longer-term reversion play if vol normalizes.
+• **GBP** — 98th percentile carry crowding on stretched valuation (+1.39); real-yield reward ambiguous (decoupled regime); fat unwind risk dominates. Avoid long.
 
-- **GBP**: 98th-percentile carry crowding on stretched valuation—the textbook unwind candidate. Decoupled yield regime masks the vulnerability. Real carry edge is narrow; any vol spike or risk-off torpedoes the trade.
+• **AUD** — Deteriorating fundamentals (-0.26) meet rich valuation (+1.65); carry at 97th percentile; one-pillar story (valuation only); stagflation trap eroding hawkish tailwind. Sell on rallies.
 
-- **CAD**: Cheap, improving, one-legged on valuation. Clean mean-reversion candidate with room to run if risk sentiment holds; lacks the carry-crowding red flag of GBP/JPY/AUD.
+• **JPY** — Cheap (-0.48) with improving fundamentals (+0.34), but carry at 87th percentile and yield stress regime (-0.68) means real-rate weakness on vol spikes. Mean-reversion candidate if vol stabilizes.
 
-**Carry pair to watch**: GBP/USD—highest crowding percentile and most stretched fundamental base; first to roll if vol breaks.
+• **GBP/AUD** — Widest carry premium and dual crowding; unwind catalyst could be sharp.
+
+• **CHF, NZD stretch both eased 0.4–0.5 since last read; CAD valuation remains the deepest anchor.**
