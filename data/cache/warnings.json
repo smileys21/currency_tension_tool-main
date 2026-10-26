@@ -1,6 +1,6 @@
 {
   "JPY": [
-    "Yield stress: real 10Y is high (z +1.4) but the currency weakens as yields rise (-0.42 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.69). Note: cross vs USD partly confounds this in a strong-dollar tape."
+    "Yield stress: real 10Y is high (z +1.3) but the currency weakens as yields rise (-0.45 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.72). Note: cross vs USD partly confounds this in a strong-dollar tape."
   ],
   "GBP": [
     "Fat carry on a fragile base: out-yields the field in real terms (avg +1.1%) but sits on a stretched valuation \u2014 the classic carry-unwind setup.",
@@ -29,7 +29,7 @@
     "One-legged read: External (+1.6) is doing almost all the work; the other pillars are near neutral, so treat this as narrow, not broad-based."
   ],
   "USD": [
-    "Rich versus its decade (+0.8) but easing versus its recent 2-year range (-0.4) \u2014 read as 'off its highs,' not absolute cheap.",
-    "Fat carry on a fragile base: out-yields the field in real terms (avg +0.9%) but sits on a stretched valuation \u2014 the classic carry-unwind setup."
+    "Rich versus its decade (+0.8) but easing versus its recent 2-year range (-0.3) \u2014 read as 'off its highs,' not absolute cheap.",
+    "Fat carry on a fragile base: out-yields the field in real terms (avg +1.0%) but sits on a stretched valuation \u2014 the classic carry-unwind setup."
   ]
 }

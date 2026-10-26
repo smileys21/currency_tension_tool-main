@@ -1,11 +1,9 @@
-**Regime: Dollar strength moderating into rich valuation; carry crowding (GBP, AUD) at unwind risk.**
+**Regime: Strong dollar on risk-premium bid; carry crowding at extremes (GBP, AUD both 97th percentile); mean-reversion setups forming in CAD and NZD.**
 
-- **AUD short**: deteriorating fundamentals (-0.24) + extreme stretch (+1.65) + valuation-only pillar (2.18 on one leg) + 97th-percentile carry crowding. Yield regime punished (risk-premium, not reward). Policy tightening cycle stalling into soft growth—stagflation drag emerging.
+• **GBP at carry extremes** – Real yield +1.1% avg, valuation +1.4 (stretched), feasibility +0.46 (hikes still live). But carry crowded at 97th percentile on fragile vol backdrop; Pillar D yield-FX decoupling makes the real-yield read ambiguous. Unwind risk acute on any vol spike.
 
-- **GBP short**: stretched valuation (1.40) + decoupled yields obscuring real support + 97th-percentile carry crowding. Classic fragile carry base; vol spike unwinds this first.
+• **AUD & NZD both yield-stressed despite high real 10Y** – Both weaken as yields rise (corr ~–0.3), signaling risk-premium regime dominance over carry reward. AUD valuation (+2.2) is the sole pillar; feasibility collapsing (–1.0) as growth softens. NZD improving fundamentally (+0.8) but still yield-stressed; cheaper valuation (–0.6) sets up mean-reversion if vol normalizes.
 
-- **NZD/CAD long**: both cheap (-1.1, -0.6 valuation) with improving fundamentals (+0.5 to +0.8). Mean-reversion setups; USD's stretch is the flip side. CAD also benefits from external pillar strength (1.65).
+• **CAD carry pair: cheap (–2.0 valuation) + improving fundamentals (+0.5) with real yield reward (0.50 mult).** Narrowly one-legged on valuation, but pillars broadening; external cross-currents muted vs EUR.
 
-- **Carry standout**: JPY sell-off (feasibility 0.80, real 10Y hit -0.69) but policy tail-risk remains. AUD/JPY unwind accelerates if vol spikes; GBP/JPY the mirror.
-
-- **Since last snap**: No prior snapshot provided.
+No prior snapshot provided; positioning against USD strength and carry crowding in GBP/AUD suggests rotational pressure toward cheap/improving pairs (CAD, NZD).
