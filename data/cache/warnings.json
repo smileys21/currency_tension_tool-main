@@ -1,6 +1,6 @@
 {
   "JPY": [
-    "Yield stress: real 10Y is high (z +1.3) but the currency weakens as yields rise (-0.45 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.72). Note: cross vs USD partly confounds this in a strong-dollar tape."
+    "Yield stress: real 10Y is high (z +1.3) but the currency weakens as yields rise (-0.45 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.71). Note: cross vs USD partly confounds this in a strong-dollar tape."
   ],
   "GBP": [
     "Fat carry on a fragile base: out-yields the field in real terms (avg +1.1%) but sits on a stretched valuation \u2014 the classic carry-unwind setup.",
@@ -19,7 +19,7 @@
   ],
   "NZD": [
     "Cheap and improving \u2014 the mean-reversion setup: valuation is below its own norm (-0.6) while fundamentals are turning up (+0.8).",
-    "Yield stress: real 10Y is high (z +0.6) but the currency weakens as yields rise (-0.25 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.46). Note: cross vs USD partly confounds this in a strong-dollar tape."
+    "Yield stress: real 10Y is high (z +0.5) but the currency weakens as yields rise (-0.21 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.40). Note: cross vs USD partly confounds this in a strong-dollar tape."
   ],
   "CAD": [
     "Cheap and improving \u2014 the mean-reversion setup: valuation is below its own norm (-1.1) while fundamentals are turning up (+0.5).",
@@ -29,7 +29,7 @@
     "One-legged read: External (+1.6) is doing almost all the work; the other pillars are near neutral, so treat this as narrow, not broad-based."
   ],
   "USD": [
-    "Rich versus its decade (+0.8) but easing versus its recent 2-year range (-0.3) \u2014 read as 'off its highs,' not absolute cheap.",
-    "Fat carry on a fragile base: out-yields the field in real terms (avg +1.0%) but sits on a stretched valuation \u2014 the classic carry-unwind setup."
+    "Rich versus its decade (+0.8) but easing versus its recent 2-year range (-0.4) \u2014 read as 'off its highs,' not absolute cheap.",
+    "Fat carry on a fragile base: out-yields the field in real terms (avg +0.9%) but sits on a stretched valuation \u2014 the classic carry-unwind setup."
   ]
 }
