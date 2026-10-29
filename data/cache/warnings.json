@@ -1,6 +1,11 @@
 {
   "JPY": [
-    "Yield stress: real 10Y is high (z +1.3) but the currency weakens as yields rise (-0.45 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.72). Note: cross vs USD partly confounds this in a strong-dollar tape."
+    "Yield stress: real 10Y is high (z +1.3) but the currency weakens as yields rise (-0.45 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.71). Note: cross vs USD partly confounds this in a strong-dollar tape."
+  ],
+  "GBP": [
+    "Fat carry on a fragile base: out-yields the field in real terms (avg +1.0%) but sits on a stretched valuation \u2014 the classic carry-unwind setup.",
+    "FX and yields are decoupled \u2014 the real-yield reward/stress read is ambiguous this window; treat Pillar D lightly.",
+    "Carry crowded: carry-to-vol in the 97th percentile \u2014 a lot of carry riding on quiet vol, fragile to a vol spike."
   ],
   "CHF": [
     "FX and yields are decoupled \u2014 the real-yield reward/stress read is ambiguous this window; treat Pillar D lightly."
@@ -8,13 +13,13 @@
   "AUD": [
     "Fat carry on a fragile base: out-yields the field in real terms (avg +0.9%) but sits on a stretched valuation \u2014 the classic carry-unwind setup.",
     "One-legged read: Valuation (+2.2) is doing almost all the work; the other pillars are near neutral, so treat this as narrow, not broad-based.",
-    "Policy trap: inflation above target but growth soft and policy already tight (feasibility -1.0) \u2014 the hawkish tailwind is fading toward a stagflation drag; inflation's axis-1 contribution is dampened (mult -0.78).",
+    "Policy trap: inflation above target but growth soft and policy already tight (feasibility -1.1) \u2014 the hawkish tailwind is fading toward a stagflation drag; inflation's axis-1 contribution is dampened (mult -0.79).",
     "Yield stress: real 10Y is high (z +0.9) but the currency weakens as yields rise (-0.33 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.58). Note: cross vs USD partly confounds this in a strong-dollar tape.",
     "Carry crowded: carry-to-vol in the 98th percentile \u2014 a lot of carry riding on quiet vol, fragile to a vol spike."
   ],
   "NZD": [
-    "Cheap and improving \u2014 the mean-reversion setup: valuation is below its own norm (-0.6) while fundamentals are turning up (+0.8).",
-    "Yield stress: real 10Y is high (z +0.6) but the currency weakens as yields rise (-0.21 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.40). Note: cross vs USD partly confounds this in a strong-dollar tape."
+    "Cheap and improving \u2014 the mean-reversion setup: valuation is below its own norm (-0.6) while fundamentals are turning up (+0.6).",
+    "Yield stress: real 10Y is high (z +0.7) but the currency weakens as yields rise (-0.20 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.37). Note: cross vs USD partly confounds this in a strong-dollar tape."
   ],
   "CAD": [
     "Cheap and improving \u2014 the mean-reversion setup: valuation is below its own norm (-1.1) while fundamentals are turning up (+0.5).",
@@ -23,11 +28,8 @@
   "EUR": [
     "One-legged read: External (+1.6) is doing almost all the work; the other pillars are near neutral, so treat this as narrow, not broad-based."
   ],
-  "GBP": [
-    "Fat carry on a fragile base: out-yields the field in real terms (avg +1.0%) but sits on a stretched valuation \u2014 the classic carry-unwind setup."
-  ],
   "USD": [
-    "Rich versus its decade (+0.8) but easing versus its recent 2-year range (-0.3) \u2014 read as 'off its highs,' not absolute cheap.",
-    "Fat carry on a fragile base: out-yields the field in real terms (avg +1.0%) but sits on a stretched valuation \u2014 the classic carry-unwind setup."
+    "Rich versus its decade (+0.8) but easing versus its recent 2-year range (-0.4) \u2014 read as 'off its highs,' not absolute cheap.",
+    "Fat carry on a fragile base: out-yields the field in real terms (avg +0.9%) but sits on a stretched valuation \u2014 the classic carry-unwind setup."
   ]
 }

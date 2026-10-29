@@ -1,11 +1,11 @@
-**Risk-premium regime; carry crowding at extremes; mean-reversion bids in commodity and FX-friendly names.**
+**Regime: Carry crowding meets mean-reversion cheap—vol calm is masking fragility.**
 
-- **AUD**: Stretched valuation (+2.2) carrying deteriorating fundamentals (-0.24) on crowded carry (98th percentile). Yield stress persists (real 10Y high but weakens on rises). Unwind risk is acute if vol spikes or growth disappoints further.
+• **AUD**: Stretched and deteriorating (fund -0.24). Valuation overbought (+2.2) carries all the signal; growth weak, policy tightening cycle exhausted, inflation's hawkish multiplier halved (-0.79). Yield stress regime—real 10Y high but currency weakens on rises. Carry 98th percentile: vulnerable to any vol spike. Avoid longs.
 
-- **CAD**: Cheap (-1.07 stretch) on improving fundamentals (+0.48). Valuation doing the heavy lifting; narrow setup but repricing higher on mean reversion if growth thesis holds.
+• **GBP**: Stretched on fragile carry—yields real-term best-in-class but valuation bloated (+1.4). Yield/FX decoupled (ambiguous real-rate support). Carry crowded at 97th. Fundamentals positive (+0.27) but deteriorating sharply (-0.37 since prior). A classic unwind candidate; short vol setups risky.
 
-- **NZD**: Cheap and improving—classic mean reversion. Valuation well below norm despite solid growth and carry; yield stress muted vs peers. Low-crowding alternative to AUD.
+• **NZD/CAD**: Both cheap, improving, mean-reversion setups. NZD valuation -0.6, fund +0.6 (turn-up signal despite yield stress). CAD valuation -2.0, fund +0.48 (narrow external story only). Both underowned vs AUD/GBP carry twins.
 
-- **JPY carry**: Short JPY remains crowded (81st percentile) in a risk-premium regime where real yield is *punished*, not rewarded. Stress episodes will snap shorts fast.
+• **Carry pair**: **AUDNZD short** on AUD deterioration + NZD mean-reversion flip; both yielding, but AUD unwind risk > NZD support.
 
-**GBP rally extended +0.37 on fund axis since prior snapshot; stretch unchanged.** Broad policy and fiscal strength offsetting valuation stretch, but still vulnerable to carry unwind if risk premium compresses.
+**Since prior:** GBP fundamentals rolled -0.37; NZD fundamentals faded -0.20. Carry twins weakening—early erosion signals.
