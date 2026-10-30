@@ -1,11 +1,11 @@
-**Regime: Carry crowding meets mean-reversion cheap—vol calm is masking fragility.**
+**Regime: Risk-premium dominates yield; carry crowded across AUD/USD/GBP; mean-reversion setups in CAD/NZD.**
 
-• **AUD**: Stretched and deteriorating (fund -0.24). Valuation overbought (+2.2) carries all the signal; growth weak, policy tightening cycle exhausted, inflation's hawkish multiplier halved (-0.79). Yield stress regime—real 10Y high but currency weakens on rises. Carry 98th percentile: vulnerable to any vol spike. Avoid longs.
+**Extremes:**
+- **AUD short**: Valuation +2.2 carries 99th-percentile carry crowding into a stagflation trap (growth soft, policy maxxed). Yield stress regime (real 10Y high but FX weakens on rising yields, mult –0.51) negates carry reward. Unwind risk acute.
+- **GBP: Fragile carry base**: Out-yields peers on real terms (+1.0%) but stretched valuation and 97th-percentile crowding signal classic unwind setup. FX/yield decoupling (Pillar D ambiguous) undercuts conviction.
+- **CAD/NZD long**: Both cheap and improving—valuation below norm while fundamentals strengthen. CAD one-legged (valuation –2.0 doing the work), NZD more balanced. Mean-reversion tailwind if risk-off vol doesn't trigger carry flush.
 
-• **GBP**: Stretched on fragile carry—yields real-term best-in-class but valuation bloated (+1.4). Yield/FX decoupled (ambiguous real-rate support). Carry crowded at 97th. Fundamentals positive (+0.27) but deteriorating sharply (-0.37 since prior). A classic unwind candidate; short vol setups risky.
+**Standout carry pair:**
+USD/JPY: JPY punished in stress regime (real 10Y high, –0.71 mult) and yields rise on yen weakness, not strength (–0.45 corr)—structural carry bid persists despite crowding.
 
-• **NZD/CAD**: Both cheap, improving, mean-reversion setups. NZD valuation -0.6, fund +0.6 (turn-up signal despite yield stress). CAD valuation -2.0, fund +0.48 (narrow external story only). Both underowned vs AUD/GBP carry twins.
-
-• **Carry pair**: **AUDNZD short** on AUD deterioration + NZD mean-reversion flip; both yielding, but AUD unwind risk > NZD support.
-
-**Since prior:** GBP fundamentals rolled -0.37; NZD fundamentals faded -0.20. Carry twins weakening—early erosion signals.
+**Since prior:** No prior snapshot given.
