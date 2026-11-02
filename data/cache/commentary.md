@@ -1,11 +1,11 @@
-**Regime: Risk-premium dominates yield; carry crowded across AUD/USD/GBP; mean-reversion setups in CAD/NZD.**
+**Regime: Risk-premium mode; carry unwind risk elevated on crowding extremes.**
 
-**Extremes:**
-- **AUD short**: Valuation +2.2 carries 99th-percentile carry crowding into a stagflation trap (growth soft, policy maxxed). Yield stress regime (real 10Y high but FX weakens on rising yields, mult –0.51) negates carry reward. Unwind risk acute.
-- **GBP: Fragile carry base**: Out-yields peers on real terms (+1.0%) but stretched valuation and 97th-percentile crowding signal classic unwind setup. FX/yield decoupling (Pillar D ambiguous) undercuts conviction.
-- **CAD/NZD long**: Both cheap and improving—valuation below norm while fundamentals strengthen. CAD one-legged (valuation –2.0 doing the work), NZD more balanced. Mean-reversion tailwind if risk-off vol doesn't trigger carry flush.
+**Inflection currencies:**
 
-**Standout carry pair:**
-USD/JPY: JPY punished in stress regime (real 10Y high, –0.71 mult) and yields rise on yen weakness, not strength (–0.45 corr)—structural carry bid persists despite crowding.
+- **GBP short** — 97th percentile carry crowding + stretched valuation + decoupled yields = fragile setup. Real yield spread (+1%) attractive, but vol-dependent positioning is the binding constraint; any dip in realized vol triggers unwind.
+- **AUD sell pressure** — Paired extremes: +2.18 valuation (narrow, not structural) vs. +99th percentile carry crowding. Policy tightening fading (feasibility -1.1) into soft growth (-0.42); stress regime suppresses yield support (mult -0.51). Carry-vol cliff risk.
+- **JPY long into weakness** — Cheap (-0.53) with improving fundamentals (+0.30). Valuation below norm; stress regime (real 10Y z +1.3, mult -0.70) and weak USD correlation (-0.43) create dislocation. Mean reversion candidate if vol normalizes.
 
-**Since prior:** No prior snapshot given.
+**Carry standout:** AUD/JPY — AUD is crowded carry at unwind risk; JPY is under-owned and cheap. Converging from extremes.
+
+**Prior move:** [No prior snapshot provided.]
