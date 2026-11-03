@@ -1,11 +1,13 @@
-**Regime: Risk-premium mode; carry unwind risk elevated on crowding extremes.**
+**Regime: Risk premium mode—strong dollar, carry crowded at extremes, mean-reversion setups emerging in JPY/NZD/CAD.**
 
-**Inflection currencies:**
+**Inflections:**
 
-- **GBP short** — 97th percentile carry crowding + stretched valuation + decoupled yields = fragile setup. Real yield spread (+1%) attractive, but vol-dependent positioning is the binding constraint; any dip in realized vol triggers unwind.
-- **AUD sell pressure** — Paired extremes: +2.18 valuation (narrow, not structural) vs. +99th percentile carry crowding. Policy tightening fading (feasibility -1.1) into soft growth (-0.42); stress regime suppresses yield support (mult -0.51). Carry-vol cliff risk.
-- **JPY long into weakness** — Cheap (-0.53) with improving fundamentals (+0.30). Valuation below norm; stress regime (real 10Y z +1.3, mult -0.70) and weak USD correlation (-0.43) create dislocation. Mean reversion candidate if vol normalizes.
+- **AUD**: Stretched valuation (+2.2) carrying near-neutral fundamentals; yield stress (real 10Y high but FX weakens on rises) and inflation mult capped (-0.79) as policy tightens into soft growth. Carry 99th percentile — acute unwind risk. Fade longs.
+- **GBP**: Fragile carry base—real yield out-yields (+1.0%) but valuation stretched; FX/yield decoupled. Carry crowded (97th pctile) on quiet vol. Vol spike → unwind.
+- **JPY**: Cheap (-0.53 stretch) with improving fundamentals (+0.30); valuation well below norm. But yield stress regime (real 10Y high, FX weakens on rises; mult -0.70) and high carry crowding (76th pctile) blunt the mean-reversion trade. Patient entry on vol.
 
-**Carry standout:** AUD/JPY — AUD is crowded carry at unwind risk; JPY is under-owned and cheap. Converging from extremes.
+**Carry pair:**
 
-**Prior move:** [No prior snapshot provided.]
+- **GBP/AUD**: Both trapped in carry unwinds (99th, 97th pctile crowding). AUD worse—single-pillar (valuation) setup, inflation drag intensifying. GBP sturdier on growth (+1.09) but also decoupled yields. Relative short AUD into vol.
+
+**Since prior:** No prior snapshot given.
