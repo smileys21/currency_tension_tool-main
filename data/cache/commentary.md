@@ -1,13 +1,9 @@
-**Regime: Risk premium mode—strong dollar, carry crowded at extremes, mean-reversion setups emerging in JPY/NZD/CAD.**
+**Regime: Strong dollar, carry crowded at extremes; mean-reversion setups forming in cheap pairs (JPY, NZD, CAD) while stretched carry (AUD, GBP) faces unwind risk.**
 
 **Inflections:**
+- **AUD short**: Carry crowded (99th percentile) on a one-pillar story (valuation +2.2); growth and inflation both soft, policy tightening fading into stagflation drag. Yield stress regime means real-rate support is weak. Vol spike kills this unwind.
+- **GBP short**: Carry at 98th percentile on decoupled fundamentals; real yield ambiguous. Fragile base, fat unwind risk on vol pickup.
+- **JPY long**: Cheap (-0.54 stretch) + improving fundamentals (+0.31 fund); mean-reversion trigger. Yield stress regime masks the setup—watch for risk-premium reversal.
 
-- **AUD**: Stretched valuation (+2.2) carrying near-neutral fundamentals; yield stress (real 10Y high but FX weakens on rises) and inflation mult capped (-0.79) as policy tightens into soft growth. Carry 99th percentile — acute unwind risk. Fade longs.
-- **GBP**: Fragile carry base—real yield out-yields (+1.0%) but valuation stretched; FX/yield decoupled. Carry crowded (97th pctile) on quiet vol. Vol spike → unwind.
-- **JPY**: Cheap (-0.53 stretch) with improving fundamentals (+0.30); valuation well below norm. But yield stress regime (real 10Y high, FX weakens on rises; mult -0.70) and high carry crowding (76th pctile) blunt the mean-reversion trade. Patient entry on vol.
-
-**Carry pair:**
-
-- **GBP/AUD**: Both trapped in carry unwinds (99th, 97th pctile crowding). AUD worse—single-pillar (valuation) setup, inflation drag intensifying. GBP sturdier on growth (+1.09) but also decoupled yields. Relative short AUD into vol.
-
-**Since prior:** No prior snapshot given.
+**Carry standout:**
+- **AUD/JPY short**: Both crowded carry trades in yield-stress regimes; AUD's one-pillar support vs JPY's improving fundamentals creates directional edge.
