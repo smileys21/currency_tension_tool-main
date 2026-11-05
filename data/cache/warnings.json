@@ -1,10 +1,10 @@
 {
   "JPY": [
     "Cheap and improving \u2014 the mean-reversion setup: valuation is below its own norm (-0.5) while fundamentals are turning up (+0.3).",
-    "Yield stress: real 10Y is high (z +1.3) but the currency weakens as yields rise (-0.44 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.70). Note: cross vs USD partly confounds this in a strong-dollar tape."
+    "Yield stress: real 10Y is high (z +1.3) but the currency weakens as yields rise (-0.46 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.73). Note: cross vs USD partly confounds this in a strong-dollar tape."
   ],
   "GBP": [
-    "Fat carry on a fragile base: out-yields the field in real terms (avg +1.0%) but sits on a stretched valuation \u2014 the classic carry-unwind setup.",
+    "Fat carry on a fragile base: out-yields the field in real terms (avg +1.1%) but sits on a stretched valuation \u2014 the classic carry-unwind setup.",
     "FX and yields are decoupled \u2014 the real-yield reward/stress read is ambiguous this window; treat Pillar D lightly.",
     "Carry crowded: carry-to-vol in the 98th percentile \u2014 a lot of carry riding on quiet vol, fragile to a vol spike."
   ],
@@ -20,10 +20,10 @@
   ],
   "NZD": [
     "Cheap and improving \u2014 the mean-reversion setup: valuation is below its own norm (-0.6) while fundamentals are turning up (+0.6).",
-    "Yield stress: real 10Y is high (z +0.7) but the currency weakens as yields rise (-0.15 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.29). Note: cross vs USD partly confounds this in a strong-dollar tape."
+    "FX and yields are decoupled \u2014 the real-yield reward/stress read is ambiguous this window; treat Pillar D lightly."
   ],
   "CAD": [
-    "Cheap and improving \u2014 the mean-reversion setup: valuation is below its own norm (-1.1) while fundamentals are turning up (+0.5).",
+    "Cheap and improving \u2014 the mean-reversion setup: valuation is below its own norm (-1.2) while fundamentals are turning up (+0.4).",
     "One-legged read: Valuation (-2.0) is doing almost all the work; the other pillars are near neutral, so treat this as narrow, not broad-based."
   ],
   "EUR": [
