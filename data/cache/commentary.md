@@ -1,9 +1,9 @@
-**Regime: Risk-premium grip tightening; yield-FX decoupling persisting; carry crowding at extremes (AUD, GBP 92–98th pctile).**
+**Regime: Strong dollar on structural tightness; carry crowding colliding with yield-stress regimes in AUD/NZD/JPY.**
 
-**At the extremes:**
+- **AUD short**: Valuation doing all the work (+2.2 pillar), growth/inflation pillars inert; stretched at 1.63 std, carry 93rd percentile, policy trap tightening (stagflation drag emerging). Yield weakness in a risk-premium regime (-0.16 corr to yields, mult -0.32) offers no floor.  
+- **GBP unwind risk**: Carry at 98th percentile on fragile valuation base (+1.4 stretch). Real yield decoupled; quiet vol masking crowding. First vol spike triggers unwinding.  
+- **JPY/NZD reversion**: Both cheap and fundamentals turning (JPY +0.29, NZD +0.64 fund). JPY valuation -0.65 std, NZD -0.62 std. Yield stress regime dominates both; mean reversion restrained by dollar structural strength and risk-premium tail.
 
-- **GBP short** — Real yield advantage (+1.1%) masks structural fragility: valuation stretched (+1.37), carry crowded (98th pctile), decoupled yield regime. Unwind trigger is vol; reward too thin relative to tail risk.
-- **AUD short** — Valuation doing all the work (+2.2 vs near-neutral fundamentals); policy trap (stagflation drag as inflation cools); carry at 92nd pctile; real yields punished despite high z-score. Narrow, brittle setup.
-- **CAD long** — Cheap and improving: valuation well below norm (-1.2), fundamentals turning (+0.4). Narrow read but durable; real-yield decoupling less punitive here.
+**Carry standout**: GBP/AUD pair — both crowded (GBP 98th, AUD 93rd), both on narrow valuation bases; AUD's yield stress (-0.32 mult) deepens the asymmetry.
 
-**Carry standout:** USD—real carry premium (+0.7%) but valuation off recent highs (stretch +0.70, feasibility -0.36); defensive crowding, not cyclical greed.
+**Prior delta**: No prior snapshot provided.
