@@ -1,9 +1,12 @@
-**Regime: Strong dollar on structural tightness; carry crowding colliding with yield-stress regimes in AUD/NZD/JPY.**
+**Regime: Dollar strength fading; carry crowding and yield stress colliding with mean-reversion setups.**
 
-- **AUD short**: Valuation doing all the work (+2.2 pillar), growth/inflation pillars inert; stretched at 1.63 std, carry 93rd percentile, policy trap tightening (stagflation drag emerging). Yield weakness in a risk-premium regime (-0.16 corr to yields, mult -0.32) offers no floor.  
-- **GBP unwind risk**: Carry at 98th percentile on fragile valuation base (+1.4 stretch). Real yield decoupled; quiet vol masking crowding. First vol spike triggers unwinding.  
-- **JPY/NZD reversion**: Both cheap and fundamentals turning (JPY +0.29, NZD +0.64 fund). JPY valuation -0.65 std, NZD -0.62 std. Yield stress regime dominates both; mean reversion restrained by dollar structural strength and risk-premium tail.
+**Inflection points:**
+- **JPY** — cheap (valuation –0.6) with improving fundamentals (+0.28), but yield stress regime (real 10Y z +1.2, mult –0.82) and weak FX–yield correlation (–0.59) block traditional support. Mean-reversion candidate if risk premium deflates; watch for vol spike unwind.
+- **GBP** — extreme carry crowding (98th percentile) on fragile stretched valuation base. Real yield reward ambiguous (decoupled regime). Unwind trigger is vol normalization or growth miss; short the fade on size.
 
-**Carry standout**: GBP/AUD pair — both crowded (GBP 98th, AUD 93rd), both on narrow valuation bases; AUD's yield stress (-0.32 mult) deepens the asymmetry.
+**Carry extremes:**
+- **AUD** — valuation-driven stretch (+2.2) masking soft fundamentals; policy hawkishness fading into stagflation risk. Carry crowded (92nd percentile), yield stress regime (mult –0.32). Vulnerable to a vol spike or growth data miss.
 
-**Prior delta**: No prior snapshot provided.
+**Standout pair:** **NZD/AUD** — NZD cheap with rising pillars (+0.65 fund, –0.62 stretch); AUD overextended on valuation alone. Both decoupled yield regimes but NZD's improvement vs AUD's deterioration creates asymmetric risk.
+
+**Since last snapshot:** No prior snapshot provided.
