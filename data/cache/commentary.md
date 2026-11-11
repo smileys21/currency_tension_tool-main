@@ -1,12 +1,11 @@
-**Regime: Dollar strength fading; carry crowding and yield stress colliding with mean-reversion setups.**
+**Regime: Strong dollar, carry crowded, mean-reversion tensions building in JPY/NZD/CAD; AUD/GBP unwind risk on vol spike.**
 
-**Inflection points:**
-- **JPY** — cheap (valuation –0.6) with improving fundamentals (+0.28), but yield stress regime (real 10Y z +1.2, mult –0.82) and weak FX–yield correlation (–0.59) block traditional support. Mean-reversion candidate if risk premium deflates; watch for vol spike unwind.
-- **GBP** — extreme carry crowding (98th percentile) on fragile stretched valuation base. Real yield reward ambiguous (decoupled regime). Unwind trigger is vol normalization or growth miss; short the fade on size.
+• **AUD sell-off candidate.** Valuation doing all the heavy lifting (+2.2 pillar score), fundamentals soft; carry at 92nd percentile crowding. Yield stress regime (real 10Y high but negative FX correlation) means rallies into rates don't stick. Policy tightening cycle exhausted (feasibility -1.1) as growth stalls — hawkish tailwind fading.
 
-**Carry extremes:**
-- **AUD** — valuation-driven stretch (+2.2) masking soft fundamentals; policy hawkishness fading into stagflation risk. Carry crowded (92nd percentile), yield stress regime (mult –0.32). Vulnerable to a vol spike or growth data miss.
+• **GBP carry trap.** Real yield edge (+1.1% vs peers) is real, but valuation stretched and carry crowded at 98th percentile. FX/yield decoupling (ambiguous stress read) masks fragility. Vol spike unwinds this fast.
 
-**Standout pair:** **NZD/AUD** — NZD cheap with rising pillars (+0.65 fund, –0.62 stretch); AUD overextended on valuation alone. Both decoupled yield regimes but NZD's improvement vs AUD's deterioration creates asymmetric risk.
+• **JPY mean-reversion long.** Cheap (-0.6), fundamentals turning (pillar +0.28), yet yield-stress regime keeps it suppressed. Weak yen-vs-dollar rally when UST yields rise signals risk-premium demand, not real-yield support. Reversal setup if risk-off or carry unwind.
 
-**Since last snapshot:** No prior snapshot provided.
+• **NZD undervalued.** Cheap and improving (+0.64 fund, -0.62 stretch); yield stress regime similar to JPY. Carry crowded at 69th but less extreme than AUD/GBP.
+
+• **USD off highs, not cheap.** Valuation easing; carry fat but stretched. Fiscal pillar strong (+1.08) offsetting external drag.
