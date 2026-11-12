@@ -1,11 +1,10 @@
-**Regime: Strong dollar, carry crowded, mean-reversion tensions building in JPY/NZD/CAD; AUD/GBP unwind risk on vol spike.**
+**Regime: Strong dollar tape masking yield-risk decoupling; carry crowding at extremes in AUD/GBP/JPY.**
 
-• **AUD sell-off candidate.** Valuation doing all the heavy lifting (+2.2 pillar score), fundamentals soft; carry at 92nd percentile crowding. Yield stress regime (real 10Y high but negative FX correlation) means rallies into rates don't stick. Policy tightening cycle exhausted (feasibility -1.1) as growth stalls — hawkish tailwind fading.
+**Inflection currencies:**
+- **JPY**: Cheap (–0.6) and fundamentals turning (+0.3); classic mean-reversion setup. But yields are stress-regime (real 10Y z+1.3, fx/yield corr –0.59)—BoJ support downweighted. Dollar strength confounds the cross.
+- **GBP**: Carry is fat (+1.0% real edge) on stretched valuation; crowding at 98th percentile carry-to-vol. Yield/FX decoupled—treat fiscal pillar lightly. Unwind risk acute on any vol spike.
+- **AUD**: Inverse inflection—stretched valuation (+2.2) dominating a fading hawkish setup (growth soft, policy already tight, feasibility –1.1). Carry crowded (92nd %ile), yield stress regime (corr –0.16). Vulnerable on vol.
 
-• **GBP carry trap.** Real yield edge (+1.1% vs peers) is real, but valuation stretched and carry crowded at 98th percentile. FX/yield decoupling (ambiguous stress read) masks fragility. Vol spike unwinds this fast.
+**Standout carry pair:** **AUD/JPY**—both face crowded carry positioning and yield stress, but AUD's deteriorating growth/policy backdrop vs. JPY's fundamental uplift creates asymmetric unwind risk.
 
-• **JPY mean-reversion long.** Cheap (-0.6), fundamentals turning (pillar +0.28), yet yield-stress regime keeps it suppressed. Weak yen-vs-dollar rally when UST yields rise signals risk-premium demand, not real-yield support. Reversal setup if risk-off or carry unwind.
-
-• **NZD undervalued.** Cheap and improving (+0.64 fund, -0.62 stretch); yield stress regime similar to JPY. Carry crowded at 69th but less extreme than AUD/GBP.
-
-• **USD off highs, not cheap.** Valuation easing; carry fat but stretched. Fiscal pillar strong (+1.08) offsetting external drag.
+**Since prior snapshot:** No prior data provided; baseline established.
