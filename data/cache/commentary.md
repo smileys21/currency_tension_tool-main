@@ -1,10 +1,9 @@
-**Regime: Strong dollar tape masking yield-risk decoupling; carry crowding at extremes in AUD/GBP/JPY.**
+**Regime: Risk-premium dominance; yield rises no longer support FX strength.**
 
-**Inflection currencies:**
-- **JPY**: Cheap (–0.6) and fundamentals turning (+0.3); classic mean-reversion setup. But yields are stress-regime (real 10Y z+1.3, fx/yield corr –0.59)—BoJ support downweighted. Dollar strength confounds the cross.
-- **GBP**: Carry is fat (+1.0% real edge) on stretched valuation; crowding at 98th percentile carry-to-vol. Yield/FX decoupled—treat fiscal pillar lightly. Unwind risk acute on any vol spike.
-- **AUD**: Inverse inflection—stretched valuation (+2.2) dominating a fading hawkish setup (growth soft, policy already tight, feasibility –1.1). Carry crowded (92nd %ile), yield stress regime (corr –0.16). Vulnerable on vol.
+**AUD & GBP at the edge.** AUD sits in the classic carry-unwind trap—valuation +2.2 anchors a narrow bull case, but crowding (92nd percentile) and a policy pivot (feasibility collapsing as growth softens) are dual exit risks. GBP mirrors the setup: stretched valuation, 98th-percentile crowding, and decoupled yields mask fragility. Both vulnerable to a vol spike.
 
-**Standout carry pair:** **AUD/JPY**—both face crowded carry positioning and yield stress, but AUD's deteriorating growth/policy backdrop vs. JPY's fundamental uplift creates asymmetric unwind risk.
+**CAD & JPY are mean-reversion plays.** CAD is cheap (-1.1 valuation) with improving fundamentals, though the move is one-legged (pillars 2–6 near-zero). JPY improves structurally (+0.27 fund) while undervalued (-0.56), but real-yield regime is punishing despite high levels (−0.82 mult)—correlation flip signals risk-premium mode. Both offer asymmetry on a reversion narrative.
 
-**Since prior snapshot:** No prior data provided; baseline established.
+**AUD/USD carry: overextended.** 92nd-percentile crowd, policy fading, yield-sensitive weakness—unwind risk elevated on any vol trigger.
+
+**Last move:** USD held its improved fundamental read (+0.15) while AUD valuation stretched further, AUD/USD climbing on inertia into the crowd.
