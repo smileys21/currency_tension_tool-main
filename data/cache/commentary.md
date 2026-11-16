@@ -1,9 +1,9 @@
-**Regime: Risk-premium dominance; yield rises no longer support FX strength.**
+**Regime: Risk-premium dominance; yield rises punish carry, not reward it.**
 
-**AUD & GBP at the edge.** AUD sits in the classic carry-unwind trap—valuation +2.2 anchors a narrow bull case, but crowding (92nd percentile) and a policy pivot (feasibility collapsing as growth softens) are dual exit risks. GBP mirrors the setup: stretched valuation, 98th-percentile crowding, and decoupled yields mask fragility. Both vulnerable to a vol spike.
+**AUD & NZD at extremes—both stretched carry on fundamentally deteriorating bases, crowded (92nd & 74th percentile), and yield-negative correlations signal unwind risk.** AUD specifically: policy trap (tight, weak growth) eroding the hawkish bid; valuation doing all the work (+2.2), pillars hollow. NZD cheaper but same yield-stress mechanic.
 
-**CAD & JPY are mean-reversion plays.** CAD is cheap (-1.1 valuation) with improving fundamentals, though the move is one-legged (pillars 2–6 near-zero). JPY improves structurally (+0.27 fund) while undervalued (-0.56), but real-yield regime is punishing despite high levels (−0.82 mult)—correlation flip signals risk-premium mode. Both offer asymmetry on a reversion narrative.
+**GBP equally fragile: 98th percentile carry crowding on a real-yield real-rates decoupling; fat nominal yield (+1%) masks thin fundamental support.** External pillar strong, but growth and inflation neutral; unwind vector live.
 
-**AUD/USD carry: overextended.** 92nd-percentile crowd, policy fading, yield-sensitive weakness—unwind risk elevated on any vol trigger.
+**JPY & CAD mean-reverting cheap; JPY fundamentally improving (+0.3), valuation (–1.5) a catch-up play, though real-yield regime headwind persists (mult –0.82).** CAD valuation-driven (–2.0), one-legged, but tighter margin of safety.
 
-**Last move:** USD held its improved fundamental read (+0.15) while AUD valuation stretched further, AUD/USD climbing on inertia into the crowd.
+**GBP/AUD carry unwrap—highest unwind risk in a vol spike; both sit on valuation extremes with thin real-yield reward and crowded positioning.**
