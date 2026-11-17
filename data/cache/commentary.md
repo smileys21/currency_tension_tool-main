@@ -1,9 +1,11 @@
-**Regime: Risk-premium dominance; yield rises punish carry, not reward it.**
+**Regime: Risk-premium dominance—yield rises correlate with currency weakness (AUD, NZD, JPY), not strength. Carry crowding extreme in AUD/GBP; vol-spike vulnerability high.**
 
-**AUD & NZD at extremes—both stretched carry on fundamentally deteriorating bases, crowded (92nd & 74th percentile), and yield-negative correlations signal unwind risk.** AUD specifically: policy trap (tight, weak growth) eroding the hawkish bid; valuation doing all the work (+2.2), pillars hollow. NZD cheaper but same yield-stress mechanic.
+• **GBP at unwind risk**: 98th percentile carry crowding on stretched valuation (+1.37). Real yields decoupled from FX; fat yield premium (+1.0% real avg) is risk-premium compensation, not reward. Fragile on quiet vol.
 
-**GBP equally fragile: 98th percentile carry crowding on a real-yield real-rates decoupling; fat nominal yield (+1%) masks thin fundamental support.** External pillar strong, but growth and inflation neutral; unwind vector live.
+• **AUD in structural trap**: Valuation doing all the work (+2.2); growth soft, policy hawkish tailwind fading, feasibility -1.06. Yield stress regime (-0.34 mult) despite high real yields. 92nd percentile carry crowding—unwind setup mirrors GBP.
 
-**JPY & CAD mean-reverting cheap; JPY fundamentally improving (+0.3), valuation (–1.5) a catch-up play, though real-yield regime headwind persists (mult –0.82).** CAD valuation-driven (–2.0), one-legged, but tighter margin of safety.
+• **CAD cheap-and-improving mean reversion**: Fund +0.38, stretch -1.14 (only major in this setup). Valuation -2.02 anchoring the read; growth/external/inflation pillars turning. Feasibility constrained but not policy-trapped like AUD.
 
-**GBP/AUD carry unwrap—highest unwind risk in a vol spike; both sit on valuation extremes with thin real-yield reward and crowded positioning.**
+• **Carry standout: NZD (long vol, mean reversion)** — cheap (-0.58 stretch), improving fundamentals (+0.62 fund), external +1.65. Yield stress regime but valuation buffer means less unwind risk than AUD/GBP.
+
+No prior snapshot provided; baseline positioning: short AUD/GBP on crowding; long CAD/NZD on valuation mean reversion.
