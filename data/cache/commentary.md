@@ -1,13 +1,11 @@
-**Regime: Risk-premium dominates; yield support is decoupled and fragile across carry-heavy pairs.**
+**Regime: Risk-premium dominates; yield support weakening as vol stays muted—classic carry fragility.**
 
-**Inflection points:**
+**AUD & GBP at carry unwind risk.** Both sit on fat real yields (avg +0.9–1.0%) but stretched valuations (AUD +2.0, GBP +1.6 pillar) with carry crowding extreme (92nd & 97th percentile). Yields rising *against* the currency (risk-premium regime, not reward)—a vol spike breaks the trade. AUD deteriorating fundamentals (-0.17) add drag; GBP growth pillar strong (+1.2) but insufficient to offset valuation fragility.
 
-- **GBP & AUD at carry-unwind risk.** Both sit on stretched valuations (GBP +1.4, AUD +2.2) while real yields rise in a stress regime (yield-currency correlation negative). GBP carry crowded at 98th percentile; AUD at 92nd. A vol spike or repricing of hawkish tailwinds unwinds both.
+**CAD & NZD cheap-and-improving mean reversion.** CAD fund turning positive (+0.37), valuation deep (-2.2); NZD similarly positioned. Both offer downside cushion versus the crowded longs.
 
-- **CAD & NZD cheap-and-improving reversal plays.** Valuations well underwater (CAD -2.0, NZD -0.6) while fundamentals turn (+0.4 and +0.6). CAD's one-legged valuation read is narrow, but mean-reversion mechanics are live. NZD also pinned by yield stress despite cheap spot.
+**CHF & EUR one-legged on external/inflation.** CHF inflation pillar (+1.1) doing the heavy lifting; EUR external (+1.6) is narrow support in a neutral macro backdrop. Both decoupled yield/FX dynamics muddy the read.
 
-- **CHF continues to strengthen.** Fund improved +0.19 since last snapshot; now +0.66 structural with fundamentals broad (growth, inflation, external all positive). Real-yield decoupling doesn't hurt; cheap valuation (-0.04) leaves room.
+**GBP/AUD carry pair in focus:** unwind pressure building as vol stays low and crowding reaches extremes.
 
-**Carry standout:** AUD/JPY unravels if vol lifts—both crowded longs on yield that doesn't reward risk, in a high-real-rate, weak-FX regime.
-
-**Prior move:** CHF outperformance deepening; risk-off bias intact.
+**Since prior: AUD and EUR stretch eased (-0.15, -0.42); USD stretch ticked higher (+0.20).** Compression favors mean-reversion pairs (CAD, NZD).
