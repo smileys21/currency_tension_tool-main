@@ -5,7 +5,7 @@
     "FX and yields are decoupled \u2014 the real-yield reward/stress read is ambiguous this window; treat Pillar D lightly."
   ],
   "JPY": [
-    "Yield stress: real 10Y is high (z +1.2) but the currency weakens as yields rise (-0.57 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.81). Note: cross vs USD partly confounds this in a strong-dollar tape."
+    "Yield stress: real 10Y is high (z +1.1) but the currency weakens as yields rise (-0.56 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.81). Note: cross vs USD partly confounds this in a strong-dollar tape."
   ],
   "GBP": [
     "Fat carry on a fragile base: out-yields the field in real terms (avg +1.1%) but sits on a stretched valuation \u2014 the classic carry-unwind setup.",
@@ -30,7 +30,7 @@
   ],
   "NZD": [
     "Cheap and improving \u2014 the mean-reversion setup: valuation is below its own norm (-1.1) while fundamentals are turning up (+0.6).",
-    "Yield stress: real 10Y is high (z +0.7) but the currency weakens as yields rise (-0.25 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.47). Note: cross vs USD partly confounds this in a strong-dollar tape."
+    "Yield stress: real 10Y is high (z +0.6) but the currency weakens as yields rise (-0.25 corr) \u2014 risk-premium regime, not reward; real-yield support downweighted (mult -0.46). Note: cross vs USD partly confounds this in a strong-dollar tape."
   ],
   "USD": [
     "Fat carry on a fragile base: out-yields the field in real terms (avg +1.0%) but sits on a stretched valuation \u2014 the classic carry-unwind setup."
