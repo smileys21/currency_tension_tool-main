@@ -1,9 +1,7 @@
-**Regime: Risk-premium dominance; yield-currency decoupling means carry is fragile, not rewarded.**
+**Regime: Risk-premium dominance; yield-to-FX decoupling persists; carry crowding at extremes in AUD/GBP.**
 
-• **GBP & AUD at carry unwind risk.** Both sit in the 92–97th percentile carry crowding with stretched valuations (+1.5–1.6 fundamental stretch) and negative yield-FX correlations (risk-premium regimes, not reward). External and valuation pillars are doing all the work; growth and inflation pillars are near neutral. Vol spike would force rapid deleveraging.
+- **AUD short**. Stretched valuation (+1.5) + policy trap (growth soft, feasibility -1.1) + yield stress (weakens as rates rise, mult -0.42) + carry crowded (92nd %ile). Unwind risk acute on vol spike.
+- **CAD long**. Cheap (-1.25) reversing into improving fundamentals (+0.35). Valuation doing all the work but setup is clean mean-reversion play. External pillar (+1.65) supports.
+- **GBP unwind candidate**. Real yield spread wide (+1.1%) but valuation stretched (+1.49) on decoupled yield regime. Carry crowded at 97th %ile—fragile base for outperformance.
 
-• **CAD & NZD cheap-and-improving mean reversions.** CAD: valuation -2.16 (below norm), fundamentals +0.35, external +1.65 broad. NZD: valuation -1.07, fundamentals +0.62, external +1.65. Both are off the stretch map; CAD has tighter feasibility constraints but no policy trap.
-
-• **GBP/AUD carry unwind the standout short.** Real yields high but correlations inverted; crowding at 92–97th percentile; a vol or policy shock unwinds both simultaneously.
-
-• **No change versus prior snapshot provided.**
+**Carry: AUD/JPY remains crowded stress pair** (AUD punished, JPY punished in opposite direction; both at extremes of crowding/stress map). Risk-premium regime means unwind on vol normalization, not yield repricing.
